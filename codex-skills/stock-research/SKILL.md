@@ -21,6 +21,19 @@ This skill is generated from `skills/stock-research.md` so Claude Code and Codex
 
 ---
 
+## 模型兼容性约束（重要：防 "Model only support text input" 错误）
+
+当前 Codex 配置的模型可能为**纯文本模型**（如 `glm-5.2` via 火山方舟 coding plan），不支持图片/多模态输入。向其发送任何图片都会触发 `{"error":{"code":"InvalidParameter","message":"Model only support text input ..."}}` 错误并中断报告生成。执行本技能时必须遵守：
+
+1. **PDF 财报读取**：用 `python3 tools/pdf_text_extract.py`（基于 PyMuPDF 的纯文本提取）读取财报 PDF，**禁止**将 PDF 页面渲染为 PNG 再用 `view_image` 查看。推荐流程：先 `pages` 概览各页字符数 -> `search "主要客户"/"风险因素"/"现金流量表"` 定位章节 -> `text --pages <页码>` 提取目标页文本。
+2. **网页数据抓取**：用 `curl` 或 Python HTTP 请求获取 HTML/JSON 文本，**禁止**用浏览器插件截图后发给模型。JS 动态页面优先寻找 JSON API 端点，而非整页截图。
+3. **图表验证**：报告图表用 ECharts（HTML/JS 代码）渲染，通过 `tools/report_audit.py` 做数据抽检验证，**禁止**对渲染后的图表截图并用 `view_image` 检查。
+4. **总原则**：任何情况下不得向模型发送图片内容（PNG/JPG/base64 图片、PDF 页面渲染图、网页截图）。
+
+> 扫描件 PDF（`pdf_text_extract.py pages` 显示某页字符数为 0 或极少）属例外：标注"数据缺口：原件为扫描件，无法文本提取"，从其他来源补数据，**不得**改用图片渲染发给模型。
+
+---
+
 ## 数据缓存目录
 
 所有拉取的数据分类缓存到 `/Users/wujiaqi/workspace/finanace-data-ws/finanace-data/`，后续研究可直接复用，避免重复拉取。
@@ -129,6 +142,7 @@ finanace-data/
   - **美股来源**：SEC EDGAR（10-K 年报、10-Q 季报，原始一手）；macrotrends/stockanalysis 作为结构化交叉校验源
   - **港股来源**：港交所披露易（hkexnews.hk，主，原始一手）；macrotrends ADR、巨潮资讯、东方财富（副）
   - 若无法下载 PDF，保存财报原始页面 HTML 或关键章节文本（利润表/资产负债表/现金流量表/风险因素/主要客户章节）
+  - **PDF 文本提取（必须）**：读取 PDF 财报一律用 `python3 tools/pdf_text_extract.py text <文件> --pages <页码>` 或 `search <文件> "关键词"` 定位章节后提取文本，**禁止**渲染页面为图片再用 `view_image`（详见"模型兼容性约束"）
   - 每个文件在同级目录维护 `manifest.json`，记录：报告类型、财年/季度、来源 URL、下载时间、文件哈希、本地路径
   - **复用优先**：再次研究同 ticker 时先查 `manifest.json`，已有且哈希一致的原件直接复用，仅补下缺失报告，避免重复下载
   - **分析依赖**：原始财报是"关注要点分析"和"四大师分析"的首要依据，所有定性结论（风险、发展计划、客户集中度、债务结构等）须能溯源到 `raw/` 下具体文件；收入/净利润/存货等定量数据须与原始财报利润表/资产负债表交叉核对一致后才写入 `annual-5y.json`；不得仅依赖结构化摘要 JSON 或训练数据臆断
@@ -305,6 +319,7 @@ python3 tools/financial_rigor.py three-scenario \
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{公司名}（{ticker}）股票研究报告 - {YYYYMMDD}</title>
   <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <!-- 实际生成时：下载 echarts.min.js 并内嵌为 <script>...echarts源码...</script>，不依赖 CDN（国内 CDN 常不稳定导致图表空白） -->
   <style> /* 内嵌样式 */ </style>
 </head>
 <body>
@@ -476,7 +491,7 @@ python3 tools/financial_rigor.py three-scenario \
 
 #### HTML 技术要求
 
-1. **自包含**：所有数据以 JSON 内嵌在 `<script>` 标签中，图表通过 ECharts 渲染；除 ECharts CDN 外不依赖外部资源。
+1. **自包含**：所有数据以 JSON 内嵌在 `<script>` 标签中，图表通过 ECharts 渲染；**ECharts 库必须下载后内嵌为 `<script>` 内联代码**（不使用 CDN 外链，因国内 CDN 常不稳定导致图表空白）。可用 `curl -o /tmp/echarts.min.js "https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"` 下载后嵌入。
 2. **响应式**：图表容器使用百分比宽度，适配桌面和移动端。
 3. **图表交互**：ECharts 默认支持 tooltip、缩放、数据筛选。
 4. **打印友好**：提供打印样式（`@media print`），图表以固定尺寸渲染。
