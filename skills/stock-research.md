@@ -120,6 +120,14 @@ finanace-data/
 - A股优先用 `python3 tools/ashare_data.py financials {code}` 获取核心财务数据
 - 每个关键数据点须来自至少2个独立来源，误差>1%按 `skills/financial-data.md` 规则标记
 - **raw/（原始财报下载与复用，必须执行）**：在生成结构化 JSON 的同时，必须下载并归档以下原始财报文件，下载来源**优先参照 `require.md`"近3-5年财报"数据源**（美股 macrotrends+stockanalysis、SEC EDGAR；港股 港交所披露易+macrotrends ADR/巨潮资讯/东方财富；A股 东方财富+巨潮资讯）：
+  - **下载工具（美股/港股首选，免登录免付费）**：用 `python3 tools/fetch_filings.py <ticker> --type all --years 5` 一键下载并归档原始财报到 `raw/`，自动写入并维护 `manifest.json`（复用优先、MD5 校验、仅补下缺失财年/季度，无需手工维护哈希与复用逻辑）。三源覆盖：
+    - 美股：SEC EDGAR（10-K 年报、10-Q 季报、外国私人发行人 20-F，如 TSM/TCEHY/NTES）
+    - 港股：港交所披露易 hkexnews.hk（按文档类别精准检索：年报 t2=40100、中期报告 t2=40200，自动从 `activestock_sehk_e.json` 映射内部 stockId）
+    - 公司官网：`--ir-url <PDF直链>`（可重复）或 `--ir-list <文件>`（每行 `ticker<TAB>url`），作为披露易/EDGAR 缺漏时的兜底与补充一手原件
+    - 用法示例：`python3 tools/fetch_filings.py 0700.HK --type annual --years 5`；`python3 tools/fetch_filings.py AAPL --type all --years 5`；`python3 tools/fetch_filings.py 00700 --list`（先列出可下载财报再决定）；`python3 tools/fetch_filings.py 0700.HK --rebuild-manifest`（重建 manifest）
+    - **A股不在本工具覆盖范围**：A股仍按下方"A股来源"用巨潮资讯/东方财富下载原始年报/季报 PDF，或用 `python3 tools/ashare_data.py` 取结构化数据
+    - 下载后用 `python3 tools/pdf_text_extract.py` 读取文本（见下"PDF 文本提取"）
+
   - 近5年年度报告原件（年报 PDF/HTML）-> `raw/annual/{ticker}-annual-{FY}.{ext}`
   - 近一年最新4个季度报告原件（季报 PDF/HTML）-> `raw/quarterly/{ticker}-quarterly-{YYYYQ}.{ext}`
   - **原始财报须额外提取**：前5/前10大客户及各自收入占比（下游客户集中度）、现金流量表三大活动净额、流动资产/流动负债（用于流动比率、速动比率）；若某年度未披露客户明细则如实标注缺失
