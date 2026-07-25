@@ -1,0 +1,17 @@
+{
+  "name": "海螺水泥",
+  "code": "600585",
+  "market": "a",
+  "price": 17.77,
+  "prev_close": 18.15,
+  "open": 18.08,
+  "volume_hand": "211702",
+  "turnover_yuan": "37970",
+  "market_cap_yi": 937.73,
+  "float_cap_yi": 706.79,
+  "pe_ttm": 12.07,
+  "pb": 0.49,
+  "turnover_rate": 0.53,
+  "fetch_time": "2026-07-25",
+  "source": "腾讯行情qt.gtimg.cn"
+}

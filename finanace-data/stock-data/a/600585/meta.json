@@ -1,0 +1,24 @@
+{
+  "name": "海螺水泥",
+  "code": "600585",
+  "market": "a",
+  "exchange": "上海证券交易所",
+  "industry": "水泥制造",
+  "sector": "cement",
+  "shares_yi": 52.7704,
+  "market_cap_yi": 937.73,
+  "currency": "CNY",
+  "fetch_time": "2026-07-25",
+  "also_listed": [
+    {
+      "code": "0914",
+      "market": "hongkong",
+      "name": "海螺水泥H"
+    },
+    {
+      "code": "AHCHY",
+      "market": "american",
+      "name": "Conch Cement ADR"
+    }
+  ]
+}

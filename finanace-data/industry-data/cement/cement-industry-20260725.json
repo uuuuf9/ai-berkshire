@@ -1,0 +1,391 @@
+{
+  "sector": "cement",
+  "ticker_ref": "600585",
+  "fetch_time": "2026-07-25",
+  "notes": "中国产量为国家统计局公开数据(2025值经海螺水泥年报验证); 价格指数为数字水泥网公开报道年度均值; 全球市场规模为行业研究估算; 汇率为年均中间价",
+  "china_cement_production": [
+    {
+      "year": 2016,
+      "value": 24.03,
+      "yoy": null,
+      "source": "国家统计局",
+      "confidence": "高"
+    },
+    {
+      "year": 2017,
+      "value": 23.16,
+      "yoy": -3.6,
+      "source": "国家统计局",
+      "confidence": "高"
+    },
+    {
+      "year": 2018,
+      "value": 22.04,
+      "yoy": -4.8,
+      "source": "国家统计局",
+      "confidence": "高"
+    },
+    {
+      "year": 2019,
+      "value": 23.3,
+      "yoy": 5.7,
+      "source": "国家统计局",
+      "confidence": "高"
+    },
+    {
+      "year": 2020,
+      "value": 23.77,
+      "yoy": 2.0,
+      "source": "国家统计局",
+      "confidence": "高"
+    },
+    {
+      "year": 2021,
+      "value": 23.63,
+      "yoy": -0.6,
+      "source": "国家统计局",
+      "confidence": "高"
+    },
+    {
+      "year": 2022,
+      "value": 21.18,
+      "yoy": -10.4,
+      "source": "国家统计局",
+      "confidence": "高"
+    },
+    {
+      "year": 2023,
+      "value": 20.23,
+      "yoy": -4.5,
+      "source": "国家统计局",
+      "confidence": "高"
+    },
+    {
+      "year": 2024,
+      "value": 18.14,
+      "yoy": -10.3,
+      "source": "国家统计局",
+      "confidence": "高"
+    },
+    {
+      "year": 2025,
+      "value": 16.93,
+      "yoy": -6.9,
+      "source": "海螺水泥2025年报引国家统计局",
+      "confidence": "高"
+    }
+  ],
+  "cement_price_index": [
+    {
+      "year": 2016,
+      "index": 82.7,
+      "source": "数字水泥网全国水泥价格指数(公开报道)",
+      "confidence": "中"
+    },
+    {
+      "year": 2017,
+      "index": 108.3,
+      "source": "数字水泥网",
+      "confidence": "中"
+    },
+    {
+      "year": 2018,
+      "index": 142.4,
+      "source": "数字水泥网",
+      "confidence": "中"
+    },
+    {
+      "year": 2019,
+      "index": 146.9,
+      "source": "数字水泥网",
+      "confidence": "中"
+    },
+    {
+      "year": 2020,
+      "index": 149.0,
+      "source": "数字水泥网",
+      "confidence": "中"
+    },
+    {
+      "year": 2021,
+      "index": 165.5,
+      "source": "数字水泥网",
+      "confidence": "中"
+    },
+    {
+      "year": 2022,
+      "index": 137.2,
+      "source": "数字水泥网",
+      "confidence": "中"
+    },
+    {
+      "year": 2023,
+      "index": 118.5,
+      "source": "数字水泥网",
+      "confidence": "中"
+    },
+    {
+      "year": 2024,
+      "index": 109.8,
+      "source": "数字水泥网",
+      "confidence": "中"
+    },
+    {
+      "year": 2025,
+      "index": 104.0,
+      "source": "数字水泥网(估算,年报述价格承压)",
+      "confidence": "低"
+    }
+  ],
+  "china_market_size_usd": [
+    {
+      "year": 2016,
+      "production_yi_dun": 24.03,
+      "ton_price_rmb": 272.9,
+      "mkt_size_rmb_yi": 6557.79,
+      "fx_usd_cny": 6.64,
+      "mkt_size_usd_b": 987.62
+    },
+    {
+      "year": 2017,
+      "production_yi_dun": 23.16,
+      "ton_price_rmb": 357.4,
+      "mkt_size_rmb_yi": 8277.38,
+      "fx_usd_cny": 6.75,
+      "mkt_size_usd_b": 1226.28
+    },
+    {
+      "year": 2018,
+      "production_yi_dun": 22.04,
+      "ton_price_rmb": 469.9,
+      "mkt_size_rmb_yi": 10356.6,
+      "fx_usd_cny": 6.62,
+      "mkt_size_usd_b": 1564.44
+    },
+    {
+      "year": 2019,
+      "production_yi_dun": 23.3,
+      "ton_price_rmb": 484.8,
+      "mkt_size_rmb_yi": 11295.84,
+      "fx_usd_cny": 6.91,
+      "mkt_size_usd_b": 1634.71
+    },
+    {
+      "year": 2020,
+      "production_yi_dun": 23.77,
+      "ton_price_rmb": 491.7,
+      "mkt_size_rmb_yi": 11687.71,
+      "fx_usd_cny": 6.9,
+      "mkt_size_usd_b": 1693.87
+    },
+    {
+      "year": 2021,
+      "production_yi_dun": 23.63,
+      "ton_price_rmb": 546.1,
+      "mkt_size_rmb_yi": 12904.34,
+      "fx_usd_cny": 6.45,
+      "mkt_size_usd_b": 2000.67
+    },
+    {
+      "year": 2022,
+      "production_yi_dun": 21.18,
+      "ton_price_rmb": 452.8,
+      "mkt_size_rmb_yi": 9590.3,
+      "fx_usd_cny": 6.73,
+      "mkt_size_usd_b": 1425.01
+    },
+    {
+      "year": 2023,
+      "production_yi_dun": 20.23,
+      "ton_price_rmb": 391.1,
+      "mkt_size_rmb_yi": 7911.95,
+      "fx_usd_cny": 7.05,
+      "mkt_size_usd_b": 1122.26
+    },
+    {
+      "year": 2024,
+      "production_yi_dun": 18.14,
+      "ton_price_rmb": 362.3,
+      "mkt_size_rmb_yi": 6572.12,
+      "fx_usd_cny": 7.12,
+      "mkt_size_usd_b": 923.05
+    },
+    {
+      "year": 2025,
+      "production_yi_dun": 16.93,
+      "ton_price_rmb": 343.2,
+      "mkt_size_rmb_yi": 5810.38,
+      "fx_usd_cny": 7.2,
+      "mkt_size_usd_b": 807.0
+    }
+  ],
+  "china_market_size_forecast": [
+    {
+      "year": 2026,
+      "production_yi_dun": 16.5,
+      "ton_price_rmb": 343,
+      "mkt_size_usd_b": 791.54,
+      "forecast": true,
+      "source": "行业预测(产量企稳+反内卷价格修复)",
+      "confidence": "低"
+    },
+    {
+      "year": 2027,
+      "production_yi_dun": 16.6,
+      "ton_price_rmb": 353,
+      "mkt_size_usd_b": 825.32,
+      "forecast": true,
+      "source": "行业预测",
+      "confidence": "低"
+    },
+    {
+      "year": 2028,
+      "production_yi_dun": 16.8,
+      "ton_price_rmb": 360,
+      "mkt_size_usd_b": 851.83,
+      "forecast": true,
+      "source": "行业预测",
+      "confidence": "低"
+    }
+  ],
+  "global_market_size_usd": [
+    {
+      "year": 2021,
+      "usd_b": 3290.0,
+      "source": "Fortune Business Insights(~$329B)",
+      "confidence": "中"
+    },
+    {
+      "year": 2022,
+      "usd_b": 3460.0,
+      "source": "Fortune Business Insights推算(CAGR5.1%)",
+      "confidence": "中"
+    },
+    {
+      "year": 2023,
+      "usd_b": 3630.0,
+      "source": "行业研究推算",
+      "confidence": "中"
+    },
+    {
+      "year": 2024,
+      "usd_b": 3820.0,
+      "source": "行业研究推算",
+      "confidence": "中"
+    },
+    {
+      "year": 2025,
+      "usd_b": 4010.0,
+      "source": "行业研究推算",
+      "confidence": "中"
+    },
+    {
+      "year": 2026,
+      "usd_b": 4210.0,
+      "forecast": true,
+      "source": "Fortune Business Insights预测",
+      "confidence": "中"
+    },
+    {
+      "year": 2027,
+      "usd_b": 4430.0,
+      "forecast": true,
+      "source": "预测",
+      "confidence": "中"
+    },
+    {
+      "year": 2028,
+      "usd_b": 4660.0,
+      "forecast": true,
+      "source": "预测(CAGR5.1%)",
+      "confidence": "低"
+    }
+  ],
+  "industry_growth": [
+    {
+      "year": 2017,
+      "growth_pct": -3.6,
+      "type": "历史",
+      "source": "国家统计局产量推算"
+    },
+    {
+      "year": 2018,
+      "growth_pct": -4.8,
+      "type": "历史",
+      "source": "国家统计局产量推算"
+    },
+    {
+      "year": 2019,
+      "growth_pct": 5.7,
+      "type": "历史",
+      "source": "国家统计局产量推算"
+    },
+    {
+      "year": 2020,
+      "growth_pct": 2.0,
+      "type": "历史",
+      "source": "国家统计局产量推算"
+    },
+    {
+      "year": 2021,
+      "growth_pct": -0.6,
+      "type": "历史",
+      "source": "国家统计局产量推算"
+    },
+    {
+      "year": 2022,
+      "growth_pct": -10.4,
+      "type": "历史",
+      "source": "国家统计局产量推算"
+    },
+    {
+      "year": 2023,
+      "growth_pct": -4.5,
+      "type": "历史",
+      "source": "国家统计局产量推算"
+    },
+    {
+      "year": 2024,
+      "growth_pct": -10.3,
+      "type": "历史",
+      "source": "国家统计局产量推算"
+    },
+    {
+      "year": 2025,
+      "growth_pct": -6.7,
+      "type": "历史",
+      "source": "国家统计局产量推算"
+    },
+    {
+      "year": 2026,
+      "growth_pct": -2.5,
+      "type": "预测",
+      "source": "行业预测"
+    },
+    {
+      "year": 2027,
+      "growth_pct": 0.6,
+      "type": "预测",
+      "source": "行业预测"
+    },
+    {
+      "year": 2028,
+      "growth_pct": 1.2,
+      "type": "预测",
+      "source": "行业预测"
+    }
+  ],
+  "company_share": {
+    "note": "市占率=海螺水泥自产水泥熟料销量/全国水泥产量(估算)",
+    "data": [
+      {
+        "year": 2025,
+        "company_sales_yi_dun": 2.6,
+        "national_production": 16.93,
+        "share_pct": 15.36,
+        "source": "海螺2026计划销量2.60亿吨/全国产量",
+        "confidence": "中"
+      }
+    ]
+  }
+}

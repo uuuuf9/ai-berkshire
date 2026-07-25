@@ -1,0 +1,28 @@
+{
+  "ticker": "600585",
+  "type": "annual",
+  "source": "巨潮资讯cninfo.com.cn",
+  "fetch_time": "2026-07-25",
+  "files": {
+    "2025": {
+      "path": "/Users/wujiaqi/workspace/ai-berkshire_ws/ai-berkshire/finanace-data/financial-report/a/600585/raw/annual/600585-annual-2025.pdf",
+      "size_kb": 2792
+    },
+    "2024": {
+      "path": "/Users/wujiaqi/workspace/ai-berkshire_ws/ai-berkshire/finanace-data/financial-report/a/600585/raw/annual/600585-annual-2024.pdf",
+      "size_kb": 2883
+    },
+    "2023": {
+      "path": "/Users/wujiaqi/workspace/ai-berkshire_ws/ai-berkshire/finanace-data/financial-report/a/600585/raw/annual/600585-annual-2023.pdf",
+      "size_kb": 2260
+    },
+    "2022": {
+      "path": "/Users/wujiaqi/workspace/ai-berkshire_ws/ai-berkshire/finanace-data/financial-report/a/600585/raw/annual/600585-annual-2022.pdf",
+      "size_kb": 3305
+    },
+    "2021": {
+      "path": "/Users/wujiaqi/workspace/ai-berkshire_ws/ai-berkshire/finanace-data/financial-report/a/600585/raw/annual/600585-annual-2021.pdf",
+      "size_kb": 6514
+    }
+  }
+}

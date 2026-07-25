@@ -1,0 +1,67 @@
+{
+  "category": "cement",
+  "fetch_time": "2026-07-25",
+  "source": "数字水泥网公开报道",
+  "series": [
+    {
+      "year": 2016,
+      "index": 82.7,
+      "source": "数字水泥网全国水泥价格指数(公开报道)",
+      "confidence": "中"
+    },
+    {
+      "year": 2017,
+      "index": 108.3,
+      "source": "数字水泥网",
+      "confidence": "中"
+    },
+    {
+      "year": 2018,
+      "index": 142.4,
+      "source": "数字水泥网",
+      "confidence": "中"
+    },
+    {
+      "year": 2019,
+      "index": 146.9,
+      "source": "数字水泥网",
+      "confidence": "中"
+    },
+    {
+      "year": 2020,
+      "index": 149.0,
+      "source": "数字水泥网",
+      "confidence": "中"
+    },
+    {
+      "year": 2021,
+      "index": 165.5,
+      "source": "数字水泥网",
+      "confidence": "中"
+    },
+    {
+      "year": 2022,
+      "index": 137.2,
+      "source": "数字水泥网",
+      "confidence": "中"
+    },
+    {
+      "year": 2023,
+      "index": 118.5,
+      "source": "数字水泥网",
+      "confidence": "中"
+    },
+    {
+      "year": 2024,
+      "index": 109.8,
+      "source": "数字水泥网",
+      "confidence": "中"
+    },
+    {
+      "year": 2025,
+      "index": 104.0,
+      "source": "数字水泥网(估算,年报述价格承压)",
+      "confidence": "低"
+    }
+  ]
+}
