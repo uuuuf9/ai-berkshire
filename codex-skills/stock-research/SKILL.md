@@ -1,17 +1,18 @@
----
-name: stock-research
-description: "AI Berkshire skill: 股票研究：数据驱动 + 四大师框架 + HTML 可视化报告. Source: skills/stock-research.md."
----
-
-## Codex adapter note
-
-This skill is generated from `skills/stock-research.md` so Claude Code and Codex users share one canonical workflow.
-
-- Treat `$ARGUMENTS` as the user's request in the current Codex thread.
-- When the source mentions Claude-only surfaces such as Task, Agent, WebSearch, Bash, Read, or Write, use the closest Codex capability available in this session: subagents when available, web search when needed, shell commands for local tools, and normal file edits for workspace files.
-- Use shared project tools from `tools/` in this repository. Prefer running commands from the repository root with paths like `python3 tools/financial_rigor.py ...`; if the current thread starts outside the repo, locate the actual checkout path first instead of assuming a fixed home-directory path.
-- Before starting research, run the `date` command to confirm today's date; treat it as the baseline for "latest" data and state the data cutoff date in the report header. Never assume the current date from training data.
-- Preserve the research quality rules from `AGENTS.md`: cross-check financial data, use exact arithmetic tools for valuation/math, and clearly label uncertainty and source gaps.
+----
+-name: stock-research
+-description: "AI Berkshire skill: 股票研究：数据驱动 + 四大师框架 + HTML 可视化报告. Source: skills/stock-research.md."
+----
+-
+-## Codex adapter note
+-
+-This skill is generated from `skills/stock-research.md` so Claude Code and Codex users share one canonical workflow.
+-
+-- Treat `$ARGUMENTS` as the user's request in the current Codex thread.
+-- When the source mentions Claude-only surfaces such as Task, Agent, WebSearch, Bash, Read, or Write, use the closest Codex capability available in this session: subagents when available, web search when needed, shell commands for local tools, and normal file edits for workspace files.
+-- Use shared project tools from `tools/` in this repository. Prefer running commands from the repository root with paths like `python3 tools/financial_rigor.py ...`; if the current thread starts outside the repo, locate the actual checkout path first instead of assuming a fixed home-directory path.
+-- Before starting research, run the `date` command to confirm today's date; treat it as the baseline for "latest" data and state the data cutoff date in the report header. Never assume the current date from training data.
+-- Preserve the research quality rules from `AGENTS.md`: cross-check financial data, use exact arithmetic tools for valuation/math, and clearly label uncertainty and source gaps.
+-
 
 # 股票研究：数据驱动 + 四大师框架 + HTML 可视化报告
 
@@ -36,7 +37,7 @@ This skill is generated from `skills/stock-research.md` so Claude Code and Codex
 
 ## 数据缓存目录
 
-所有拉取的数据分类缓存到 `/Users/wujiaqi/workspace/finanace-data-ws/finanace-data/`，后续研究可直接复用，避免重复拉取。
+所有拉取的数据分类缓存到 `~/workspace/ai-berkshire_ws/ai-berkshire/finanace-data/`，后续研究可直接复用，避免重复拉取。
 
 ### 目录结构
 
@@ -175,7 +176,7 @@ finanace-data/
 | 航运 | Clarksons/波罗的海交易所 | BDI、运价数据 |
 | 化工 | ICIS | 化工品价格与分析 |
 
-拉取的数据包含：行业市场规模（历史+预测）、行业增速（历史+预测）、公司在行业中的份额与排名。
+拉取的数据包含：行业市场规模（历史+预测，须区分"公司在所在国家/地区"与"全球"两个口径，统一换算为美元 USD 计价，覆盖近5年历史+未来3年预测，供图表 4-补充使用）、行业增速（历史+预测）、公司在行业中的份额与排名。
 - **原始行业数据下载（必须执行）**：若第三方权威机构提供可下载的报告/数据文件（PDF/Excel/CSV），一并下载归档到 `industry-data/{sector}/raw/{source}-{YYYYMMDD}.{ext}`，与结构化 JSON 并存，作为行业分析的一手依据。
 
 #### 2.4 近10年关键价格 → `price-history/{category}/`（仅周期性行业）
@@ -201,7 +202,7 @@ finanace-data/
 | 1 | 利润、收入等 | 近5年收入/净利润趋势、同比变化、毛利率/净利率趋势、分部收入结构 | annual-5y.json + quarterly-latest.json |
 | 2 | 存货规模 | 近5年存货绝对值及同比变化、存货周转天数趋势、存货/收入比 | annual-5y.json |
 | 3 | 债务情况 | 近5年资产负债率、有息负债规模、净现金/净债务、利息覆盖倍数（**主要依据原始财报**） | annual-5y.json + raw/ |
-| 4 | 公司及行业发展速度 | 公司收入增速 vs 行业增速（历史5年+未来3年预测）、市场份额变化（**主要依据原始财报和行业第三方权威数据**） | annual-5y.json + raw/ + industry-data/ |
+| 4 | 公司及行业发展速度 | 公司收入增速 vs 行业增速（历史5年+未来3年预测）、市场份额变化、国家与全球行业市场规模（美元 USD，近5年历史+未来3年预测，供图表4-补充）（**主要依据原始财报和行业第三方权威数据**） | annual-5y.json + raw/ + industry-data/ |
 | 5 | 财报中面对的风险 | 从年报/季报原始文件"风险因素"章节提取，分类整理（**主要依据原始财报**） | raw/ |
 | 6 | 公司未来的发展计划 | 从年报/季报原始文件"发展战略""未来展望"章节提取（**主要依据原始财报**） | raw/ |
 | 7 | 市占率 | 近5年公司市占率变化趋势、与主要竞争对手份额对比、份额变动驱动因素（产能/技术/并购/价格竞争）（**主要依据原始财报营收与行业第三方权威数据交叉计算**） | annual-5y.json + raw/ + industry-data/ |
@@ -241,7 +242,7 @@ python3 tools/financial_rigor.py three-scenario \
 
 ### 第五步：四大师分析 + 个人投资理念
 
-参考 `skills/investment-research.md` 的分析框架，结合 `require.md` 中的分析依据，按以下维度研究：
+结合 `require.md` 中的分析依据，按以下维度研究：
 
 > **分析依据要求**：四大师分析必须主要依据以下四类数据源进行分析总结，不得仅凭摘要 JSON 或训练数据臆断：
 > 1. **原始财报**（`financial-report/{market}/{ticker}/raw/`）：生意本质、护城河、管理层决策、债务结构、盈利能力等定性判断的根基
@@ -250,7 +251,13 @@ python3 tools/financial_rigor.py three-scenario \
 > 4. **近10年关键价格**（`price-history/{category}/`）：周期性行业的周期定位与安全边际判断
 > 分析中引用的具体数据点须标注来源文件或缓存路径。
 
-#### 5.1 生意本质 — 段永平"对的生意"
+> **三段式综合依据（强制）**：四大师分析的分析总结必须交叉融合以下三类输入，缺一不可，并在每项结论中显式标注所依据的输入：
+> 1. **近些年原始财报**（`raw/annual/` 近5年年报 + 最新季报）：护城河变迁、管理层决策、盈利质量、债务与现金流结构的定性判断根基；每个大师维度的结论须能溯源到具体年报章节/页码
+> 2. **第一部分数据分析图表**（图表1～图表11 及配套分析）：图表1收入与利润增速归因与可持续性、图表2债务、图表3存货、图表4公司 vs 行业增速、图表4-补充行业市场规模、图表6毛利率/净利率、图表9市占率、图表11现金流等定量趋势，作为护城河趋势、复利能力、估值分位判断的硬数据支撑；引用时须指明具体图表编号与数据点
+> 3. **第二部分当前重大风险与未来发展计划**（2.1 重大风险表 + 2.2 发展计划）：芒格逆向思考须逐一对照 2.1 风险表评估发生概率与影响；李录行业趋势须对照 2.2 发展计划判断公司是否卡位文明级趋势；行动建议须与 2.2 产能/资本开支/研发规划对齐
+> 各大师维度的"分析总结"不得脱离上述三类输入空谈理论；每条结论须标注引用的原始年报路径、图表编号或第二部分条目，并据此给出可执行的行动建议（落于第三部分 3.4）。
+
+#### 5.1 生意本质 - 段永平"对的生意"
 
 - 用一句话定义这门生意的本质（谁付钱、为什么付钱、什么稀缺、什么复购）
 - 收入结构拆解（分部收入占比、增速）
@@ -353,6 +360,23 @@ python3 tools/financial_rigor.py three-scenario \
 - **配套数据表**：图表下方渲染明细表，每行一个财年，列出：财年、营业收入、收入同比、净利润、净利润同比，数值与折线标签一一对应，便于核对
 - 数据来源标注：`annual-5y.json` + `raw/annual/` 原始年报，注明拉取时间
 
+**图表 1 配套分析：收入与净利润增速归因与可持续性研判（必须包含）**
+
+紧随图表 1 与配套数据表之后，输出一段结构化文字分析，**必须锚定 `raw/annual/` 原始财报**（"管理层讨论与分析""经营情况讨论""主要会计数据"等章节），不得仅凭 `annual-5y.json` 摘要或训练数据臆断：
+
+1. **增速回顾**：逐年列出近3年（及可得的最长序列）的收入同比增速、净利润同比增速，指出增速的绝对水平与方向（加速/减速/转负/由负转正），并标注所依据的原始年报路径与章节。
+2. **增速变化主因（近3年）**：结合原始年报逐条说明导致近3年增速变化的主要原因，至少覆盖以下维度，每条主因须引用原始年报中的具体表述或数据点并标注原件路径与页码/章节：
+   - **量价拆解**：销量/产能/出货量 vs 平均售价（ASP）/单价的各自贡献
+   - **分部/产品结构**：高增速业务占比提升或低毛利/衰退业务拖累整体增速
+   - **成本与费用端**：原材料价格、毛利率变动、研发/销售/管理费用率变化对净利润增速与收入增速背离（净利增速快于或慢于收入增速）的解释
+   - **一次性因素剥离**：资产处置、汇兑损益、政府补贴、并购并表、会计政策变更等非经常性项目对增速的扰动，须还原剔除后的内生增速
+3. **增速可持续性研判（未来1～3年）**：基于上述归因，对收入增速与净利润增速分别给出"可持续/承压/不可持续"的明确结论，并说明：
+   - **支撑持续的驱动力**：在手订单、产能投放节奏、客户拓展、行业景气度等（引用第二部分 2.2 发展计划与 `industry-data/` 行业第三方数据）
+   - **制约因素**：竞争加剧、价格下行、需求见顶、成本上升、政策收紧等（引用第二部分 2.1 重大风险）
+   - **收入与净利润增速是否同步**：净利润增速能否跟上或超越收入增速（经营杠杆方向），若背离须解释原因
+   - **交叉印证**：与图表 4（公司增速 vs 行业增速）、图表 4-补充（行业市场规模预测）对照，判断公司增速能否跑赢行业
+4. **数据缺口透明**：若某年原始年报缺失或为扫描件无法文本提取，对应年份的主因分析须标注"数据缺口"并说明对可持续性结论的影响，不得静默略过或外推编造。
+
 **图表 2：债务情况（近5年）**
 
 - 类型：柱状图 + 折线图，双 Y 轴
@@ -377,6 +401,19 @@ python3 tools/financial_rigor.py three-scenario \
 - 折线 2：行业增速（历史实际 + 未来预测，来源第三方权威数据）
 - 标注市场份额变化趋势
 - 预测部分用虚线区分
+
+**图表 4-补充：行业市场规模（近5年历史 + 未来3年预测，美元计价）**
+
+- 类型：双柱状图（国家市场规模 + 全球市场规模）+ 可选折线图（同比增速），按量级调整 Y 轴
+- X 轴：近5年（历史实际）+ 未来3年（预测，虚线/浅色区分）
+- 柱状 1：公司在所在国家/地区的行业市场规模（美元 USD）
+- 柱状 2：全球行业市场规模（美元 USD）
+- 折线（可选）：国家市场规模同比增速、全球市场规模同比增速
+- **统一以美元（USD）计价（强制）**：若第三方数据源原始单位为人民币或其他币种，须按对应财年平均汇率换算为美元，并在图表注释中标注所用汇率数值与来源（如中国人民银行/美联储年度平均汇率）；禁止在同一图中混用币种
+- 市场规模数据来源：行业第三方权威数据（require.md 匹配的数据源，如 Prismark/SEMI/WSTS/IDC/IEA/SNE Research 等），历史与预测须同一来源或同口径可衔接；预测部分标注来源与置信度（高/中/低）
+- **配套数据表**：图表下方渲染明细表，每行一个年度，列出：年度、国家/地区市场规模（USD）、全球市场规模（USD）、国家同比、全球同比，数值与图表一一对应
+- 标注公司在该市场的份额量级（结合图表 9 市占率），用于判断 TAM 与公司成长空间
+- 数据缺口处理：若全球与国家市场规模任一无法获取，标注"数据缺口"并说明对行业空间与公司增速可持续性判断的影响；不得仅展示一侧而隐藏另一侧缺失
 
 **图表 5：近10年关键价格（仅周期性行业）**
 
@@ -474,7 +511,7 @@ python3 tools/financial_rigor.py three-scenario \
 
 **3.2 四位大师模拟点评**
 
-以引用格式，分别用巴菲特、芒格、段永平、李录的语气给出对该公司的点评（每人2-3句）。
+以引用格式，分别用巴菲特、芒格、段永平、李录的语气给出对该公司的点评（每人2-3句）。每位大师的点评必须**显式引用**第一部分图表的数据点（如图表1增速与可持续性研判、图表4-补充行业市场规模、图表9市占率等）与第二部分的风险/发展计划条目，并标注所依据的原始年报路径，不得泛泛而谈理论。
 
 **3.3 个人投资理念评估**
 
@@ -494,8 +531,8 @@ python3 tools/financial_rigor.py three-scenario \
 **理由撰写要求（强制）**：每条行动建议必须给出具体、可靠、可核验的理由，禁止空泛套话（如"估值合理""基本面良好"等无依据表述）。每条理由须同时满足：
 1. **数据锚定**：引用至少 1 个具体量化依据（如"当前 PE-TTM 18.3x，处近10年 25%分位""近三年净利率 12%->19%""净现金 230 亿"），数值须来自缓存文件并可溯源。
 2. **多维依据（不只看 PE/PB）**：禁止仅以"PE/PB 低"或"PE/PB 高"作为单一依据，理由须在估值之外综合基本面维度，以下 4 项均须涉及（缺项须显式标注"数据缺口"并说明影响）：
-   - **未来 1～3 年利润与营收增速**：引用一致预期/公司指引的营收与净利润增速（如"未来3年营收 CAGR 15%、净利润 CAGR 20%"），与历史增速、行业增速对比，判断成长性与确定性（数据取自图表1/图表4 预测部分）。
-   - **未来 1～3 年资产负债率**：引用有息负债规模、资产负债率趋势与利息覆盖倍数预判，评估杠杆安全边际（数据取自图表3，须对照行业参考水平）。
+   - **未来 1～3 年利润与营收增速**：引用一致预期/公司指引的营收与净利润增速（如"未来3年营收 CAGR 15%、净利润 CAGR 20%"），与历史增速、行业增速对比，判断成长性与确定性（数据取自图表1/图表4/图表4-补充 预测部分，并结合图表1配套增速可持续性研判）。
+   - **未来 1～3 年资产负债率**：引用有息负债规模、资产负债率趋势与利息覆盖倍数预判，评估杠杆安全边际（数据取自图表2，须对照行业参考水平）。
    - **未来 1～3 年现金流**：引用经营现金流与自由现金流的预测趋势，判断公司能否自我造血、覆盖资本开支与偿债（数据取自现金流图表与 `annual-5y.json`）。
    - **公司长期的生意模式**：从商业模式（一次性销售 vs 订阅/复购、硬件 vs 软件 vs 平台）、护城河持久性、ROIC 与复利路径角度，定性+定量论证生意模式是否支撑该建议。
 3. **逻辑链**：说明上述估值与基本面数据如何综合支撑该建议（如"估值分位低于历史中枢，叠加未来3年净利润 CAGR 20%、自由现金流稳健增长且资产负债率维持 40% 以下，构成安全边际"）。
@@ -526,7 +563,7 @@ python3 tools/financial_rigor.py three-scenario \
 
 1. **HTML 结构合法**：`<!DOCTYPE html>` 完整，标签闭合无错配、无截断；可用 `python3 -c "from html.parser import HTMLParser; ..."` 或 `xmllint --html --noout <报告>` 做基础结构校验。
 2. **自包含**：ECharts 以 `<script>` 内联方式嵌入（无 `src=` 外链 CDN）；报告离线打开不依赖任何外部网络资源。
-3. **图表齐全**：本技能要求的强制图表（图表1 收入与利润、图表2 债务、图表3 存货等）均存在对应的 ECharts 容器与 `setOption` 调用；任一强制图表缺失即不通过。
+3. **图表齐全**：本技能要求的强制图表（图表1 收入与利润、图表2 债务、图表3 存货、图表4-补充 行业市场规模等）均存在对应的 ECharts 容器与 `setOption` 调用；任一强制图表缺失即不通过。图表 1 下方须存在"收入与净利润增速归因与可持续性研判"配套文字分析段落，且锚定 `raw/` 原始年报路径。
 4. **内嵌数据与缓存一致**：HTML `<script>` 内嵌 JSON 的关键字段（收入、净利润、存货、总有息负债等）与 `annual-5y.json`/`quote.json`/`valuation.json` 等缓存文件一致，抽样至少 5 个数值逐一比对，偏差须为 0。
 5. **同比标注强制项**：图表1（收入/利润同比）、图表3（存货同比）折线均开启 `label.show=true` 且配套数据表存在；缺同比标签或配套表即不通过。
 6. **中文渲染**：`<html lang="zh-CN">`，ECharts 文本/tooltip 字体配置正确，无乱码占位。
@@ -565,7 +602,7 @@ python3 tools/report_audit.py verdict --results '<填好的JSON>' --report <报�
 **追加必检项（不通过即打回）**：
 
 - **同比数据核验**：从图表1/图表3的同比标签或配套数据表中抽取至少 2 个同比值，用 `annual-5y.json` 原始数值按 `本期÷上年−1` 复算，偏差须为 0（容许四舍五入 ≤0.1 个百分点）。
-- **原始财报溯源**：随机抽 2 条定性结论（风险/发展计划/客户集中度等），确认其在报告中标注了 `raw/` 下具体原件路径，且该路径文件实际存在。
+- **原始财报溯源**：随机抽 2 条定性结论（风险/发展计划/客户集中度/图表1增速归因等），确认其在报告中标注了 `raw/` 下具体原件路径，且该路径文件实际存在。
 - **数据缺口透明**：若存在数据缺口，报告中必须有对应"数据缺口"标注与影响说明，不得静默缺失。
 
 ---
@@ -586,6 +623,9 @@ python3 tools/report_audit.py verdict --results '<填好的JSON>' --report <报�
 12. 每份报告须通过"生成前数据完整性门禁"、"第七步 HTML 正确性子代理校验"和"第八步报告数据抽检"三重校验后方可发布，确保多次运行的稳定性与数据正确性；分析结论须以 `raw/` 原始财报为首要依据，结构化 JSON 仅作辅助。
 13. 行动建议（3.4）每条策略必须给出具体、可靠、可溯源的理由（数据锚定 + 多维依据 + 逻辑链 + 风险对冲），除 PE/PB 外还须覆盖未来1～3年利润与营收增速、资产负债率、现金流及长期生意模式，禁止空泛套话与仅凭 PE/PB 的单一依据。
 14. HTML 报告须经第七步"HTML 正确性子代理校验循环"验收：由子代理逐项校验，打回则主代理按建议修改后复校，循环直至子代理判"通过"（上限 5 轮）；未通过不得验收发布。
+15. 图表 1 下方必须包含"收入与净利润增速归因与可持续性研判"配套分析：逐年列出近3年收入/净利润同比增速、增速变化主因（量价拆解/分部结构/成本费用/一次性因素剥离，锚定原始年报）、未来1～3年增速可持续性结论与依据，并标注所依据的原始年报路径。
+16. 第一部分须包含图表 4-补充（行业市场规模，美元 USD）：区分"公司在所在国家/地区"与"全球"两个口径，覆盖近5年历史+未来3年预测，附配套数据表与汇率换算说明；非美元原始数据须换算为 USD 并标注汇率来源，币种混用或缺失一侧须标注"数据缺口"。
+17. 第三部分四大师分析（3.1～3.4）须交叉融合三类输入进行分析总结：近些年原始财报、第一部分数据分析图表（指明具体图表编号与数据点）、第二部分重大风险与未来发展计划；行动建议（3.4）须由此综合得出并满足多维依据要求。
 
 ---
 
@@ -596,7 +636,7 @@ python3 tools/report_audit.py verdict --results '<填好的JSON>' --report <报�
 1. 利润、收入等（需图形化 + 同比变化）
 2. 存货规模（需图形化 + 同比变化）
 3. 债务情况（需图形化，须标注行业参考水平）
-4. 财报中公司的发展以及行业的发展速度图（历史 + 未来，需图形化）
+4. 财报中公司的发展以及行业的发展速度图（历史 + 未来，需图形化；含国家与全球行业市场规模图，美元 USD 计价）
 5. 财报中面对的风险
 6. 财报中公司未来的发展计划
 7. 市占率（需图形化）
@@ -612,5 +652,5 @@ python3 tools/report_audit.py verdict --results '<填好的JSON>' --report <报�
 
 ### 分析依据
 
-1. 巴菲特/芒格/段永平/李录大师分析理论（参考 `skills/investment-research.md`）
+1. stock-research skill 中使用巴菲特/芒格/段永平/李录大师理论根据财报进行分析
 2. 个人投资理念：长期持有优秀企业，相信复利，长期相信 AI
