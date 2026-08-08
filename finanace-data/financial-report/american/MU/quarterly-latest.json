@@ -1,0 +1,77 @@
+{
+  "ticker": "MU",
+  "currency": "USD (millions)",
+  "fetch_time": "2026-08-03",
+  "note": "近5个季度展示HBM超级周期下业绩爆发轨迹：营收从$9.3B飙升至$41.5B, 毛利率从37.7%升至84.5%",
+  "quarters": [
+    {
+      "quarter": "Q3-FY2026",
+      "period_end": "2026-05-31",
+      "revenue": 41464,
+      "gross_profit": 35064,
+      "gross_margin_pct": 84.5,
+      "operating_income": 33322,
+      "operating_margin_pct": 80.3,
+      "net_income": 28242,
+      "diluted_eps": 24.67,
+      "source": "yfinance + 10-Q (MU-quarterly-2026Q2.htm)"
+    },
+    {
+      "quarter": "Q2-FY2026",
+      "period_end": "2026-02-28",
+      "revenue": 23863,
+      "gross_profit": 17748,
+      "gross_margin_pct": 74.4,
+      "operating_income": 16140,
+      "operating_margin_pct": 67.6,
+      "net_income": 13788,
+      "diluted_eps": 12.07,
+      "source": "yfinance + 10-Q (MU-quarterly-2026Q1.htm)"
+    },
+    {
+      "quarter": "Q1-FY2026",
+      "period_end": "2025-11-30",
+      "revenue": 13642,
+      "gross_profit": 7650,
+      "gross_margin_pct": 56.1,
+      "operating_income": 6140,
+      "operating_margin_pct": 45.0,
+      "net_income": 5239,
+      "diluted_eps": 4.6,
+      "source": "yfinance + 10-Q (MU-quarterly-2025Q4.htm)"
+    },
+    {
+      "quarter": "Q4-FY2025",
+      "period_end": "2025-08-31",
+      "revenue": 11313,
+      "gross_profit": 5054,
+      "gross_margin_pct": 44.7,
+      "operating_income": 3692,
+      "operating_margin_pct": 32.6,
+      "net_income": 3202,
+      "diluted_eps": 2.83,
+      "source": "yfinance + 10-K"
+    },
+    {
+      "quarter": "Q3-FY2025",
+      "period_end": "2025-05-31",
+      "revenue": 9304,
+      "gross_profit": 3509,
+      "gross_margin_pct": 37.7,
+      "operating_income": 2173,
+      "operating_margin_pct": 23.4,
+      "net_income": 1893,
+      "diluted_eps": 1.68,
+      "source": "yfinance"
+    }
+  ],
+  "ttm_summary": {
+    "ttm_revenue": 90274,
+    "ttm_net_income": 50469,
+    "ttm_eps": 44.28,
+    "ttm_gross_margin_pct": 73.5,
+    "ttm_operating_margin_pct": 65.6,
+    "quarterly_revenue_growth_qoq_latest": 73.8,
+    "note": "TTM数据与yfinance info字段一致"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "ticker": "002050.SZ",
+  "name": "三花智控",
+  "data": {
+    "price": 38.71,
+    "prev_close": 39.41,
+    "open": 38.9,
+    "high": 39.36,
+    "low": 38.43,
+    "volume": 660557.0,
+    "amount": 2566470000.0,
+    "market_cap": 162892000000.0,
+    "circulating_market_cap": 142880000000.0,
+    "pe_dynamic": 39.86,
+    "pb": 5.18,
+    "turnover_rate": 1.79,
+    "high_52w": 43.35,
+    "low_52w": 35.47,
+    "pct_chg": -1.78
+  },
+  "source": "腾讯行情 qt.gtimg.cn",
+  "fetch_time": "2026-08-06 23:18:54"
+}

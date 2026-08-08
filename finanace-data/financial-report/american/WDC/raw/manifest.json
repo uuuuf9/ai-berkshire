@@ -1,0 +1,196 @@
+{
+  "generated_at": "2026-08-06T23:13:31+08:00",
+  "ticker": "WDC",
+  "files": [
+    {
+      "type": "quarterly",
+      "filename": "WDC-quarterly-2026Q2.htm",
+      "period": "2026Q2",
+      "source": "SEC EDGAR 10-Q (accession 0001628280-26-029054, filed 2026-05-01)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/106040/000162828026029054/wdc-20260403.htm",
+      "size_bytes": 1709771,
+      "md5": "4ed3a63af6b500a75433fbf3f3436527",
+      "downloaded_at": "2026-08-06T23:13:20+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "WDC-quarterly-2026Q1.htm",
+      "period": "2026Q1",
+      "source": "SEC EDGAR 10-Q (accession 0001628280-26-004207, filed 2026-01-30)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/106040/000162828026004207/wdc-20260102.htm",
+      "size_bytes": 1599975,
+      "md5": "ff0870a72aafe9766606235d0d22a7c2",
+      "downloaded_at": "2026-08-06T23:13:20+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "WDC-quarterly-2025Q4.htm",
+      "period": "2025Q4",
+      "source": "SEC EDGAR 10-Q (accession 0001628280-25-047613, filed 2025-10-31)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/106040/000162828025047613/wdc-20251003.htm",
+      "size_bytes": 1304931,
+      "md5": "02ca56eead1aa84524ac62f4a46d3b6b",
+      "downloaded_at": "2026-08-06T23:13:21+08:00"
+    },
+    {
+      "type": "annual",
+      "filename": "WDC-annual-2025.htm",
+      "period": "2025",
+      "source": "SEC EDGAR 10-K (accession 0000106040-25-000038, filed 2025-08-14)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/106040/000010604025000038/wdc-20250627.htm",
+      "size_bytes": 2556187,
+      "md5": "5e2d99b833df497b529f4995af62db07",
+      "downloaded_at": "2026-08-06T23:13:21+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "WDC-quarterly-2025Q1.htm",
+      "period": "2025Q1",
+      "source": "SEC EDGAR 10-Q (accession 0000106040-25-000026, filed 2025-05-02)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/106040/000010604025000026/wdc-20250328.htm",
+      "size_bytes": 1752934,
+      "md5": "a49e5178cb1fd176f3a610adb53bfd50",
+      "downloaded_at": "2026-08-06T23:13:22+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "WDC-quarterly-2024Q4.htm",
+      "period": "2024Q4",
+      "source": "SEC EDGAR 10-Q (accession 0000106040-25-000008, filed 2025-01-31)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/106040/000010604025000008/wdc-20241227.htm",
+      "size_bytes": 1756739,
+      "md5": "6498d8dc1a5fb62c32b2086ae62a62d2",
+      "downloaded_at": "2026-08-06T23:13:22+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "WDC-quarterly-2024Q3.htm",
+      "period": "2024Q3",
+      "source": "SEC EDGAR 10-Q (accession 0000106040-24-000040, filed 2024-10-31)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/106040/000010604024000040/wdc-20240927.htm",
+      "size_bytes": 1416816,
+      "md5": "7e1325604cd73ffc3fa3090e0d1253dd",
+      "downloaded_at": "2026-08-06T23:13:23+08:00"
+    },
+    {
+      "type": "annual",
+      "filename": "WDC-annual-2024.htm",
+      "period": "2024",
+      "source": "SEC EDGAR 10-K (accession 0000106040-24-000031, filed 2024-08-20)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/106040/000010604024000031/wdc-20240628.htm",
+      "size_bytes": 2685019,
+      "md5": "9eea56bb71118d38076bfd7ff33c76bd",
+      "downloaded_at": "2026-08-06T23:13:24+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "WDC-quarterly-2024Q1.htm",
+      "period": "2024Q1",
+      "source": "SEC EDGAR 10-Q (accession 0000106040-24-000022, filed 2024-04-30)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/106040/000010604024000022/wdc-20240329.htm",
+      "size_bytes": 1979298,
+      "md5": "b8a1db461504f011d9b8fefc157390ef",
+      "downloaded_at": "2026-08-06T23:13:24+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "WDC-quarterly-2023Q4.htm",
+      "period": "2023Q4",
+      "source": "SEC EDGAR 10-Q (accession 0000106040-24-000014, filed 2024-02-12)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/106040/000010604024000014/wdc-20231229.htm",
+      "size_bytes": 1938510,
+      "md5": "310423bad7b5dba53501f734be8bb5a8",
+      "downloaded_at": "2026-08-06T23:13:25+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "WDC-quarterly-2023Q3.htm",
+      "period": "2023Q3",
+      "source": "SEC EDGAR 10-Q (accession 0000106040-23-000034, filed 2023-11-07)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/106040/000010604023000034/wdc-20230929.htm",
+      "size_bytes": 1440971,
+      "md5": "617c93e9001693e778e9302c49efcf4f",
+      "downloaded_at": "2026-08-06T23:13:26+08:00"
+    },
+    {
+      "type": "annual",
+      "filename": "WDC-annual-2023.htm",
+      "period": "2023",
+      "source": "SEC EDGAR 10-K (accession 0000106040-23-000024, filed 2023-08-22)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/106040/000010604023000024/wdc-20230630.htm",
+      "size_bytes": 2621356,
+      "md5": "f6e53f0eff5164c148a523ec53b5b3a8",
+      "downloaded_at": "2026-08-06T23:13:26+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "WDC-quarterly-2023Q1.htm",
+      "period": "2023Q1",
+      "source": "SEC EDGAR 10-Q (accession 0000106040-23-000017, filed 2023-05-10)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/106040/000010604023000017/wdc-20230331.htm",
+      "size_bytes": 2232253,
+      "md5": "7cc6853c63381d2ffd5a56eea213ded8",
+      "downloaded_at": "2026-08-06T23:13:27+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "WDC-quarterly-2022Q4.htm",
+      "period": "2022Q4",
+      "source": "SEC EDGAR 10-Q (accession 0000106040-23-000010, filed 2023-02-03)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/106040/000010604023000010/wdc-20221230.htm",
+      "size_bytes": 2071482,
+      "md5": "b1c26f69a082afd05beb06084abea281",
+      "downloaded_at": "2026-08-06T23:13:28+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "WDC-quarterly-2022Q3.htm",
+      "period": "2022Q3",
+      "source": "SEC EDGAR 10-Q (accession 0000106040-22-000065, filed 2022-11-02)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/106040/000010604022000065/wdc-20220930.htm",
+      "size_bytes": 1640238,
+      "md5": "85d83d6d92b7d4901f3126c4e82cd841",
+      "downloaded_at": "2026-08-06T23:13:28+08:00"
+    },
+    {
+      "type": "annual",
+      "filename": "WDC-annual-2022.htm",
+      "period": "2022",
+      "source": "SEC EDGAR 10-K (accession 0000106040-22-000055, filed 2022-08-25)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/106040/000010604022000055/wdc-20220701.htm",
+      "size_bytes": 3066913,
+      "md5": "216311df34fe67b538c75849697ab225",
+      "downloaded_at": "2026-08-06T23:13:29+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "WDC-quarterly-2022Q2.htm",
+      "period": "2022Q2",
+      "source": "SEC EDGAR 10-Q (accession 0000106040-22-000040, filed 2022-05-04)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/106040/000010604022000040/wdc-20220401.htm",
+      "size_bytes": 2183736,
+      "md5": "3b5b6d60d03727b846f426992830b387",
+      "downloaded_at": "2026-08-06T23:13:30+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "WDC-quarterly-2021Q4.htm",
+      "period": "2021Q4",
+      "source": "SEC EDGAR 10-Q (accession 0000106040-22-000018, filed 2022-02-03)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/106040/000010604022000018/wdc-20211231.htm",
+      "size_bytes": 2062589,
+      "md5": "03c5ba4a272cc3d900498a2407cefdc8",
+      "downloaded_at": "2026-08-06T23:13:31+08:00"
+    },
+    {
+      "type": "annual",
+      "filename": "WDC-annual-2021.htm",
+      "period": "2021",
+      "source": "SEC EDGAR 10-K (accession 0000106040-21-000040, filed 2021-08-27)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/106040/000010604021000040/wdc-20210702.htm",
+      "size_bytes": 2954441,
+      "md5": "ed04a16d79ad2ae2da3a612a2e5fc65b",
+      "downloaded_at": "2026-08-06T23:13:31+08:00"
+    }
+  ]
+}

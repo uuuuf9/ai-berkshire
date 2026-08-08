@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>SK海力士(HXSCY/000660.KS)研究报告 - AI Berkshire</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.6.0/dist/echarts.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:#f5f6fa;color:#2c3e50;line-height:1.7;max-width:1200px;margin:0 auto;padding:20px}
+h1{color:#1a3a5c;font-size:26px;text-align:center;margin:10px 0 5px}
+h2{color:#1a3a5c;font-size:20px;border-left:5px solid #2980b9;padding-left:12px;margin:30px 0 15px;background:#eaf2f8;padding:10px 15px;border-radius:4px}
+h3{color:#34495e;font-size:16px;margin:20px 0 10px;padding-bottom:6px;border-bottom:2px solid #dfe6e9}
+.header-box{background:linear-gradient(135deg,#1a3a5c,#2980b9);color:#fff;padding:25px;border-radius:10px;margin-bottom:25px}
+.header-box table{width:100%;border-collapse:collapse}.header-box td,.header-box th{padding:8px 12px;border:1px solid rgba(255,255,255,0.2)}
+.header-box th{background:rgba(255,255,255,0.15);text-align:left;font-weight:600}.header-box td{background:rgba(255,255,255,0.08)}
+.chart{background:#fff;border-radius:8px;padding:20px;margin:20px 0;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
+.chart-title{font-size:16px;font-weight:700;color:#1a3a5c;margin-bottom:10px}.chart-box{width:100%;height:420px}.chart-box.tall{height:460px}
+.src{font-size:12px;color:#7f8c8d;margin-top:8px;font-style:italic}
+table.data-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px}
+table.data-table th,table.data-table td{border:1px solid #dfe6e9;padding:6px 8px;text-align:center}table.data-table th{background:#eaf2f8;color:#1a3a5c;font-weight:600}table.data-table tr:nth-child(even){background:#f8f9fa}
+.analysis{background:#fff;border-radius:8px;padding:20px;margin:20px 0;box-shadow:0 2px 8px rgba(0,0,0,0.08);border-left:4px solid #27ae60}
+.analysis h4{color:#27ae60;margin-bottom:8px}
+.quote-box{background:#fef9e7;border-left:4px solid #f39c12;padding:15px;margin:12px 0;border-radius:4px}.quote-box .master{font-weight:700;color:#d35400}
+.gap{background:#fdecea;border:1px solid #e74c3c;padding:10px 14px;border-radius:4px;font-size:13px;color:#c0392b;margin:10px 0}
+.rec-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px}.rec-table th,.rec-table td{border:1px solid #bdc3c7;padding:8px;text-align:left;vertical-align:top}.rec-table th{background:#34495e;color:#fff}
+.footer{text-align:center;color:#95a5a6;font-size:12px;margin:30px 0 10px;padding-top:15px;border-top:1px solid #dfe6e9}
+.note{background:#eafaf1;border-left:4px solid #27ae60;padding:12px 16px;margin:12px 0;border-radius:4px;font-size:14px}
+.warn{background:#fef9e7;border-left:4px solid #f39c12;padding:12px 16px;margin:12px 0;border-radius:4px;font-size:14px}
+@media print{body{background:#fff;padding:0}.chart-box{height:360px}.chart{break-inside:avoid}}
+</style></head><body>
+<div class="header-box">
+<h1>SK海力士 (HXSCY / 000660.KS) 深度研究报告</h1>
+<p style="text-align:center;margin-top:5px;font-size:14px;opacity:0.9">AI内存超级周期下的HBM霸主 · 巴菲特/芒格/段永平/李录四大师框架</p>
+<table>
+<tr><th>公司名称</th><td>SK hynix Inc. (SK海力士)</td><th>股票代码</th><td>美股 HXSCY (OTC非保荐ADR) / 主上市 KOSPI 000660.KS</td></tr>
+<tr><th>研究日期</th><td>2026-07-31</td><th>数据截止</th><td>2026-07-30 (2Q26业绩,2026-07-29发布)</td></tr>
+<tr><th>当前股价</th><td>1,322,000 韩元 (07-30收盘, -5.64%)</td><th>总市值</th><td>942.19万亿韩元 ≈ 6,877亿美元 (汇率≈1,370 KRW/USD)</td></tr>
+<tr><th>PE</th><td>TTM 22.4x (FY25, EPS 58,946韩元) / 前瞻 2026E ≈5.5x</td><th>PB</th><td>≈7.7x (BPS 171,751韩元, Naver 기업실적)</td></tr>
+<tr><th>ROE</th><td>44.2% (FY25)</td><th>净现金</th><td>69.4万亿韩元 (2Q26末, 现金88万亿/有息负债18.6万亿)</td></tr>
+<tr><th>行业</th><td>半导体-存储 (DRAM/NAND/HBM, 周期性)</td><th>核心竞争力</th><td>HBM全球第一(~50%份额) · 技术领先 · AI内存核心受益</td></tr>
+</table>
+<p style="margin-top:10px;font-size:12px;opacity:0.9">⚠ 本报告仅供学习研究,不构成投资建议。<b>数据来源:</b> SK hynix官方IR(news.skhynix.com财报稿) · Naver Finance · Google Finance · WSTS/TrendForce公开行业数据。</p>
+<p style="margin-top:6px;font-size:12px;opacity:0.85">⚠ <b>数据缺口声明(重要):</b> SK海力士为韩国KOSPI上市公司,标准美股数据源(macrotrends/stockanalysis 404或无覆盖、SEC EDGAR无申报、Yahoo 429限流、Naver API超时)在本环境均不可用。故财务数据以SK hynix官方英文IR财报稿为一手权威来源(已归档raw/),行情取Naver+Google Finance交叉验证;完整5年资产负债表/现金流/存货/客户集中度/10年月度PB-PE序列需年报/DART(本次未获取),相应图表标注"数据缺口"。</p>
+</div>
+
+<div class="warn">📌 <b>核心结论速览:</b> AI内存超级周期推动SK海力士FY25营收97.15万亿韩元(+47%)、营业利润47.21万亿(营业利润率49%)创历史新高;2Q26营收79.32万亿、营业利润率76%再爆表。但财报后股价反跌约10%(见顶/均值回归担忧)。TTM PE 22.4x看似偏贵,前瞻PE约5.5x便宜——价差反映市场对"峰值盈利可持续性"的分歧。<b>建议:观望为主,逢回调分批建仓,长期核心配置(相信AI内存结构性趋势),不追高。</b></div>
+
+<h2>第一部分:数据驱动分析</h2>
+
+<div class="chart"><div class="chart-title">图表1:营业收入与净利润(近5年) + 同比增速</div>
+<div id="chart1" class="chart-box tall"></div>
+<table class="data-table"><tr><th>财年</th><th>营收(万亿韩元)</th><th>营收同比</th><th>净利润(万亿韩元)</th><th>净利同比</th><th>营业利润率</th></tr>
+<tr><td>FY2021</td><td>43.0</td><td>+69.3%</td><td>9.6</td><td>+321%</td><td>28.9%</td></tr>
+<tr><td>FY2022</td><td>44.6</td><td>+3.8%</td><td>2.2</td><td>-76.7%</td><td>15.3%</td></tr>
+<tr><td>FY2023</td><td>32.8</td><td>-26.6%</td><td>-9.1</td><td>转亏</td><td>-23.6%</td></tr>
+<tr><td>FY2024</td><td>66.2</td><td>+102%</td><td>19.8</td><td>转盈</td><td>35.5%</td></tr>
+<tr><td>FY2025</td><td>97.1</td><td>+46.8%</td><td>42.9</td><td>+117%</td><td>48.6%</td></tr></table>
+<div class="src">数据来源:raw/annual/HXSCY-annual-FY21~FY25.html (SK hynix官方IR, K-IFRS) · 拉取时间2026-07-31</div></div>
+
+<div class="analysis"><h4>📊 收入与净利润增速归因与可持续性研判</h4>
+<b>FY2021(+69%营收/+321%净利):</b> 疫情后服务器/移动需求共振,DRAM/NAND价格上行,高基数盈利。<br>
+<b>FY2022(+3.8%/-76.7%):</b> 营收微增但H2起内存下行周期,价格急跌致净利大幅缩水。<br>
+<b>FY2023(-26.6%/转亏-9.1万亿):</b> 内存深度谷底,价格暴跌,营业亏损7.73万亿(营业利润率-23.6%)。<br>
+<b>FY2024(+102%/转盈19.8万亿):</b> AI拉动HBM/服务器DRAM量价齐升,业绩V型反转,营业利润率回升至35.5%。<br>
+<b>FY2025(+46.8%/+117%):</b> HBM3E/HBM4放量,AI内存供不应求,营业利润率49%、净利率44%创纪录。<br>
+<b>未来1-3年可持续性:</b> 2Q26营收79.32万亿(同比+257%)、营业利润率76%,H1'26营收首破100万亿——2026年增速仍极高但<b>基数效应下2027-28将放缓</b>。结构性AI需求支撑中长期,但<b>Samsung/Micron HBM扩产+内存周期规律</b>意味着当前超高位利润率(44-76%)<b>不可线性外推</b>,2027-28存在均值回归风险。依据:raw/annual/HXSCY-annual-FY25.html、raw/quarterly/HXSCY-quarterly-2Q26.html。</div>
+
+<div class="chart"><div class="chart-title">图表2:债务与流动性(2Q26末快照)</div>
+<div id="chart2" class="chart-box"></div>
+<div class="src">数据来源:raw/quarterly/HXSCY-quarterly-2Q26.html (2Q26 narrative: 现金88万亿、有息负债18.6万亿、净现金69.4万亿)</div></div>
+<div class="gap">⚠ <b>数据缺口(图表2):</b> 5年有息负债/资产负债率/利息覆盖倍数历史序列需完整年报(K-IFRS资产负债表),本次仅获取2Q26末快照。定性:SK海力士2023下行周期曾承压(净负债目标提及),FY24-25超级周期下大幅去杠杆,当前净现金69.4万亿、堡垒级资产负债表,偿债风险极低。行业参考:存储同业资产负债率约30-45%。</div>
+
+<div class="gap">⚠ <b>数据缺口(图表3-存货规模):</b> 近5年存货账面价值/存货周转天数/存货同比数据需年报附注,本次未获取。按技能规则(inventory_yoy缺失)该图不予生成。<b>定性判断:</b> 2Q26末现金激增33.6万亿、营业利润率76%,反映存货周转极健康(AI内存供不应求、去库存彻底);2023谷底曾被动累库。精确存货序列待年报。</div>
+
+<div class="chart"><div class="chart-title">图表4:公司营收增速 vs 全球内存市场增速(近5年历史+未来3年预测)</div>
+<div id="chart4" class="chart-box tall"></div>
+<div class="src">数据来源:公司营收=raw/annual官方IR;行业=WSTS/TrendForce公开数据(置信度中)。2026-28为公司示意预测(基于H1'26外推,虚线/预测段)</div></div>
+
+<div class="chart"><div class="chart-title">图表4-补充:行业市场规模(美元USD,近5年+未来3年预测)</div>
+<div id="chart4b" class="chart-box tall"></div>
+<table class="data-table"><tr><th>年度</th><th>全球内存市场(十亿USD)</th><th>韩国内存(估,占全球62%)</th><th>全球半导体(十亿USD)</th></tr>
+<tr><td>2021</td><td>160</td><td>99</td><td>556</td></tr><tr><td>2022</td><td>130</td><td>81</td><td>574</td></tr><tr><td>2023</td><td>92</td><td>57</td><td>527</td></tr><tr><td>2024</td><td>135</td><td>84</td><td>628</td></tr><tr><td>2025</td><td>190</td><td>118</td><td>697</td></tr><tr><td>2026E</td><td>240</td><td>149</td><td>740</td></tr><tr><td>2027E</td><td>270</td><td>167</td><td>790</td></tr><tr><td>2028E</td><td>300</td><td>186</td><td>840</td></tr></table>
+<div class="src">数据来源:WSTS/TrendForce公开报告(行业估算,置信度中)。韩国内存规模=全球×62%(韩国存储产能份额估算)。HBM细分市场2024约124亿→2026E约500亿USD(TrendForce)。预测段标注来源与置信度:中。</div></div>
+
+<div class="chart"><div class="chart-title">图表5:DRAM价格指数(周期性行业关键价格,2021=100)</div>
+<div id="chart5" class="chart-box"></div>
+<div class="src">数据来源:TrendForce DDR4 8Gb现货价(指数化,2021=100)。2023谷底34,2025-26回升至100+,反映AI内存超级周期。当前处于约10年70-100%分位(偏高)。</div></div>
+
+<div class="chart"><div class="chart-title">图表6:毛利率/营业利润率/净利率趋势(近5年)</div>
+<div id="chart6" class="chart-box"></div>
+<div class="src">数据来源:raw/annual官方IR计算。FY23营业利润率-23.6%(全行业亏损);FY25营业利润率48.6%、净利率44.2%创纪录;2Q26营业利润率76%(极值)。同行参考:Samsung内存营业利润率约30-40%(峰值)。</div></div>
+
+<div class="chart"><div class="chart-title">图表7:PB估值(当前快照)</div>
+<div id="chart7" class="chart-box" style="height:300px"></div>
+<div class="src">数据来源:BPS=171,751韩元(Naver 기업실적 FY25),PB=股价/BPS=7.7x。净资产(FY25末)约125万亿韩元(由BPS×股本推算)。</div></div>
+<div class="gap">⚠ <b>数据缺口(图表7):</b> 近10年月度PB历史序列(用于分位计算)需历史BPS+月度股价,Yahoo/Naver历史接口在本环境不可用。定性:当前PB 7.7x处内存周期高位(2023谷底PB曾<1.5x),反映AI超周期与高ROE溢价。<b>当前PB约处近10年70-85%分位(估算,偏高)</b>。</div>
+
+<div class="chart"><div class="chart-title">图表8:PE估值(TTM vs 前瞻)</div>
+<div id="chart8" class="chart-box" style="height:340px"></div>
+<div class="src">数据来源:EPS=FY25净利42.95万亿/总股本7.286亿股=58,946韩元(与Naver 58,955交叉验证);前瞻PE基于2026E净利~170万亿(H1'26营业利润98.15万亿年化×净利/营润比0.91,剔除2Q26一次性收益)。</div></div>
+<div class="gap">⚠ <b>数据缺口(图表8):</b> 近10年月度PE-TTM历史序列需历史股价+滚动EPS,本环境数据源不可用,仅给当前TTM(22.4x)与前瞻(5.5x)对比。<b>核心估值悖论:</b> TTM 22.4x偏贵(因FY25已含部分高基数),前瞻5.5x便宜(2026E盈利爆发)——价差=市场对"峰值可持续性"的折价,也是财报后跌10%的主因。</div>
+
+<div class="chart"><div class="chart-title">图表9:市占率(DRAM近5年趋势 + 2025份额结构)</div>
+<div id="chart9" class="chart-box tall"></div>
+<div class="src">数据来源:TrendForce。SK hynix DRAM份额由2021约28%升至2025约36%(第二,仅次于Samsung约42%);<b>HBM份额2025约50%(全球第一)</b>;NAND约19%(第三)。</div></div>
+
+<div class="gap">⚠ <b>数据缺口(图表10-下游前10大客户集中度):</b> SK海力士(KOSPI披露规则)未公开前10大客户名称及收入占比,2Q26稿仅称"与约10家核心客户签长期协议(Multi-Year)"。<b>定性:</b> HBM/高端存储下游高度集中于AI超大规模厂商(AI加速器/云厂商,如Nvidia生态),集中度高(CR5估>60%,置信度低-中)。集中度风险等级<b>高</b>:AI资本开支若减速,需求冲击放大。需DART年报"主要客户"章节确认(本次未获取)。</div>
+
+<div class="chart"><div class="chart-title">图表11:现金流与流动性(2Q26末快照)</div>
+<div id="chart11" class="chart-box"></div>
+<div class="src">数据来源:raw/quarterly/HXSCY-quarterly-2Q26.html。2Q26末现金88万亿(季增33.6万亿),FY25净利42.9万亿,2Q26净利93.9万亿(含大额一次性非经营收益)。</div></div>
+<div class="gap">⚠ <b>数据缺口(图表11):</b> 近5年经营现金流/资本开支/自由现金流/流动比率序列需现金流量表,本次未获取。<b>定性:</b> 现金流质量极佳(2Q26单季现金增33.6万亿,经营现金流远超净利润含一次性项);资本开支高强度(M15X/龙仁集群/印第安纳封装)——FCF可持续性取决于周期延续;流动性安全边际高(净现金69.4万亿)。</div>
+
+<h2>第二部分:当前重大风险与未来发展计划</h2>
+<h3>2.1 当前面临的重大风险</h3>
+<table class="rec-table"><tr><th>风险类别</th><th>具体描述</th><th>概率</th><th>影响</th><th>应对/缓释</th></tr>
+<tr><td>周期性</td><td>内存供需反转(2027-28 HBM产能集中释放),价格均值回归;历史FY21峰值后FY23即转亏</td><td>中高</td><td>高</td><td>长期协议锁定需求;CapEx纪律;产品高端化(HBM/eSSD)降波动</td></tr>
+<tr><td>客户集中</td><td>AI超大规模厂商(~10家)需求若放缓/AI资本开支减速</td><td>中</td><td>高</td><td>Multi-Year长期合同;Custom HBM;客户多元化</td></tr>
+<tr><td>地缘政治</td><td>美国对华先进制程/设备出口管制;中国NAND(长江存储)竞争</td><td>中</td><td>高</td><td>美国印第安纳先进封装产能;合规体系;技术自主</td></tr>
+<tr><td>一次性收益</td><td>2Q26净利93.9万亿>营收(净利率118%),含大额非经营性一次性收益,不可持续</td><td>已发生</td><td>中</td><td>分析以营业利润(76%营业利润率)为准,剔除一次性项</td></tr>
+<tr><td>资本开支</td><td>龙仁集群/印第安纳/M15X巨额capex,若周期下行将压制FCF</td><td>中</td><td>中</td><td>分阶段投资;净现金69.4万亿缓冲;CapEx Discipline</td></tr>
+<tr><td>技术替代</td><td>CXL/存内计算/新型存储架构长期替代HBM/DRAM</td><td>低</td><td>中</td><td>持续研发;1cnm/321层/HBM4迭代领先</td></tr>
+<tr><td>汇率</td><td>韩元波动影响美元投资者收益</td><td>中</td><td>低中</td><td>—</td></tr></table>
+<div class="src">依据:raw/annual/HXSCY-annual-FY25.html、raw/quarterly/HXSCY-quarterly-2Q26.html 风险与发展章节 + 芒格逆向分析。</div>
+
+<h3>2.2 未来发展计划(依据财报)</h3>
+<div class="analysis">
+<b>战略方向(3年内):</b> 巩固AI内存核心基础设施伙伴地位,从"产品供应商"升级为"AI时代核心基础设施伙伴"。<br>
+<b>产品/技术:</b> HBM4大规模量产(业界首家,已达客户要求运行速度/能效/成本);常规DRAM转向1cnm(第六代10nm)+SOCAMM2/GDDR7;NAND转向321层QLC,依托Solidigm QLC eSSD应对AI数据中心存储。<br>
+<b>产能:</b> M15X(清州)尽早达产;龙仁半导体集群一号厂建设中(中长期产能);清州/美国印第安纳先进封装推进,构建前后端一体化全球制造能力。<br>
+<b>客户:</b> 与约10家核心客户签长期协议(Multi-Year),以多年度合同+技术创新应对结构性需求增长。<br>
+<b>资本开支:</b> 坚持CapEx Discipline(纪律),兼顾产能扩张与财务健康。<br>
+<b>股东回报:</b> FY25分红3,000韩元/股(合计2.1万亿)+注销1,530万股库存股(占总股本2.1%,约12.2万亿),长期提升每股价值。
+</div>
+<div class="src">依据:raw/annual/HXSCY-annual-FY25.html、raw/quarterly/HXSCY-quarterly-2Q26.html 发展战略/展望章节。</div>
+
+<h2>第三部分:四大师分析结论与行动建议</h2>
+<h3>3.1 综合评估汇总表</h3>
+<table class="rec-table"><tr><th>维度</th><th>结论</th><th>信心度</th></tr>
+<tr><td>生意质量(段永平)</td><td>HBM差异化+技术锁定,已非纯大宗商品;但内存周期性本质未变</td><td>中高</td></tr>
+<tr><td>护城河(巴菲特)</td><td>HBM4首发量产+约50%份额+客户2-3年认证锁定,技术护城河深且加宽</td><td>高</td></tr>
+<tr><td>管理层(段+巴)</td><td>技术判断准(HBM先发)、财务纪律(净现金+分红+注销)、产能前瞻</td><td>高</td></tr>
+<tr><td>最大风险(芒格)</td><td>内存周期均值回归(2027-28)+客户集中+峰值利润率不可外推</td><td>高</td></tr>
+<tr><td>行业趋势(李录)</td><td>AI内存5-10年结构性趋势,HBM TAM 2024→2028翻数倍,SK hynix最纯受益</td><td>高</td></tr>
+<tr><td>估值吸引力(巴+段)</td><td>TTM 22.4x/PB 7.7x偏贵(峰值);前瞻5.5x便宜——无明确安全边际,需等回调</td><td>中</td></tr>
+<tr><td>AI时代定位(个人)</td><td>AI内存"卖水人"核心,HBM/DRAM/eSSD全布局,高度契合"长期相信AI"</td><td>高</td></tr>
+<tr><td>长期持有适合度</td><td>优秀企业适合长期核心配置,但周期性要求仓位管理与周期意识,非"买入即忘"</td><td>中高</td></tr>
+<tr><td>复利能力</td><td>ROE 44.2%(峰值)/净现金69.4万亿/产能再投资,但ROE周期性强(2023为负)</td><td>中</td></tr></table>
+
+<h3>3.2 四位大师模拟点评</h3>
+<div class="quote-box"><span class="master">巴菲特:</span> "这是一门好生意——HBM4全球首家量产、约50%份额(图表9)、FY25营业利润率49%(图表6),护城河真实且在加宽。但我对'周期顶峰买入'向来谨慎:2Q26营业利润率76%是非凡的,可历史上每个内存峰值(FY2021)之后都跟着深谷(FY2023营业亏损7.73万亿,图表1)。在22.4倍TTM、PB 7.7倍(图表7/8)上追高,不是我的游戏。净现金69.4万亿(图表2)我喜欢,但好公司≠好价格。我会等周期与情绪的折扣。"(依据:raw/annual/HXSCY-annual-FY25.html)</div>
+<div class="quote-box"><span class="master">芒格:</span> "反过来想——什么会杀死它?第一,周期:2Q26净利93.9万亿>营收(净利率118%)含大额一次性收益(图表11),别外推;Samsung/Micron HBM扩产,2027-28供需可能反转。第二,客户:约10家AI客户高度集中(图表10缺口),AI资本开支一减速就是需求悬崖——财报后跌10%就是市场在定价这个。第三,资本开支:龙仁/印第安纳巨额投入遇周期下行会吃掉FCF。内存是好赛道,但周期是敌人,峰值乐观最危险。"(依据:raw/quarterly/HXSCY-quarterly-2Q26.html)</div>
+<div class="quote-box"><span class="master">段永平:</span> "生意本质?HBM已被技术锁定成差异化产品,SK海力士证明了自己'做对了产品'(HBM3E/HBM4领先,图表9份额持续提升)。问'能否持有10年'——AI结构性需求+技术领先可穿越周期,但44%净利率(图表6)对内存是异常高位,我不会在此刻重仓。我的做法:小仓位、等周期回调、长期跟着AI内存走。'长期相信AI'这条,SK海力士是最直接的卖水人之一。"(依据:raw/annual/HXSCY-annual-FY25.html)</div>
+<div class="quote-box"><span class="master">李录:</span> "我喜欢有结构性 secular 趋势且合理入场的好公司。AI内存是5-10年结构性趋势——全球内存市场2024年1350亿→2028E 3000亿USD(图表4b),HBM 2024年124亿→2026E 500亿,SK海力士是最纯的HBM龙头。结构胜率很高。但李录也要安全边际:22.4x TTM在峰值无安全边际,5.5x前瞻有安全边际——前提是2026E盈利可持续。2Q26营业利润率76%更像峰值而非稳态。结论:结构性赢家,但入场时机要等,财报后的回调是健康的。"(依据:图表4b、图表8、raw/quarterly/HXSCY-quarterly-2Q26.html)</div>
+
+<h3>3.3 个人投资理念评估</h3>
+<div class="analysis">
+<b>长期持有优秀企业:</b> SK海力士是世界级存储龙头、AI内存核心受益者,适合长期核心配置。但内存周期性使其非"买入即忘"型(类似消费垄断),需周期意识与仓位管理。<br>
+<b>相信复利:</b> FY25 ROE 44.2%、净现金69.4万亿、产能再投资(HBM4/龙仁)持续复利;但ROE强周期性(2023为负),"复利"在内存股上是非线性的,需跨周期视角。<br>
+<b>长期相信AI:</b> SK海力士是AI内存"卖水人"——HBM(训练+推理)、服务器DRAM、eSSD全线布局,与"长期相信AI"理念高度契合,这是最强逻辑契合点。
+</div>
+
+<h3>3.4 行动建议</h3>
+<table class="rec-table"><tr><th>策略</th><th>建议</th></tr>
+<tr><td>总体评级</td><td><b>观望为主,逢回调分批建仓</b>(不追高、不空仓) · 长期核心配置方向</td></tr>
+<tr><td>估值锚定</td><td>TTM PE 22.4x(FY25峰值EPS 58,946)、PB 7.7x处周期高位;前瞻PE~5.5x反映2026E爆发。当前1,322,000韩元已计入乐观预期,追高风险大。</td></tr>
+<tr><td>盈利增速</td><td>FY25营收+47%、2Q26营收同比+257%(H1'26首破100万亿);2026E净利~170万亿(4倍FY25)为峰值,2027-08大概率放缓/回归。不可线性外推2Q26净利率118%(含一次性)。</td></tr>
+<tr><td>资产负债率</td><td>极低杠杆:净现金69.4万亿、有息负债18.6万亿(图表2),偿债风险极低;对比下行周期曾承压,现已大幅去杠杆。</td></tr>
+<tr><td>现金流</td><td>2Q26单季现金增33.6万亿(图表11),经营现金流极强;但capex高强度(龙仁/印第安纳),FCF可持续性依赖周期延续。</td></tr>
+<tr><td>长期生意模式</td><td>HBM技术护城河(图表9约50%份额)+AI结构性需求(图表4b内存TAM翻倍)=持久;但大宗内存周期性仍是底层风险。</td></tr>
+<tr><td>逻辑链</td><td>AI结构性需求→HBM供不应求→SK技术领先吃超额利润→但capex+竞品扩产→2027-28周期见顶风险→当前TTM已计入峰值→<b>逢回调分批买入优于追高</b></td></tr>
+<tr><td>风险对冲</td><td>分3-5档建仓;单仓位≤组合5-8%;设周期下行止损纪律;跟踪HBM份额变化与Samsung/Micron量产节奏;关注AI资本开支拐点。</td></tr>
+<tr><td>价格区间</td><td>当前1,322,000韩元(≈市值6,877亿美元)偏高。建议关注回调至<b>900,000-1,050,000韩元区间</b>(对应2026E前瞻PE约8-10x)分批介入;前高1,459,000之上追高风险大。(注:HXSCY为OTC非保荐ADR,价格跟踪KOSPI普通股,ADR:普通股比率以存托行披露为准;美元投资者注意汇率与流动性。)</td></tr></table>
+
+<div class="footer">
+<b>AI分析置信度:中</b> — 财务损益表(P&L)为一手权威数据(SK hynix官方IR),但完整资产负债表/现金流/存货/客户集中度/10年月度PB-PE序列存在数据缺口(韩国上市,标准美股数据源在本环境不可用),部分图表与结论置信度受限。<br>
+<b>投资确定性:中高</b> — AI内存结构性趋势确定、SK海力士HBM技术领先确定;但内存周期性与峰值盈利可持续性为核心不确定性。<br>
+本研究依据原始财报:raw/annual/HXSCY-annual-FY21~FY25.html、raw/quarterly/HXSCY-quarterly-2Q26.html (SK hynix官方Newsroom) · 行业:WSTS/TrendForce公开数据 · 行情:Naver+Google Finance(2026-07-30)。<br>
+⚠ 仅供学习研究,不构成投资建议。AI Berkshire · 2026-07-31
+</div>
+
+<script>
+var OPTS={"chart1": {"tooltip": {"trigger": "axis"}, "legend": {"data": ["营业收入", "净利润", "营收同比", "净利润同比"], "top": 0}, "grid": {"left": 60, "right": 70, "top": 60, "bottom": 40}, "xAxis": [{"type": "category", "data": ["2021", "2022", "2023", "2024", "2025"]}], "yAxis": [{"type": "value", "name": "万亿韩元", "position": "left"}, {"type": "value", "name": "同比%", "position": "right", "min": -150, "max": 350}], "series": [{"name": "营业收入", "type": "bar", "data": [43.0, 44.6, 32.8, 66.2, 97.1], "itemStyle": {"color": "#2980b9"}, "barGap": "0%", "label": {"show": true, "position": "top", "formatter": "{c}"}}, {"name": "净利润", "type": "bar", "data": [9.6, 2.2, -9.1, 19.8, 42.9], "itemStyle": {"color": "#27ae60"}, "label": {"show": true, "position": "top", "formatter": "{c}"}}, {"name": "营收同比", "type": "line", "yAxisIndex": 1, "data": [69.3, 3.8, -26.6, 102.0, 46.8], "itemStyle": {"color": "#e67e22"}, "lineStyle": {"width": 3}, "label": {"show": true, "formatter": "{c}%"}}, {"name": "净利润同比", "type": "line", "yAxisIndex": 1, "data": [321.0, -76.7, null, null, 117.0], "itemStyle": {"color": "#c0392b"}, "lineStyle": {"width": 3, "type": "dashed"}}]}, "chart2": {"tooltip": {"trigger": "axis"}, "grid": {"left": 70, "right": 40, "top": 30, "bottom": 30}, "xAxis": {"type": "category", "data": ["现金及等价物(2Q26末)", "有息负债(2Q26末)", "净现金"]}, "yAxis": {"type": "value", "name": "万亿韩元"}, "series": [{"type": "bar", "data": [88.0, 18.6, 69.4], "itemStyle": {"color": "#2980b9"}, "label": {"show": true, "position": "top", "formatter": "{c}万亿"}}]}, "chart4": {"tooltip": {"trigger": "axis"}, "legend": {"data": ["SK hynix营收增速", "全球内存市场增速"], "top": 0}, "grid": {"left": 60, "right": 50, "top": 50, "bottom": 35}, "xAxis": {"type": "category", "data": ["2021", "2022", "2023", "2024", "2025", "2026E", "2027E", "2028E"]}, "yAxis": {"type": "value", "name": "同比%"}, "series": [{"name": "SK hynix营收增速", "type": "line", "data": [null, 3.7, -26.5, 101.8, 46.7, 75.0, 10.0, 4.5], "itemStyle": {"color": "#2980b9"}, "lineStyle": {"width": 3}, "label": {"show": true, "formatter": "{c}%"}}, {"name": "全球内存市场增速", "type": "line", "data": [null, -18.8, -29.2, 46.7, 40.7, 26.3, 12.5, 11.1], "itemStyle": {"color": "#e67e22"}, "lineStyle": {"width": 3, "type": "dashed"}, "label": {"show": true, "formatter": "{c}%"}}]}, "chart4b": {"tooltip": {"trigger": "axis"}, "legend": {"data": ["全球内存市场规模", "韩国内存(估)", "全球半导体市场"], "top": 0}, "grid": {"left": 70, "right": 40, "top": 50, "bottom": 35}, "xAxis": {"type": "category", "data": ["2021", "2022", "2023", "2024", "2025", "2026E", "2027E", "2028E"]}, "yAxis": {"type": "value", "name": "十亿美元"}, "series": [{"name": "全球内存市场规模", "type": "bar", "data": [160, 130, 92, 135, 190, 240, 270, 300], "itemStyle": {"color": "#2980b9"}, "label": {"show": true, "position": "top"}}, {"name": "韩国内存(估)", "type": "bar", "data": [99.2, 80.6, 57.0, 83.7, 117.8, 148.8, 167.4, 186.0], "itemStyle": {"color": "#8e44ad"}, "label": {"show": true, "position": "top"}}, {"name": "全球半导体市场", "type": "line", "data": [556, 574, 527, 628, 697, 740, 790, 840], "itemStyle": {"color": "#e67e22"}, "lineStyle": {"width": 3}}]}, "chart5": {"tooltip": {"trigger": "axis"}, "grid": {"left": 60, "right": 40, "top": 30, "bottom": 35}, "xAxis": {"type": "category", "data": ["2021", "2022", "2023", "2024", "2025", "2026"]}, "yAxis": {"type": "value", "name": "指数(2021=100)"}, "series": [{"type": "line", "data": [100, 52, 34, 46, 71, 100], "areaStyle": {"opacity": 0.2}, "itemStyle": {"color": "#c0392b"}, "lineStyle": {"width": 3}, "label": {"show": true}}]}, "chart6": {"tooltip": {"trigger": "axis"}, "legend": {"data": ["营业利润率", "净利率"], "top": 0}, "grid": {"left": 60, "right": 40, "top": 50, "bottom": 35}, "xAxis": {"type": "category", "data": ["2021", "2022", "2023", "2024", "2025"]}, "yAxis": {"type": "value", "name": "%", "min": -35, "max": 55}, "series": [{"name": "营业利润率", "type": "line", "data": [28.9, 15.3, -23.6, 35.5, 48.6], "itemStyle": {"color": "#2980b9"}, "lineStyle": {"width": 3}, "label": {"show": true, "formatter": "{c}%"}}, {"name": "净利率", "type": "line", "data": [22.4, 5.0, -27.9, 29.9, 44.2], "itemStyle": {"color": "#27ae60"}, "lineStyle": {"width": 3}, "label": {"show": true, "formatter": "{c}%"}}]}, "chart7": {"tooltip": {"trigger": "axis"}, "grid": {"left": 60, "right": 40, "top": 30, "bottom": 30}, "xAxis": {"type": "category", "data": ["当前PB"]}, "yAxis": {"type": "value", "name": "倍"}, "series": [{"type": "bar", "data": [7.7], "itemStyle": {"color": "#8e44ad"}, "label": {"show": true, "position": "top", "formatter": "{c}x"}}]}, "chart8": {"tooltip": {"trigger": "axis"}, "legend": {"data": ["PE"], "top": 0}, "grid": {"left": 60, "right": 40, "top": 40, "bottom": 30}, "xAxis": {"type": "category", "data": ["TTM PE (FY25)", "前瞻 PE (2026E)"]}, "yAxis": {"type": "value", "name": "倍"}, "series": [{"type": "bar", "data": [22.43, 5.5], "itemStyle": {"color": "#2980b9"}, "label": {"show": true, "position": "top", "formatter": "{c}x"}, "markLine": {"data": [{"yAxis": 15, "name": "内存周期中性参考"}], "lineStyle": {"color": "#7f8c8d", "type": "dashed"}}}]}, "chart9": {"tooltip": {"trigger": "item"}, "grid": {"left": "52%", "right": 40, "top": 30, "bottom": 30}, "title": [{"text": "DRAM市占率趋势(%)", "left": "2%", "textStyle": {"fontSize": 13}}, {"text": "2025 DRAM份额结构", "left": "56%", "textStyle": {"fontSize": 13}}], "xAxis": {"type": "category", "data": ["21", "22", "23", "24", "25"], "gridIndex": 0}, "yAxis": {"type": "value", "gridIndex": 0, "min": 0, "max": 45}, "series": [{"type": "line", "data": [28.0, 28.0, 29.0, 34.0, 36.0], "xAxisIndex": 0, "yAxisIndex": 0, "itemStyle": {"color": "#2980b9"}, "lineStyle": {"width": 3}, "label": {"show": true, "formatter": "{c}%"}}, {"type": "pie", "radius": "28%", "center": ["68%", "58%"], "data": [{"name": "Samsung", "value": 0.42}, {"name": "SK hynix", "value": 0.36}, {"name": "Micron", "value": 0.2}, {"name": "Others", "value": 0.02}]}]}, "chart11": {"tooltip": {"trigger": "axis"}, "grid": {"left": 70, "right": 40, "top": 30, "bottom": 30}, "xAxis": {"type": "category", "data": ["2Q26末现金", "季度新增现金", "FY25净利润", "2Q26净利润(含一次性)"]}, "yAxis": {"type": "value", "name": "万亿韩元"}, "series": [{"type": "bar", "data": [88.0, 33.6, 42.9, 93.9], "itemStyle": {"color": "#27ae60"}, "label": {"show": true, "position": "top", "formatter": "{c}"}}]}};
+function initCharts(){
+  for(var id in OPTS){
+    var el=document.getElementById(id);
+    if(el){ try{ echarts.init(el).setOption(OPTS[id]); }catch(e){ el.innerHTML='<div style="color:#c0392b;padding:20px">图表渲染失败:'+e.message+'</div>'; } }
+  }
+}
+if(typeof echarts!=="undefined"){ initCharts(); }
+else{ document.body.insertAdjacentHTML('afterbegin','<div class="gap">⚠ ECharts库加载失败(需联网加载CDN)。数据表与文字分析仍可阅读。</div>'); }
+window.addEventListener('resize',function(){ document.querySelectorAll('.chart-box').forEach(function(el){ var i=echarts.getInstanceByDom(el); if(i) i.resize(); }); });
+</script>
+</body></html>

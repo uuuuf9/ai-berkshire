@@ -1,0 +1,68 @@
+{
+  "ticker": "OXY",
+  "date": "2026-08-06",
+  "data_cutoff": "2026-08-06",
+  "focus_points": [
+    {
+      "#": 1,
+      "point": "利润/收入",
+      "summary": "5年收入26.3B->22.1B(2021->2025,持续经营口径),2022峰值37.1B(油价$95);净利润1522M->1647M,2022峰值12504M。2025毛利率70.5%创新高但净利率仅9.5%(利息+优先股股息$679M拖累)。H1'26持续经营利润$3,236M同比+177%(高油价$83均价)。口径切换:2023-2025剔除OxyChem,2021-2022含OxyChem",
+      "source": "annual-5y.json + raw/annual/OXY-annual-2025.htm"
+    },
+    {
+      "#": 2,
+      "point": "存货规模",
+      "summary": "存货2021 $1,846M->2025 $1,823M,基本稳定;2024降至$1,756M(低点)。存货周转天数约30天,存货/收入比~8%,属E&P行业正常水平(原油成品+化学品库存)",
+      "source": "annual-5y.json + 10-K"
+    },
+    {
+      "#": 3,
+      "point": "债务情况",
+      "summary": "总债务2021 $30.4B(Anadarko遗留高位)->2025 $22.4B;2026-06已骤降至$13.7B(OxyChem出售$9.5B偿债$8.6B)。资产负债率2025 56.5%(行业参考45-50%,偏高但改善中)。利息费用$1,079M(2025),利息覆盖≈3.8x(经营利润/利息)。净债务大幅改善",
+      "source": "annual-5y.json + raw/quarterly/OXY-quarterly-2026Q2.htm(OxyChem交易)"
+    },
+    {
+      "#": 4,
+      "point": "公司及行业发展速度",
+      "summary": "公司收入2022-2025随油价下行(-35.8%,-6.9%,-0.5%);全球石油需求2021-2025从96.6增至104.0MMBbl/d(+1.9%CAGR,低速增长)。OXY 2024 CrownRock并购扩产,销量446->523 MMboe(+17%)。行业预测2026-2028需求+1%/年。市场规模全球$2.48T(2025)->$2.93T(2028F)",
+      "source": "annual-5y.json + industry-data/oil-market-20260806.json"
+    },
+    {
+      "#": 5,
+      "point": "财报风险",
+      "summary": "1)油价波动(核心,2025 WTI$64.81 vs 2022$94.8);2)债务与流动性(虽大降仍$13.7B);3)环境/气候法规(DAC投资不确定性);4)储量替代与枯竭(R/P~8.8年);5)地缘政治(OPEC+减产/中东);6)天然气Waha价格波动",
+      "source": "raw/annual/OXY-annual-2025.htm Risk Factors"
+    },
+    {
+      "#": 6,
+      "point": "未来发展计划",
+      "summary": "1)OxyChem出售偿债$8.6B,聚焦油气E&P;2)$3.0B股票回购授权;3)股息增长(季度$0.26,+8%);4)CrownRock协同(Permian全年产);5)Low Carbon Ventures(DAC直接空气捕集/CCUS);6)持续去杠杆目标;7)Permian开发资本2025投入$3.4B",
+      "source": "raw/annual/OXY-annual-2025.htm Strategy + 10-K"
+    },
+    {
+      "#": 7,
+      "point": "市占率",
+      "summary": "OXY 2025产量~1,433 Mboe/d(523 MMboe/年),占全球石油需求~1.4%,占美国原油产量~10.7%(13.4MMBbl/d中)。美国前五大E&P之一(仅次于Exxon/Chevron)。CrownRock后Permian地位强化",
+      "source": "annual-5y.json(销量) + industry-data(全球/美国产能)"
+    },
+    {
+      "#": 8,
+      "point": "下游客户集中度",
+      "summary": "E&P公司销售原油/NGL/天然气等大宗商品给众多购买方(炼厂/贸易商/营销商),无单一客户超10%(10-K未披露重大单一客户,符合大宗商品行业特征)。Midstream&Marketing部门处理集输/贸易。客户集中度风险低",
+      "source": "raw/annual/OXY-annual-2025.htm(大宗商品销售特征)"
+    },
+    {
+      "#": 9,
+      "point": "现金流",
+      "summary": "经营现金流2021 $10.4B->2025 $10.5B(稳定);FCF 2025 $4.1B(2022峰值$12.3B)。流动比率0.94(2025,偏低但E&P资本密集特性)。CapEx 2025 $6.4B(CrownRock开发)。FCF Margin 18.6%。债务大降后利息负担减轻将释放更多自由现金流",
+      "source": "annual-5y.json + 10-K"
+    }
+  ],
+  "forecasts": {
+    "revenue_profit": "卖方一致预期Forward PE 12.93隐含EPS≈$4.37(持续经营正常化);三情景:乐观$86/中性$52.5/悲观$23.8",
+    "industry": "IEA/EIA预测全球需求2026-2028 +1%/年",
+    "confidence": "medium"
+  },
+  "data_source": "annual-5y.json + raw/ + industry-data/",
+  "fetched_at": "2026-08-06"
+}

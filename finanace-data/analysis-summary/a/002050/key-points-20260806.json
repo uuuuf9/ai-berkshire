@@ -1,0 +1,44 @@
+{
+  "ticker": "002050.SZ",
+  "name": "三花智控",
+  "date": "2026-08-06",
+  "fetch_time": "2026-08-06 23:32:59",
+  "key_points": {
+    "1_revenue_profit": {
+      "summary": "2025年营收310.12亿(+10.97%)，归母净利润40.63亿(+31.10%)。净利增速远超营收增速，反映经营杠杆释放。制冷业务185.85亿(+12.22%)，汽车零部件124.27亿(+9.14%)。毛利率28.78%(+1.31pp)，净利率13.10%(+2.01pp)。",
+      "source": "annual-5y.json + raw/annual/002050-annual-2025.pdf 第14-15页"
+    },
+    "2_inventory": {
+      "summary": "存货56.4亿，同比+6.8%，低于营收增速。存货周转天数93天，存货/收入比18.2%，合理区间。",
+      "source": "annual-5y.json + raw/annual/002050-annual-2025.pdf 资产负债表"
+    },
+    "3_debt": {
+      "summary": "有息负债22.5亿(短贷13.9亿+长贷8.6亿)，资产负债率35.15%(较2022年53%大幅改善)。净现金126.6亿，流动比率2.1947。",
+      "source": "annual-5y.json + raw/annual/002050-annual-2025.pdf 资产负债表"
+    },
+    "4_growth_vs_industry": {
+      "summary": "公司2025年营收+10.97% vs 全球NEV销量+29%。差异因公司主动从'跑马圈地'转向'精耕细作'。全球汽车热管理市场425亿美元(CAGR~7%)，中国市场150亿美元。",
+      "source": "annual-5y.json + industry-data.json + raw/annual/002050-annual-2025.pdf 第10-12页"
+    },
+    "5_risks": {
+      "summary": "主要风险：原材料价格波动(铜铝)、劳动力成本上升、贸易及汇率风险(境外收入占42.96%)、NEV增速放缓、竞争加剧。均有应对措施。",
+      "source": "raw/annual/002050-annual-2025.pdf 第28页"
+    },
+    "6_development_plans": {
+      "summary": "战略：'专注领先、创新超越'，成为气候智能控制系统全球领军企业。2026计划：制冷业务推进数据中心+AI应用；汽车业务精耕细作；仿生机器人机电执行器先发优势。",
+      "source": "raw/annual/002050-annual-2025.pdf 第27-28页"
+    },
+    "7_market_share": {
+      "summary": "汽车热管理整体市占率约35%(2025年)，电子膨胀阀>45%、四通换向阀>60%全球第一。4,680项专利(含2,560项发明专利)，8个全球生产基地。",
+      "source": "industry-data.json + raw/annual/002050-annual-2025.pdf 第12-13页"
+    },
+    "8_customer_concentration": {
+      "summary": "CR5=32.14%(连年下降，从35.94%降至32.14%)，CR1=10.90%(从14.59%降至10.90%)。客户覆盖全球头部家电+车企+热管理集成商。集中度风险：低。",
+      "source": "raw/annual/002050-annual-2021~2025.pdf 主要客户披露"
+    },
+    "9_cash_flow": {
+      "summary": "OCF 50.9亿(+16.58%)，FCF 19.4亿(由负转正)。OCF/净利润=1.25。流动比率2.1947，速动比率1.8277。",
+      "source": "annual-5y.json + raw/annual/002050-annual-2025.pdf 现金流量表"
+    }
+  }
+}

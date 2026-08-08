@@ -1,0 +1,14 @@
+{
+  "ticker": "WDC",
+  "name": "Western Digital Corporation",
+  "name_cn": "西部数据",
+  "exchange": "NMS",
+  "sector": "Technology",
+  "industry": "Storage Devices (HDD)",
+  "currency": "USD",
+  "country": "United States",
+  "fiscal_year_end": "Late June (Friday closest to Jun 30)",
+  "description": "全球领先的硬盘驱动器(HDD)制造商。2025年2月分拆SanDisk(原Flash业务)后,成为纯HDD公司。聚焦云端/数据中心高容量企业级HDD,受益于AI驱动的数据存储需求爆发。Cloud终端市场占FY2025收入88%,与Seagate形成全球HDD双寡头格局,市占率约51%。",
+  "shares_outstanding": 344682131,
+  "fetch_time": "2026-08-06"
+}

@@ -1,0 +1,241 @@
+{
+  "ticker": "MU",
+  "company": "Micron Technology, Inc.",
+  "market": "american",
+  "source": "SEC EDGAR",
+  "cik": "0000723125",
+  "fetch_time": "2026-08-03",
+  "filings": [
+    {
+      "type": "10-K",
+      "category": "annual",
+      "filename": "MU-annual-2021.htm",
+      "fiscal_period": "2021",
+      "format": "HTML",
+      "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=10-K",
+      "size_bytes": 2829215,
+      "md5": "38016bac1f05aa15545d0c0f52087b59",
+      "local_path": "finanace-data/financial-report/american/MU/raw/annual/MU-annual-2021.htm"
+    },
+    {
+      "type": "10-K",
+      "category": "annual",
+      "filename": "MU-annual-2022.htm",
+      "fiscal_period": "2022",
+      "format": "HTML",
+      "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=10-K",
+      "size_bytes": 2851205,
+      "md5": "15c0a803aa9528f84df01e74613902d5",
+      "local_path": "finanace-data/financial-report/american/MU/raw/annual/MU-annual-2022.htm"
+    },
+    {
+      "type": "10-K",
+      "category": "annual",
+      "filename": "MU-annual-2023.htm",
+      "fiscal_period": "2023",
+      "format": "HTML",
+      "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=10-K",
+      "size_bytes": 2227693,
+      "md5": "fbbb95b9b37dd6f473399c5b87d81753",
+      "local_path": "finanace-data/financial-report/american/MU/raw/annual/MU-annual-2023.htm"
+    },
+    {
+      "type": "10-K",
+      "category": "annual",
+      "filename": "MU-annual-2024.htm",
+      "fiscal_period": "2024",
+      "format": "HTML",
+      "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=10-K",
+      "size_bytes": 2202347,
+      "md5": "8647d72f3cb6939fbbc73ebeacfc6742",
+      "local_path": "finanace-data/financial-report/american/MU/raw/annual/MU-annual-2024.htm"
+    },
+    {
+      "type": "10-K",
+      "category": "annual",
+      "filename": "MU-annual-2025.htm",
+      "fiscal_period": "2025",
+      "format": "HTML",
+      "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=10-K",
+      "size_bytes": 2439110,
+      "md5": "0437b9886058e3182025de9f191fe844",
+      "local_path": "finanace-data/financial-report/american/MU/raw/annual/MU-annual-2025.htm"
+    },
+    {
+      "type": "10-Q",
+      "category": "quarterly",
+      "filename": "MU-quarterly-2021Q2.htm",
+      "fiscal_period": "2021Q2",
+      "format": "HTML",
+      "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=10-Q",
+      "size_bytes": 2162868,
+      "md5": "8a254b8ce4e3261814e248b0eb3c99f4",
+      "local_path": "finanace-data/financial-report/american/MU/raw/quarterly/MU-quarterly-2021Q2.htm"
+    },
+    {
+      "type": "10-Q",
+      "category": "quarterly",
+      "filename": "MU-quarterly-2021Q4.htm",
+      "fiscal_period": "2021Q4",
+      "format": "HTML",
+      "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=10-Q",
+      "size_bytes": 1634690,
+      "md5": "dc092f804acd682ef505a831a69df547",
+      "local_path": "finanace-data/financial-report/american/MU/raw/quarterly/MU-quarterly-2021Q4.htm"
+    },
+    {
+      "type": "10-Q",
+      "category": "quarterly",
+      "filename": "MU-quarterly-2022Q1.htm",
+      "fiscal_period": "2022Q1",
+      "format": "HTML",
+      "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=10-Q",
+      "size_bytes": 1988431,
+      "md5": "cf8baa8504dda7901556baff800d52f9",
+      "local_path": "finanace-data/financial-report/american/MU/raw/quarterly/MU-quarterly-2022Q1.htm"
+    },
+    {
+      "type": "10-Q",
+      "category": "quarterly",
+      "filename": "MU-quarterly-2022Q2.htm",
+      "fiscal_period": "2022Q2",
+      "format": "HTML",
+      "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=10-Q",
+      "size_bytes": 2109355,
+      "md5": "7933904b898cbd099ad2de82fccaef7d",
+      "local_path": "finanace-data/financial-report/american/MU/raw/quarterly/MU-quarterly-2022Q2.htm"
+    },
+    {
+      "type": "10-Q",
+      "category": "quarterly",
+      "filename": "MU-quarterly-2022Q4.htm",
+      "fiscal_period": "2022Q4",
+      "format": "HTML",
+      "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=10-Q",
+      "size_bytes": 1658173,
+      "md5": "b087e3e1129a09a59e9c11f745c6bc7c",
+      "local_path": "finanace-data/financial-report/american/MU/raw/quarterly/MU-quarterly-2022Q4.htm"
+    },
+    {
+      "type": "10-Q",
+      "category": "quarterly",
+      "filename": "MU-quarterly-2023Q1.htm",
+      "fiscal_period": "2023Q1",
+      "format": "HTML",
+      "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=10-Q",
+      "size_bytes": 1636065,
+      "md5": "6934ce80e6a510d444beefa5eb4f3835",
+      "local_path": "finanace-data/financial-report/american/MU/raw/quarterly/MU-quarterly-2023Q1.htm"
+    },
+    {
+      "type": "10-Q",
+      "category": "quarterly",
+      "filename": "MU-quarterly-2023Q2.htm",
+      "fiscal_period": "2023Q2",
+      "format": "HTML",
+      "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=10-Q",
+      "size_bytes": 1759195,
+      "md5": "88586929bef7c8c08a2ddcba5278cc5d",
+      "local_path": "finanace-data/financial-report/american/MU/raw/quarterly/MU-quarterly-2023Q2.htm"
+    },
+    {
+      "type": "10-Q",
+      "category": "quarterly",
+      "filename": "MU-quarterly-2023Q4.htm",
+      "fiscal_period": "2023Q4",
+      "format": "HTML",
+      "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=10-Q",
+      "size_bytes": 1239759,
+      "md5": "ce8d12878c2f466f56d84e1754af3539",
+      "local_path": "finanace-data/financial-report/american/MU/raw/quarterly/MU-quarterly-2023Q4.htm"
+    },
+    {
+      "type": "10-Q",
+      "category": "quarterly",
+      "filename": "MU-quarterly-2024Q1.htm",
+      "fiscal_period": "2024Q1",
+      "format": "HTML",
+      "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=10-Q",
+      "size_bytes": 1581333,
+      "md5": "cd42c65343b4195e5351bfdcdd6817b2",
+      "local_path": "finanace-data/financial-report/american/MU/raw/quarterly/MU-quarterly-2024Q1.htm"
+    },
+    {
+      "type": "10-Q",
+      "category": "quarterly",
+      "filename": "MU-quarterly-2024Q2.htm",
+      "fiscal_period": "2024Q2",
+      "format": "HTML",
+      "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=10-Q",
+      "size_bytes": 1646330,
+      "md5": "47129c045a76f42fbfb131fbfb48c696",
+      "local_path": "finanace-data/financial-report/american/MU/raw/quarterly/MU-quarterly-2024Q2.htm"
+    },
+    {
+      "type": "10-Q",
+      "category": "quarterly",
+      "filename": "MU-quarterly-2024Q4.htm",
+      "fiscal_period": "2024Q4",
+      "format": "HTML",
+      "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=10-Q",
+      "size_bytes": 1237530,
+      "md5": "7e2b8297addc2d12b254b27d5a2fae3d",
+      "local_path": "finanace-data/financial-report/american/MU/raw/quarterly/MU-quarterly-2024Q4.htm"
+    },
+    {
+      "type": "10-Q",
+      "category": "quarterly",
+      "filename": "MU-quarterly-2025Q1.htm",
+      "fiscal_period": "2025Q1",
+      "format": "HTML",
+      "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=10-Q",
+      "size_bytes": 1566319,
+      "md5": "2030e65b011750eef023629bb4c55820",
+      "local_path": "finanace-data/financial-report/american/MU/raw/quarterly/MU-quarterly-2025Q1.htm"
+    },
+    {
+      "type": "10-Q",
+      "category": "quarterly",
+      "filename": "MU-quarterly-2025Q2.htm",
+      "fiscal_period": "2025Q2",
+      "format": "HTML",
+      "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=10-Q",
+      "size_bytes": 1656066,
+      "md5": "adcc12f15ae68fb24dd22e4de3402c87",
+      "local_path": "finanace-data/financial-report/american/MU/raw/quarterly/MU-quarterly-2025Q2.htm"
+    },
+    {
+      "type": "10-Q",
+      "category": "quarterly",
+      "filename": "MU-quarterly-2025Q4.htm",
+      "fiscal_period": "2025Q4",
+      "format": "HTML",
+      "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=10-Q",
+      "size_bytes": 1327156,
+      "md5": "bba5f4b5298ea714ff9bdedf984f341e",
+      "local_path": "finanace-data/financial-report/american/MU/raw/quarterly/MU-quarterly-2025Q4.htm"
+    },
+    {
+      "type": "10-Q",
+      "category": "quarterly",
+      "filename": "MU-quarterly-2026Q1.htm",
+      "fiscal_period": "2026Q1",
+      "format": "HTML",
+      "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=10-Q",
+      "size_bytes": 1517039,
+      "md5": "4e15de0711be01b00d9dab79d1b6ba1b",
+      "local_path": "finanace-data/financial-report/american/MU/raw/quarterly/MU-quarterly-2026Q1.htm"
+    },
+    {
+      "type": "10-Q",
+      "category": "quarterly",
+      "filename": "MU-quarterly-2026Q2.htm",
+      "fiscal_period": "2026Q2",
+      "format": "HTML",
+      "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=10-Q",
+      "size_bytes": 1531708,
+      "md5": "f04696300cfcebf4730f703beb2a2591",
+      "local_path": "finanace-data/financial-report/american/MU/raw/quarterly/MU-quarterly-2026Q2.htm"
+    }
+  ]
+}

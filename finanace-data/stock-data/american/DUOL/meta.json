@@ -1,0 +1,17 @@
+{
+  "ticker": "DUOL",
+  "name": "Duolingo, Inc.",
+  "name_cn": "多邻国",
+  "exchange": "NMS",
+  "sector": "Technology",
+  "industry": "Software - Application",
+  "currency": "USD",
+  "country": "United States",
+  "fiscal_year_end": "December 31",
+  "description": "Duolingo, Inc. operates as a mobile learning platform in the United States, the United Kingdom, and internationally. The company offers 250 language courses, including Spanish, English, French, German, Italian, Portuguese, Japanese, and Chinese through its Duolingo app. It also provides a digital English language proficiency assessment exam. The company was incorporated in 2011 and is headquartered in Pittsburgh, Pennsylvania.",
+  "shares_outstanding": 46950291,
+  "fetch_time": "2026-08-06",
+  "shares_class_a": 40594239,
+  "shares_class_b": 6356052,
+  "share_count_source": "10-K FY2025 cover page (as of Feb 25, 2026)"
+}

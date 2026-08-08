@@ -1,0 +1,21 @@
+{
+  "fetched_at": "2026-08-06T23:22:28",
+  "sources": [
+    "东方财富"
+  ],
+  "data": {
+    "name": "盛达资源",
+    "code": "000603",
+    "secucode": "000603.SZ",
+    "market": "a",
+    "exchange": "深圳证券交易所",
+    "industry": "有色金属-贵金属-金银矿采选",
+    "industry_detail": "有色金属矿采选业（金、银、铅、锌等多金属伴生矿）",
+    "currency": "CNY",
+    "total_shares": null,
+    "market_cap_yi": 215.96,
+    "listing_date": "1996-08-08",
+    "chairman": "赵庆",
+    "actual_controller": "赵庆"
+  }
+}

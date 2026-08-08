@@ -1,0 +1,42 @@
+{
+  "ticker": "DUOL",
+  "source": "yfinance (Yahoo Finance) computed",
+  "fetch_time": "2026-08-06",
+  "note": "PB computed from quarterly book value per share; PE-TTM from trailing 4-quarter diluted EPS vs quarter-end price. DUOL IPO 2021-07; only ~5y history available.",
+  "series": [
+    {
+      "date": "2025-03-31",
+      "PB": 15.779,
+      "price": 310.54,
+      "bvps": 19.68
+    },
+    {
+      "date": "2025-06-30",
+      "PB": 19.215,
+      "price": 410.02,
+      "bvps": 21.34
+    },
+    {
+      "date": "2025-09-30",
+      "PB": 11.349,
+      "price": 321.84,
+      "bvps": 28.36
+    },
+    {
+      "date": "2025-12-31",
+      "PB": 6.075,
+      "price": 175.5,
+      "bvps": 28.89,
+      "PE_TTM": 20.7,
+      "TTM_EPS": 8.48
+    },
+    {
+      "date": "2026-03-31",
+      "PB": 3.321,
+      "price": 98.57,
+      "bvps": 29.68,
+      "PE_TTM": 11.4,
+      "TTM_EPS": 8.65
+    }
+  ]
+}

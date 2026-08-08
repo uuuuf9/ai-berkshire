@@ -1,0 +1,19 @@
+{
+  "ticker": "OXY",
+  "date": "2026-08-06",
+  "pe_ttm": 8.68,
+  "pe_forward": 12.93,
+  "pb": 1.36,
+  "ps": 2.47,
+  "p_fcf": 11.74,
+  "ev_revenue": null,
+  "ev_ebitda": null,
+  "dividend_yield_pct": 1.84,
+  "eps_ttm": 6.52,
+  "eps_forward_implied": 4.37,
+  "bvps": 41.49,
+  "fcf_per_share_ttm": 5.31,
+  "data_source": "stockanalysis.com",
+  "fetched_at": "2026-08-06",
+  "note": "PB 用 2026-06-30 账面净值$41.49；Forward PE 12.93 隐含 Forward EPS≈$4.37(持续经营正常化)"
+}

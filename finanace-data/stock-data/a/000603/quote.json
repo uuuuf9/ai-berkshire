@@ -1,0 +1,25 @@
+{
+  "fetched_at": "2026-08-06T23:22:28",
+  "sources": [
+    "腾讯行情 qt.gtimg.cn"
+  ],
+  "data": {
+    "name": "盛达资源",
+    "code": "000603",
+    "price": 31.3,
+    "prev_close": 29.15,
+    "open": 32.06,
+    "high": 1209847.0,
+    "low": 508731.0,
+    "volume_hand": 701117,
+    "turnover_wan": 382280.0,
+    "market_cap_yi": 215.96,
+    "circ_market_cap_yi": 208.68,
+    "pe_ttm": 25.34,
+    "pb": 5.75,
+    "turnover_rate": 18.15,
+    "52w_high": 32.07,
+    "52w_low": 30.3,
+    "total_shares": null
+  }
+}

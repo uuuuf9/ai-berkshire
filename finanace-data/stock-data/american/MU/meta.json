@@ -1,0 +1,14 @@
+{
+  "ticker": "MU",
+  "name": "Micron Technology, Inc.",
+  "name_cn": "美光科技",
+  "exchange": "NASDAQ-GS",
+  "sector": "Technology",
+  "industry": "Semiconductors",
+  "currency": "USD",
+  "country": "United States",
+  "fiscal_year_end": "August (Thursday closest to Aug 31)",
+  "description": "全球领先的存储与存储解决方案供应商，主营DRAM(含HBM)、NAND、NOR闪存。AI驱动HBM需求爆发，数据中心收入占比约50%。",
+  "shares_outstanding": 1129393151,
+  "fetch_time": "2026-08-03"
+}

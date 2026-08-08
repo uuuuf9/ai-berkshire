@@ -1,0 +1,93 @@
+{
+  "source": "WSTS (World Semiconductor Trade Statistics) via SIA (Semiconductor Industry Association)",
+  "fetch_time": "2026-08-03",
+  "currency": "USD (billions)",
+  "data_points": {
+    "confirmed": {
+      "2026-05_monthly_3mma": 120.6,
+      "2026-05_yoy_pct": 104.1,
+      "2026_projected_annual": ">1500 (SIA 2026 State of Industry: 'global chip sales projected to exceed $1.5 trillion this year')",
+      "2025-05_monthly_3mma": 59.1
+    }
+  },
+  "annual_market_size": [
+    {
+      "year": 2020,
+      "global_usd_bn": 440,
+      "us_americas_bn": 95,
+      "source": "WSTS/SIA",
+      "note": "疫情影响"
+    },
+    {
+      "year": 2021,
+      "global_usd_bn": 556,
+      "us_americas_bn": 118,
+      "source": "WSTS/SIA",
+      "note": "增长26.2%, 缺芯潮"
+    },
+    {
+      "year": 2022,
+      "global_usd_bn": 574,
+      "us_americas_bn": 132,
+      "source": "WSTS",
+      "note": "增长3.3%, 见顶"
+    },
+    {
+      "year": 2023,
+      "global_usd_bn": 527,
+      "us_americas_bn": 125,
+      "source": "WSTS/SIA",
+      "note": "下降8.2%, 存储去库存"
+    },
+    {
+      "year": 2024,
+      "global_usd_bn": 628,
+      "us_americas_bn": 155,
+      "source": "WSTS/SIA",
+      "note": "增长19.2%, AI驱动复苏"
+    },
+    {
+      "year": 2025,
+      "global_usd_bn": 735,
+      "us_americas_bn": 190,
+      "source": "WSTS/SIA推算(May2025月均$59.1B)",
+      "note": "增长~17%, HBM需求启动",
+      "confidence": "中"
+    },
+    {
+      "year": 2026,
+      "global_usd_bn": 1520,
+      "us_americas_bn": 420,
+      "source": "SIA 2026 State of Industry (>$1.5T)",
+      "note": "增长~107%, AI超级周期",
+      "confidence": "中",
+      "is_forecast": true
+    },
+    {
+      "year": 2027,
+      "global_usd_bn": 1850,
+      "us_americas_bn": 520,
+      "source": "WSTS趋势外推",
+      "note": "预测",
+      "confidence": "低",
+      "is_forecast": true
+    },
+    {
+      "year": 2028,
+      "global_usd_bn": 2100,
+      "us_americas_bn": 600,
+      "source": "WSTS趋势外推",
+      "note": "预测",
+      "confidence": "低",
+      "is_forecast": true
+    }
+  ],
+  "regional_growth_may_2026": {
+    "Americas": "+132.2%",
+    "AsiaPacific_AllOther": "+118.9%",
+    "China": "+88.8%",
+    "Europe": "+60.7%",
+    "Japan": "+23.8%"
+  },
+  "note": "2025年数据为基于SIA月度数据推算(May2025 3MMA=$59.1B), 2026年为SIA官方预测(>$1.5T), 2027-2028为趋势外推(低置信度)"
+}

@@ -1,0 +1,61 @@
+{
+  "ticker": "OXY",
+  "currency": "USD",
+  "unit": "millions",
+  "quarters": [
+    {
+      "quarter": "Q2-2026",
+      "net_sales_m": 8065,
+      "income_continuing_m": 3000,
+      "income_discontinued_m": -4,
+      "net_income_m": 2996,
+      "ni_common_m": 2807,
+      "eps_basic": 2.8,
+      "basis": "continuing_ops",
+      "note": "高油价($90-100)驱动持续经营强劲"
+    },
+    {
+      "quarter": "Q1-2026",
+      "net_sales_m": 5230,
+      "income_continuing_m": 236,
+      "income_discontinued_m": 3123,
+      "net_income_m": 6355,
+      "ni_common_m": 3175,
+      "eps_basic": 3.36,
+      "basis": "continuing_ops+oxychem_gain",
+      "note": "Q1含OxyChem出售一次性收益$3,123M(终止经营)；低油价($60-70)压低持续经营"
+    },
+    {
+      "quarter": "Q4-2025",
+      "net_sales_m": null,
+      "ni_common_m": null,
+      "basis": "not_separately_rested",
+      "note": "FY2025年报持续经营口径未单独披露Q4；10-K将OxyChem重分类，Q3'25原报含OxyChem致口径不可直接拆分"
+    },
+    {
+      "quarter": "Q3-2025",
+      "net_sales_m": 6624,
+      "ni_common_m": 661,
+      "eps_basic": 0.67,
+      "basis": "as_filed_incl_oxychem",
+      "note": "原10-Q申报含OxyChem(10/2/2025签约前)；与10-K持续经营口径不可比"
+    }
+  ],
+  "h1_comparison": {
+    "h1_2026": {
+      "net_sales_m": 13295,
+      "income_continuing_m": 3236,
+      "income_discontinued_m": 3119,
+      "ni_common_m": 5982
+    },
+    "h1_2025": {
+      "net_sales_m": 10962,
+      "income_continuing_m": 1168,
+      "income_discontinued_m": 245,
+      "ni_common_m": 1054
+    },
+    "continuing_ops_yoy_pct": 177.05
+  },
+  "data_source": "SEC 10-Q (2026Q2, 2025Q3)",
+  "fetched_at": "2026-08-06"
+}

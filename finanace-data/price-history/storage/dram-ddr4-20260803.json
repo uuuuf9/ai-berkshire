@@ -1,0 +1,111 @@
+{
+  "source": "TrendForce DRAMeXchange (DDR4 8Gb合约价) + Micron 10-K ASP数据",
+  "fetch_time": "2026-08-03",
+  "currency": "USD",
+  "note": "DDR4 8Gb(1Gx8)合约价为DRAM行业基准价格; 近期含HBM溢价影响",
+  "price_series": [
+    {
+      "date": "2016-12",
+      "ddr4_8gb_contract": 2.72,
+      "note": "景气底部"
+    },
+    {
+      "date": "2017-06",
+      "ddr4_8gb_contract": 4.8,
+      "note": "涨价周期"
+    },
+    {
+      "date": "2017-12",
+      "ddr4_8gb_contract": 6.5,
+      "note": "高点"
+    },
+    {
+      "date": "2018-06",
+      "ddr4_8gb_contract": 5.5,
+      "note": ""
+    },
+    {
+      "date": "2018-12",
+      "ddr4_8gb_contract": 3.8,
+      "note": "下行"
+    },
+    {
+      "date": "2019-06",
+      "ddr4_8gb_contract": 3.0,
+      "note": ""
+    },
+    {
+      "date": "2019-12",
+      "ddr4_8gb_contract": 3.1,
+      "note": "见底"
+    },
+    {
+      "date": "2020-06",
+      "ddr4_8gb_contract": 3.2,
+      "note": ""
+    },
+    {
+      "date": "2020-12",
+      "ddr4_8gb_contract": 3.5,
+      "note": "复苏"
+    },
+    {
+      "date": "2021-06",
+      "ddr4_8gb_contract": 4.2,
+      "note": "缺芯潮"
+    },
+    {
+      "date": "2021-12",
+      "ddr4_8gb_contract": 4.5,
+      "note": "高点"
+    },
+    {
+      "date": "2022-06",
+      "ddr4_8gb_contract": 3.2,
+      "note": "下行"
+    },
+    {
+      "date": "2022-12",
+      "ddr4_8gb_contract": 1.8,
+      "note": "暴跌"
+    },
+    {
+      "date": "2023-06",
+      "ddr4_8gb_contract": 1.45,
+      "note": "谷底"
+    },
+    {
+      "date": "2023-12",
+      "ddr4_8gb_contract": 1.65,
+      "note": "复苏"
+    },
+    {
+      "date": "2024-06",
+      "ddr4_8gb_contract": 1.9,
+      "note": "HBM驱动"
+    },
+    {
+      "date": "2024-12",
+      "ddr4_8gb_contract": 2.8,
+      "note": "涨价"
+    },
+    {
+      "date": "2025-06",
+      "ddr4_8gb_contract": 4.5,
+      "note": "AI需求爆发(10-K: ASP+低40%range)"
+    },
+    {
+      "date": "2025-12",
+      "ddr4_8gb_contract": 7.2,
+      "note": "HBM3E供不应求"
+    },
+    {
+      "date": "2026-06",
+      "ddr4_8gb_contract": 12.5,
+      "note": "超级周期高点, 较谷底涨760%",
+      "confidence": "中"
+    }
+  ],
+  "current_vs_history": "当前DDR4合约价约$12.5, 处于10年98%分位(历史区间$1.45-$6.50)",
+  "data_gap": "2026年6月价格为估算(TrendForce未公开最新), 置信度中"
+}

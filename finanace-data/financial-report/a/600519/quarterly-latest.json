@@ -1,0 +1,72 @@
+{
+  "ticker": "600519.SS",
+  "data": [
+    {
+      "report_date": "2026-03-31",
+      "report_name": "2026一季报",
+      "revenue": 54702912385.23,
+      "revenue_yoy": 6.336009277123,
+      "net_profit": 27242512886.45,
+      "net_profit_yoy": 1.471418294983,
+      "eps": 21.76,
+      "bps": 216.32234994607,
+      "roe_weighted": 10.57,
+      "gross_margin": 89.7592176242,
+      "net_margin": 52.2244889889
+    },
+    {
+      "report_date": "2025-12-31",
+      "report_name": "2025年报",
+      "revenue": 172054171890.91,
+      "revenue_yoy": -1.200097176919,
+      "net_profit": 82320067101.68,
+      "net_profit_yoy": -4.532254817158,
+      "eps": 65.66,
+      "bps": 195.355449727901,
+      "roe_weighted": 32.53,
+      "gross_margin": 91.1795516835,
+      "net_margin": 50.5278865155
+    },
+    {
+      "report_date": "2025-09-30",
+      "report_name": "2025三季报",
+      "revenue": 130903889634.88,
+      "revenue_yoy": 6.320001880648,
+      "net_profit": 64626746712.18,
+      "net_profit_yoy": 6.245844952412,
+      "eps": 51.53,
+      "bps": 205.283142014385,
+      "roe_weighted": 24.64,
+      "gross_margin": 91.2933832134,
+      "net_margin": 52.0800885914
+    },
+    {
+      "report_date": "2025-06-30",
+      "report_name": "2025中报",
+      "revenue": 91093762553.97,
+      "revenue_yoy": 9.158168061298,
+      "net_profit": 45402962298.1,
+      "net_profit_yoy": 8.891466577162,
+      "eps": 36.18,
+      "bps": 189.975286050079,
+      "roe_weighted": 17.89,
+      "gross_margin": 91.2993094819,
+      "net_margin": 52.5640684573
+    },
+    {
+      "report_date": "2025-03-31",
+      "report_name": "2025一季报",
+      "revenue": 51443450583.77,
+      "revenue_yoy": 10.66739891106,
+      "net_profit": 26847474238.76,
+      "net_profit_yoy": 11.561111702645,
+      "eps": 21.38,
+      "bps": 205.666530124802,
+      "roe_weighted": 10.92,
+      "gross_margin": 91.9736093542,
+      "net_margin": 54.8895459139
+    }
+  ],
+  "source": "东方财富 RPT_F10_FINANCE_MAINFINADATA",
+  "fetch_time": "2026-08-06 22:35:45"
+}

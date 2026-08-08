@@ -1,0 +1,47 @@
+{
+  "ticker": "DUOL",
+  "fetch_time": "2026-08-06",
+  "source": "yfinance",
+  "quarters": [
+    {
+      "period_end": "2026-03-31",
+      "revenue": 291967000,
+      "net_income": 43460000,
+      "gross_margin_pct": 73.0,
+      "net_margin_pct": 14.9,
+      "operating_cash_flow": 150771000,
+      "free_cash_flow": 147786000,
+      "diluted_eps": 0.89
+    },
+    {
+      "period_end": "2025-12-31",
+      "revenue": 282868000,
+      "net_income": 41954000,
+      "gross_margin_pct": 72.8,
+      "net_margin_pct": 14.8,
+      "operating_cash_flow": 107278000,
+      "free_cash_flow": 93732000,
+      "diluted_eps": 0.89976
+    },
+    {
+      "period_end": "2025-09-30",
+      "revenue": 271713000,
+      "net_income": 292195000,
+      "gross_margin_pct": 72.5,
+      "net_margin_pct": 107.5,
+      "operating_cash_flow": 84239000,
+      "free_cash_flow": 77356000,
+      "diluted_eps": 5.95
+    },
+    {
+      "period_end": "2025-06-30",
+      "revenue": 252265000,
+      "net_income": 44781000,
+      "gross_margin_pct": 72.4,
+      "net_margin_pct": 17.8,
+      "operating_cash_flow": 90675000,
+      "free_cash_flow": 86324000,
+      "diluted_eps": 0.91
+    }
+  ]
+}

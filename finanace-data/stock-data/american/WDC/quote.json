@@ -1,0 +1,22 @@
+{
+  "ticker": "WDC",
+  "source_primary": "yfinance",
+  "fetch_time": "2026-08-06",
+  "current_price": 473.8699951171875,
+  "previous_close": 458.28,
+  "change": 15.59,
+  "change_pct": 3.4,
+  "day_high": 474.65,
+  "day_low": 407.475,
+  "volume": 9345239,
+  "avg_volume": 8290890,
+  "market_cap": 163334519733.95178,
+  "market_cap_usd_bn": 163.3,
+  "shares_outstanding": 344682131,
+  "fifty_two_week_low": 73.14,
+  "fifty_two_week_high": 799.87,
+  "annualized_dividend": 0.6,
+  "dividend_yield_pct": 11.0,
+  "beta": 2.217,
+  "market_status": "REGULAR"
+}

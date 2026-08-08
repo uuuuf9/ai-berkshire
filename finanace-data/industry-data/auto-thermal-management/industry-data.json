@@ -1,0 +1,170 @@
+{
+  "ticker": "002050.SZ",
+  "name": "三花智控",
+  "sector": "auto-thermal-management",
+  "fetch_time": "2026-08-06 23:25:42",
+  "sources": [
+    "巨潮资讯网 002050 年度报告 2021-2025 (MarkLines/EV Tank/乘联会/产业在线 引用)",
+    "MarketsandMarkets / Fortune Business Insights (市场规模估计)",
+    "中汽协/IEA Global EV Outlook (历史NEV销量)",
+    "中国人民银行/美联储 (年度平均汇率)"
+  ],
+  "exchange_rates_cny_usd": {
+    "2021": 6.45,
+    "2022": 6.73,
+    "2023": 7.08,
+    "2024": 7.12,
+    "2025": 7.25,
+    "2026F": 7.2,
+    "2027F": 7.2,
+    "2028F": 7.2
+  },
+  "nev_sales": {
+    "global_wan": {
+      "2021": 660,
+      "2022": 1080,
+      "2023": 1465.3,
+      "2024": 1752.9,
+      "2025": 2262.0,
+      "2026F": 2850,
+      "2027F": 3500,
+      "2028F": 4200
+    },
+    "china_wan": {
+      "2021": 352,
+      "2022": 689,
+      "2023": 949.5,
+      "2024": 1227.4,
+      "2025": 1649.0,
+      "2026F": 2000,
+      "2027F": 2400,
+      "2028F": 2800
+    },
+    "global_yoy": {
+      "2022": 63.6,
+      "2023": 35.7,
+      "2024": 19.6,
+      "2025": 29.0,
+      "2027F": 22.8,
+      "2028F": 20.0
+    },
+    "china_yoy": {
+      "2022": 95.7,
+      "2023": 37.8,
+      "2024": 29.3,
+      "2025": 34.3,
+      "2027F": 20.0,
+      "2028F": 16.7
+    },
+    "source": "MarkLines/乘联会/EV Tank (from annual reports 2023-2025); 中汽协/IEA (2021-2022)"
+  },
+  "automotive_thermal_market": {
+    "global_usd_billion": {
+      "2021": 32.5,
+      "2022": 35.2,
+      "2023": 37.8,
+      "2024": 40.1,
+      "2025": 42.5,
+      "2026F": 45.5,
+      "2027F": 48.8,
+      "2028F": 52.3
+    },
+    "china_usd_billion": {
+      "2021": 10.5,
+      "2022": 11.6,
+      "2023": 12.8,
+      "2024": 13.9,
+      "2025": 15.0,
+      "2026F": 16.3,
+      "2027F": 17.8,
+      "2028F": 19.4
+    },
+    "source": "MarketsandMarkets/Fortune Business Insights综合估计 (CAGR ~7%)",
+    "confidence": "medium"
+  },
+  "china_ac_market": {
+    "central_ac_cny_yi": {
+      "2021": 1230,
+      "2022": 1350,
+      "2023": 1420,
+      "2024": 1497,
+      "2025": 1386.8,
+      "2026F": 1450,
+      "2027F": 1520,
+      "2028F": 1600
+    },
+    "household_ac_wan_units": {
+      "2021": 21035,
+      "2022": 22247,
+      "2023": 21068,
+      "2024": 20079,
+      "2025": 19839,
+      "2026F": 20500,
+      "2027F": 21200,
+      "2028F": 22000
+    },
+    "source": "产业在线 (from annual reports); 2024-2025为年报披露值, 2021-2023为产业在线公开数据",
+    "confidence": "high"
+  },
+  "market_share": {
+    "products": [
+      {
+        "product": "空调电子膨胀阀",
+        "share_pct": 55,
+        "rank": 1,
+        "source": "行业估计"
+      },
+      {
+        "product": "四通换向阀",
+        "share_pct": 60,
+        "rank": 1,
+        "source": "行业估计"
+      },
+      {
+        "product": "电磁阀",
+        "share_pct": 50,
+        "rank": 1,
+        "source": "行业估计"
+      },
+      {
+        "product": "微通道换热器",
+        "share_pct": 35,
+        "rank": 1,
+        "source": "行业估计"
+      },
+      {
+        "product": "车用电子膨胀阀",
+        "share_pct": 45,
+        "rank": 1,
+        "source": "行业估计"
+      },
+      {
+        "product": "新能源车热管理集成组件",
+        "share_pct": 30,
+        "rank": 1,
+        "source": "行业估计"
+      }
+    ],
+    "auto_thermal_share_trend": {
+      "2021": 28,
+      "2022": 30,
+      "2023": 32,
+      "2024": 33,
+      "2025": 35,
+      "2026F": 36,
+      "2027F": 37,
+      "2028F": 38
+    }
+  },
+  "company_operational_data": {
+    "2025": {
+      "ev_thermal_production_wan": 6388.89,
+      "ev_thermal_sales_wan": 6375.27,
+      "ev_thermal_revenue_cny": 10998677964.51,
+      "ice_thermal_production_wan": 19392.19,
+      "ice_thermal_sales_wan": 19384.66,
+      "domestic_production_wan": 15159.15,
+      "overseas_production_wan": 10621.93
+    }
+  }
+}

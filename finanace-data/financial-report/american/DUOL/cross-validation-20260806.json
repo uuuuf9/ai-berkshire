@@ -1,0 +1,12 @@
+{
+  "fetch_time":"2026-08-06",
+  "market_cap_verification":{"price":123.96,"shares":46950291,"calculated_mcap_usd":5820000000,"reported_mcap_usd":5820000000,"deviation_pct":0.0,"status":"PASS"},
+  "revenue_crosscheck":{"yfinance":1037589000,"sec_10k":1037589000,"deviation_pct":0.0,"status":"PASS"},
+  "net_income_crosscheck":{"yfinance":414065000,"sec_10k":414065000,"deviation_pct":0.0,"status":"PASS","note":"Includes $256.7M one-time deferred tax asset valuation allowance release"},
+  "valuation_reported_eps":{"pe_ttm":14.46,"pb":4.17,"p_fcf":16.62,"fcf_yield_pct":6.02,"roe_pct":28.85,"note":"REPORTED EPS $8.57 includes one-time tax benefit - NOT representative"},
+  "valuation_normalized_eps":{"pe_ttm":39.99,"pb":4.17,"p_fcf":16.62,"fcf_yield_pct":6.02,"roe_pct":10.43,"note":"NORMALIZED EPS $3.10 (pre-tax $182M x 79%) - representative of ongoing earnings"},
+  "three_scenario":{"current_price":123.96,"normalized_eps":3.10,
+    "bull":{"growth":0.35,"pe":45,"target_eps":7.63,"target_price":343.2,"change_pct":176.9},
+    "base":{"growth":0.25,"pe":30,"target_eps":6.05,"target_price":181.6,"change_pct":46.5},
+    "bear":{"growth":0.15,"pe":20,"target_eps":4.71,"target_price":94.3,"change_pct":-23.9}}
+}

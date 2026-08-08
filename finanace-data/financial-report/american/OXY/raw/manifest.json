@@ -1,0 +1,216 @@
+{
+  "generated_at": "2026-08-06T23:16:44+08:00",
+  "ticker": "OXY",
+  "files": [
+    {
+      "type": "quarterly",
+      "filename": "OXY-quarterly-2026Q2.htm",
+      "period": "2026Q2",
+      "source": "SEC EDGAR 10-Q (accession 0001628280-26-053388, filed 2026-08-05)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/797468/000162828026053388/oxy-20260630.htm",
+      "size_bytes": 1836862,
+      "md5": "43ee9fe9deb972d12868bd4df6133bee",
+      "downloaded_at": "2026-08-06T23:16:26+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "OXY-quarterly-2026Q1.htm",
+      "period": "2026Q1",
+      "source": "SEC EDGAR 10-Q (accession 0001628280-26-030584, filed 2026-05-05)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/797468/000162828026030584/oxy-20260331.htm",
+      "size_bytes": 1372896,
+      "md5": "eacd423aad8910012f1d568a470906e3",
+      "downloaded_at": "2026-08-06T23:16:27+08:00"
+    },
+    {
+      "type": "annual",
+      "filename": "OXY-annual-2025.htm",
+      "period": "2025",
+      "source": "SEC EDGAR 10-K (accession 0001628280-26-009059, filed 2026-02-18)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/797468/000162828026009059/oxy-20251231.htm",
+      "size_bytes": 4331808,
+      "md5": "91191fa7ffcc628385ca83eed13aef17",
+      "downloaded_at": "2026-08-06T23:16:27+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "OXY-quarterly-2025Q3.htm",
+      "period": "2025Q3",
+      "source": "SEC EDGAR 10-Q (accession 0001628280-25-051071, filed 2025-11-10)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/797468/000162828025051071/oxy-20250930.htm",
+      "size_bytes": 1701360,
+      "md5": "9cc5b248c47c35ae7c778cabae158e51",
+      "downloaded_at": "2026-08-06T23:16:28+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "OXY-quarterly-2025Q2.htm",
+      "period": "2025Q2",
+      "source": "SEC EDGAR 10-Q (accession 0000797468-25-000111, filed 2025-08-06)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/797468/000079746825000111/oxy-20250630.htm",
+      "size_bytes": 1666148,
+      "md5": "f30b8a4dd18d738d61bbdce448032477",
+      "downloaded_at": "2026-08-06T23:16:29+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "OXY-quarterly-2025Q1.htm",
+      "period": "2025Q1",
+      "source": "SEC EDGAR 10-Q (accession 0000797468-25-000076, filed 2025-05-07)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/797468/000079746825000076/oxy-20250331.htm",
+      "size_bytes": 1239265,
+      "md5": "7f4053468784abb96df95de954c10dfb",
+      "downloaded_at": "2026-08-06T23:16:29+08:00"
+    },
+    {
+      "type": "annual",
+      "filename": "OXY-annual-2024.htm",
+      "period": "2024",
+      "source": "SEC EDGAR 10-K (accession 0000797468-25-000029, filed 2025-02-18)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/797468/000079746825000029/oxy-20241231.htm",
+      "size_bytes": 4258125,
+      "md5": "bc9b02bda95457330b3442360cbd30f0",
+      "downloaded_at": "2026-08-06T23:16:30+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "OXY-quarterly-2024Q3.htm",
+      "period": "2024Q3",
+      "source": "SEC EDGAR 10-Q (accession 0000797468-24-000164, filed 2024-11-12)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/797468/000079746824000164/oxy-20240930.htm",
+      "size_bytes": 1772862,
+      "md5": "d1a6843831f9efeec83d5189721e429a",
+      "downloaded_at": "2026-08-06T23:16:31+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "OXY-quarterly-2024Q2.htm",
+      "period": "2024Q2",
+      "source": "SEC EDGAR 10-Q (accession 0000797468-24-000136, filed 2024-08-07)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/797468/000079746824000136/oxy-20240630.htm",
+      "size_bytes": 1702350,
+      "md5": "ae77f6f503c484e3ae774f54058ce5c1",
+      "downloaded_at": "2026-08-06T23:16:31+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "OXY-quarterly-2024Q1.htm",
+      "period": "2024Q1",
+      "source": "SEC EDGAR 10-Q (accession 0000797468-24-000095, filed 2024-05-07)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/797468/000079746824000095/oxy-20240331.htm",
+      "size_bytes": 1238126,
+      "md5": "6ad07dd5204620368b802e6fdace8479",
+      "downloaded_at": "2026-08-06T23:16:33+08:00"
+    },
+    {
+      "type": "annual",
+      "filename": "OXY-annual-2023.htm",
+      "period": "2023",
+      "source": "SEC EDGAR 10-K (accession 0000797468-24-000034, filed 2024-02-14)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/797468/000079746824000034/oxy-20231231.htm",
+      "size_bytes": 4263681,
+      "md5": "8178bfd3e57e18002e49b61288123277",
+      "downloaded_at": "2026-08-06T23:16:34+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "OXY-quarterly-2023Q3.htm",
+      "period": "2023Q3",
+      "source": "SEC EDGAR 10-Q (accession 0000797468-23-000092, filed 2023-11-07)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/797468/000079746823000092/oxy-20230930.htm",
+      "size_bytes": 1665011,
+      "md5": "2d2405510349e00da264e2e81a1c0cf0",
+      "downloaded_at": "2026-08-06T23:16:35+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "OXY-quarterly-2023Q2.htm",
+      "period": "2023Q2",
+      "source": "SEC EDGAR 10-Q (accession 0000797468-23-000075, filed 2023-08-02)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/797468/000079746823000075/oxy-20230630.htm",
+      "size_bytes": 1643290,
+      "md5": "a2ae11b0205f3d9b0c0402a441436829",
+      "downloaded_at": "2026-08-06T23:16:36+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "OXY-quarterly-2023Q1.htm",
+      "period": "2023Q1",
+      "source": "SEC EDGAR 10-Q (accession 0000797468-23-000032, filed 2023-05-09)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/797468/000079746823000032/oxy-20230331.htm",
+      "size_bytes": 1574371,
+      "md5": "0278f8a746e485e387d5e3ad070f4f0f",
+      "downloaded_at": "2026-08-06T23:16:36+08:00"
+    },
+    {
+      "type": "annual",
+      "filename": "OXY-annual-2022.htm",
+      "period": "2022",
+      "source": "SEC EDGAR 10-K (accession 0000797468-23-000011, filed 2023-02-27)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/797468/000079746823000011/oxy-20221231.htm",
+      "size_bytes": 5413605,
+      "md5": "fa54120d10a5b4628ebe4e852813a8ae",
+      "downloaded_at": "2026-08-06T23:16:37+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "OXY-quarterly-2022Q3.htm",
+      "period": "2022Q3",
+      "source": "SEC EDGAR 10-Q (accession 0000797468-22-000036, filed 2022-11-08)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/797468/000079746822000036/oxy-20220930.htm",
+      "size_bytes": 2038814,
+      "md5": "51392ce9bee6c5c373c84559862eb2c1",
+      "downloaded_at": "2026-08-06T23:16:38+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "OXY-quarterly-2022Q2.htm",
+      "period": "2022Q2",
+      "source": "SEC EDGAR 10-Q (accession 0000797468-22-000030, filed 2022-08-02)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/797468/000079746822000030/oxy-20220630.htm",
+      "size_bytes": 2031483,
+      "md5": "72d3cfe9922e4d642e042942d34b7957",
+      "downloaded_at": "2026-08-06T23:16:39+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "OXY-quarterly-2022Q1.htm",
+      "period": "2022Q1",
+      "source": "SEC EDGAR 10-Q (accession 0000797468-22-000018, filed 2022-05-10)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/797468/000079746822000018/oxy-20220331.htm",
+      "size_bytes": 1424797,
+      "md5": "9838c427844266d2cf0ec8251cd5b803",
+      "downloaded_at": "2026-08-06T23:16:40+08:00"
+    },
+    {
+      "type": "annual",
+      "filename": "OXY-annual-2021.htm",
+      "period": "2021",
+      "source": "SEC EDGAR 10-K (accession 0000797468-22-000008, filed 2022-02-24)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/797468/000079746822000008/oxy-20211231.htm",
+      "size_bytes": 5650127,
+      "md5": "e9479f6495e48b12847f870764c35321",
+      "downloaded_at": "2026-08-06T23:16:42+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "OXY-quarterly-2021Q3.htm",
+      "period": "2021Q3",
+      "source": "SEC EDGAR 10-Q (accession 0000797468-21-000036, filed 2021-11-04)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/797468/000079746821000036/oxy-20210930.htm",
+      "size_bytes": 1952409,
+      "md5": "952b61458dd228d98b381dcdf85acf4a",
+      "downloaded_at": "2026-08-06T23:16:43+08:00"
+    },
+    {
+      "type": "quarterly",
+      "filename": "OXY-quarterly-2021Q2.htm",
+      "period": "2021Q2",
+      "source": "SEC EDGAR 10-Q (accession 0000797468-21-000028, filed 2021-08-03)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/797468/000079746821000028/oxy-20210630.htm",
+      "size_bytes": 1952820,
+      "md5": "fe4e0c14c8950a3d2f4253ff7bbc2702",
+      "downloaded_at": "2026-08-06T23:16:44+08:00"
+    }
+  ]
+}

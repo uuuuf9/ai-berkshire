@@ -1,0 +1,32 @@
+{
+  "source": "贵州茅台2025年报-产能状况",
+  "source_file": "finanace-data/financial-report/a/600519/raw/annual/600519-annual-2025.pdf:15",
+  "fetch_time": "2026-08-06 22:45:52",
+  "data": {
+    "moutai_design_capacity_tons": 46395,
+    "moutai_actual_capacity_tons": 58473.16,
+    "moutai_new_capacity_2025": 1800,
+    "moutai_new_capacity_release": "2026年释放",
+    "series_design_capacity_tons": 59400,
+    "series_actual_capacity_tons": 57650.57,
+    "series_new_capacity_2025": 6940,
+    "series_new_capacity_release": "2026年释放",
+    "under_construction": [
+      {
+        "name": "3万吨酱香系列酒技改工程及配套设施项目",
+        "planned_investment_wan": 1018000,
+        "cumulative_investment_wan": 707713.26
+      },
+      {
+        "name": "十四五酱香酒习水同民坝一期建设项目",
+        "planned_investment_wan": 411000,
+        "cumulative_investment_wan": 220005.39
+      },
+      {
+        "name": "茅台酒十四五技改建设项目",
+        "planned_investment_wan": 1551600,
+        "cumulative_investment_wan": 242494.96
+      }
+    ]
+  }
+}

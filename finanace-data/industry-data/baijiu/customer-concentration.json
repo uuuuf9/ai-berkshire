@@ -1,0 +1,48 @@
+{
+  "source": "贵州茅台年报-主要销售客户情况",
+  "fetch_time": "2026-08-06 22:45:52",
+  "data": [
+    {
+      "year": 2021,
+      "top5_sales_wan": 1498273.79,
+      "top5_pct": 14.13,
+      "related_party_wan": 524025.01,
+      "rp_pct": 4.94
+    },
+    {
+      "year": 2022,
+      "top5_sales_wan": 1415812.57,
+      "top5_pct": 11.44,
+      "related_party_wan": 527655.64,
+      "rp_pct": 4.26
+    },
+    {
+      "year": 2023,
+      "top5_sales_wan": 1470945.68,
+      "top5_pct": 9.99,
+      "related_party_wan": 550892.63,
+      "rp_pct": 3.74
+    },
+    {
+      "year": 2024,
+      "top5_sales_wan": 1964793.93,
+      "top5_pct": 11.52,
+      "related_party_wan": 656041.77,
+      "rp_pct": 3.85
+    },
+    {
+      "year": 2025,
+      "top5_sales_wan": 1704578.78,
+      "top5_pct": 10.1,
+      "related_party_wan": 635829.28,
+      "rp_pct": 3.77
+    }
+  ],
+  "source_files": [
+    "finanace-data/financial-report/a/600519/raw/annual/600519-annual-2021.pdf:9",
+    "finanace-data/financial-report/a/600519/raw/annual/600519-annual-2022.pdf:10",
+    "finanace-data/financial-report/a/600519/raw/annual/600519-annual-2023.pdf:11",
+    "finanace-data/financial-report/a/600519/raw/annual/600519-annual-2024.pdf:10",
+    "finanace-data/financial-report/a/600519/raw/annual/600519-annual-2025.pdf:11"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "source": "贵州茅台年报引用国家统计局/中国酒业协会数据",
+  "source_files": [
+    "finanace-data/financial-report/a/600519/raw/annual/600519-annual-2021.pdf",
+    "finanace-data/financial-report/a/600519/raw/annual/600519-annual-2022.pdf",
+    "finanace-data/financial-report/a/600519/raw/annual/600519-annual-2023.pdf",
+    "finanace-data/financial-report/a/600519/raw/annual/600519-annual-2024.pdf",
+    "finanace-data/financial-report/a/600519/raw/annual/600519-annual-2025.pdf"
+  ],
+  "fetch_time": "2026-08-06 22:45:52",
+  "data": [
+    {
+      "year": 2021,
+      "production_wan_kl": 715.63,
+      "production_yoy": -0.59,
+      "revenue_yi": 6033.48,
+      "revenue_yoy": 18.6,
+      "profit_yi": 1701.94,
+      "moutai_revenue_yi": 1094.64,
+      "moutai_market_share_pct": 18.14
+    },
+    {
+      "year": 2022,
+      "production_wan_kl": 671.24,
+      "production_yoy": -5.58,
+      "revenue_yi": 6626.45,
+      "revenue_yoy": 9.64,
+      "profit_yi": 2201.72,
+      "moutai_revenue_yi": 1275.54,
+      "moutai_market_share_pct": 19.25
+    },
+    {
+      "year": 2023,
+      "production_wan_kl": 449.2,
+      "production_yoy": -2.8,
+      "revenue_yi": 7563.0,
+      "revenue_yoy": 9.7,
+      "profit_yi": 2328.0,
+      "moutai_revenue_yi": 1505.6,
+      "moutai_market_share_pct": 19.91
+    },
+    {
+      "year": 2024,
+      "production_wan_kl": 414.5,
+      "production_yoy": -7.7,
+      "revenue_yi": 7963.84,
+      "revenue_yoy": 5.3,
+      "profit_yi": 2508.65,
+      "moutai_revenue_yi": 1741.44,
+      "moutai_market_share_pct": 21.87
+    },
+    {
+      "year": 2025,
+      "production_wan_kl": 354.9,
+      "production_yoy": -14.4,
+      "revenue_yi": null,
+      "revenue_yoy": null,
+      "profit_yi": null,
+      "note": "2025年报仅披露产量，行业收入数据待中国酒业协会发布",
+      "moutai_revenue_yi": 1720.54,
+      "moutai_market_share_pct": null
+    }
+  ],
+  "note": "2023年产量大幅下降部分因统计口径调整（规模以上企业门槛变更），不代表实际产量断崖"
+}

@@ -1,0 +1,56 @@
+{
+  "generated_at": "2026-08-06T23:17:03+08:00",
+  "ticker": "DUOL",
+  "files": [
+    {
+      "type": "annual",
+      "filename": "DUOL-annual-2025.htm",
+      "period": "2025",
+      "source": "SEC EDGAR 10-K (accession 0001628280-26-012494, filed 2026-02-27)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+      "size_bytes": 1872843,
+      "md5": "9308d099f2c0694d34211cae719c2578",
+      "downloaded_at": "2026-08-06T23:17:01+08:00"
+    },
+    {
+      "type": "annual",
+      "filename": "DUOL-annual-2024.htm",
+      "period": "2024",
+      "source": "SEC EDGAR 10-K (accession 0001562088-25-000042, filed 2025-02-28)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1562088/000156208825000042/duol-20241231.htm",
+      "size_bytes": 1820211,
+      "md5": "4f6f3889d37ee0e4af9baa33c43204f6",
+      "downloaded_at": "2026-08-06T23:17:02+08:00"
+    },
+    {
+      "type": "annual",
+      "filename": "DUOL-annual-2023.htm",
+      "period": "2023",
+      "source": "SEC EDGAR 10-K (accession 0001562088-24-000050, filed 2024-02-29)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1562088/000156208824000050/duol-20231231.htm",
+      "size_bytes": 1806452,
+      "md5": "1cadfe03f5459c56af64b8914156ebe9",
+      "downloaded_at": "2026-08-06T23:17:02+08:00"
+    },
+    {
+      "type": "annual",
+      "filename": "DUOL-annual-2022.htm",
+      "period": "2022",
+      "source": "SEC EDGAR 10-K (accession 0001562088-23-000052, filed 2023-03-01)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1562088/000156208823000052/duol-20221231.htm",
+      "size_bytes": 2170355,
+      "md5": "cafcc0e9bbd51760e8cb9cc50965c996",
+      "downloaded_at": "2026-08-06T23:17:03+08:00"
+    },
+    {
+      "type": "annual",
+      "filename": "DUOL-annual-2021.htm",
+      "period": "2021",
+      "source": "SEC EDGAR 10-K (accession 0001562088-22-000039, filed 2022-03-04)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1562088/000156208822000039/duol-20211231.htm",
+      "size_bytes": 1859343,
+      "md5": "95247410e699aa4c4e8f0ebb37884bce",
+      "downloaded_at": "2026-08-06T23:17:03+08:00"
+    }
+  ]
+}

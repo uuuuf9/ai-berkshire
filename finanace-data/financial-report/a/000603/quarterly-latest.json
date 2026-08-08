@@ -1,0 +1,120 @@
+{
+  "fetched_at": "2026-08-06T23:25:00",
+  "sources": [
+    "东方财富 datacenter"
+  ],
+  "data": [
+    {
+      "date": "2026-06-30",
+      "type": "中报",
+      "revenue": 11.516,
+      "revenue_yoy": 27.084423453721,
+      "net_profit": 3.9006,
+      "net_profit_yoy": 456.461858410108,
+      "eps": 0.5653,
+      "gross_margin": 69.1464368208,
+      "net_margin": 37.5685632319,
+      "deducted_np": 3.8241,
+      "ocf": 5.7289,
+      "roic": 7.562328432728
+    },
+    {
+      "date": "2026-03-31",
+      "type": "一季报",
+      "revenue": 3.8438,
+      "revenue_yoy": 9.019380435396,
+      "net_profit": 0.7941,
+      "net_profit_yoy": 858.526317327484,
+      "eps": 0.1151,
+      "gross_margin": 61.4208880015,
+      "net_margin": 29.9658324546,
+      "deducted_np": 0.7754,
+      "ocf": 0.5839,
+      "roic": 2.162808948659
+    },
+    {
+      "date": "2025-12-31",
+      "type": "年报",
+      "revenue": 24.6144,
+      "revenue_yoy": 22.264695686259,
+      "net_profit": 5.3246,
+      "net_profit_yoy": 36.5145861243,
+      "eps": 0.77,
+      "gross_margin": 57.6082936472,
+      "net_margin": 25.3708353024,
+      "deducted_np": 5.4324,
+      "ocf": 8.6818,
+      "roic": 12.981107972862
+    },
+    {
+      "date": "2025-09-30",
+      "type": "三季报",
+      "revenue": 16.5241,
+      "revenue_yoy": 18.288886563716,
+      "net_profit": 3.2264,
+      "net_profit_yoy": 61.966956550003,
+      "eps": 0.4676,
+      "gross_margin": 55.8872424005,
+      "net_margin": 23.8299949734,
+      "deducted_np": 3.3103,
+      "ocf": 4.2342,
+      "roic": 8.37024083261
+    },
+    {
+      "date": "2025-06-30",
+      "type": "中报",
+      "revenue": 9.0617,
+      "revenue_yoy": 6.339172028212,
+      "net_profit": 0.701,
+      "net_profit_yoy": -15.029239278615,
+      "eps": 0.1016,
+      "gross_margin": 44.0189347439,
+      "net_margin": 11.3885137617,
+      "deducted_np": 0.7396,
+      "ocf": 1.3095,
+      "roic": 2.712458341064
+    },
+    {
+      "date": "2025-03-31",
+      "type": "一季报",
+      "revenue": 3.5258,
+      "revenue_yoy": 33.918743031703,
+      "net_profit": 0.0828,
+      "net_profit_yoy": 194.36984649276,
+      "eps": 0.012,
+      "gross_margin": 28.9102182022,
+      "net_margin": 3.1536008652,
+      "deducted_np": 0.0686,
+      "ocf": -1.6428,
+      "roic": 0.59255505749
+    },
+    {
+      "date": "2024-12-31",
+      "type": "年报",
+      "revenue": 20.1321,
+      "revenue_yoy": -10.663174968495,
+      "net_profit": 3.9004,
+      "net_profit_yoy": 163.560586374243,
+      "eps": 0.57,
+      "gross_margin": 48.4912261986,
+      "net_margin": 23.5651045609,
+      "deducted_np": 2.6027,
+      "ocf": 7.3057,
+      "roic": 10.977765584483
+    },
+    {
+      "date": "2024-09-30",
+      "type": "三季报",
+      "revenue": 13.9693,
+      "revenue_yoy": -7.08486015871,
+      "net_profit": 1.992,
+      "net_profit_yoy": 48.733165320002,
+      "eps": 0.2904,
+      "gross_margin": 43.4731015255,
+      "net_margin": 18.5291319925,
+      "deducted_np": 1.9301,
+      "ocf": 4.1628,
+      "roic": 6.155739564483
+    }
+  ]
+}

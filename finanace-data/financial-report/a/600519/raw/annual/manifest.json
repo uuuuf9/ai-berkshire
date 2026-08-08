@@ -1,0 +1,63 @@
+{
+  "ticker": "600519.SS",
+  "name": "贵州茅台",
+  "report_type": "annual",
+  "files": [
+    {
+      "fiscal_year": "2025",
+      "filename": "600519-annual-2025.pdf",
+      "local_path": "finanace-data/financial-report/a/600519/raw/annual/600519-annual-2025.pdf",
+      "source_url": "https://pdf.dfcfw.com/pdf/H2_AN202604161821275610_1.pdf",
+      "source": "东方财富/巨潮资讯",
+      "announcement_date": "2026-04-17",
+      "art_code": "AN202604161821275610",
+      "file_size_bytes": 1082847,
+      "md5": "44f6edd27d20ffa5f7dd46fa0c64b8a3"
+    },
+    {
+      "fiscal_year": "2024",
+      "filename": "600519-annual-2024.pdf",
+      "local_path": "finanace-data/financial-report/a/600519/raw/annual/600519-annual-2024.pdf",
+      "source_url": "https://pdf.dfcfw.com/pdf/H2_AN202504021650444452_1.pdf",
+      "source": "东方财富/巨潮资讯",
+      "announcement_date": "2025-04-03",
+      "art_code": "AN202504021650444452",
+      "file_size_bytes": 3626217,
+      "md5": "69dde34a448ee965c650c2f8a8fc34a4"
+    },
+    {
+      "fiscal_year": "2023",
+      "filename": "600519-annual-2023.pdf",
+      "local_path": "finanace-data/financial-report/a/600519/raw/annual/600519-annual-2023.pdf",
+      "source_url": "https://pdf.dfcfw.com/pdf/H2_AN202404021629586635_1.pdf",
+      "source": "东方财富/巨潮资讯",
+      "announcement_date": "2024-04-03",
+      "art_code": "AN202404021629586635",
+      "file_size_bytes": 3563819,
+      "md5": "f99f2215be06895e31e0c07f3d90db28"
+    },
+    {
+      "fiscal_year": "2022",
+      "filename": "600519-annual-2022.pdf",
+      "local_path": "finanace-data/financial-report/a/600519/raw/annual/600519-annual-2022.pdf",
+      "source_url": "https://pdf.dfcfw.com/pdf/H2_AN202303301584717893_1.pdf",
+      "source": "东方财富/巨潮资讯",
+      "announcement_date": "2023-03-31",
+      "art_code": "AN202303301584717893",
+      "file_size_bytes": 3320339,
+      "md5": "a7f938b0780e8d68b7d636ac16064c6c"
+    },
+    {
+      "fiscal_year": "2021",
+      "filename": "600519-annual-2021.pdf",
+      "local_path": "finanace-data/financial-report/a/600519/raw/annual/600519-annual-2021.pdf",
+      "source_url": "https://pdf.dfcfw.com/pdf/H2_AN202203311556165228_1.pdf",
+      "source": "东方财富/巨潮资讯",
+      "announcement_date": "2022-03-31",
+      "art_code": "AN202203311556165228",
+      "file_size_bytes": 3350320,
+      "md5": "02876c6eb42dd36d05c050bcc6623a68"
+    }
+  ],
+  "fetch_time": "2026-08-06 22:43:55"
+}

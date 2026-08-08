@@ -1,0 +1,31 @@
+{
+  "source": "基于2026Q1实际数据+产能投放计划+行业趋势估算",
+  "confidence": "中",
+  "fetch_time": "2026-08-06 22:45:52",
+  "data": [
+    {
+      "year": 2026,
+      "revenue_yi": 1830,
+      "revenue_yoy": 6.4,
+      "net_profit_yi": 860,
+      "net_profit_yoy": 4.5,
+      "basis": "2026Q1营收+6.3%/净利+1.5%, 全年产能释放+直销渠道增长"
+    },
+    {
+      "year": 2027,
+      "revenue_yi": 1940,
+      "revenue_yoy": 6.0,
+      "net_profit_yi": 920,
+      "net_profit_yoy": 7.0,
+      "basis": "新产能全面释放+系列酒恢复增长+提价预期"
+    },
+    {
+      "year": 2028,
+      "revenue_yi": 2060,
+      "revenue_yoy": 6.2,
+      "net_profit_yi": 985,
+      "net_profit_yoy": 7.1,
+      "basis": "产能持续扩张+国际化推进+品牌溢价"
+    }
+  ]
+}

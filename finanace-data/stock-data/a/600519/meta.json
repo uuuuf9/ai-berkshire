@@ -1,0 +1,16 @@
+{
+  "ticker": "600519.SS",
+  "name": "贵州茅台",
+  "name_en": "Kweichow Moutai",
+  "exchange": "上海证券交易所",
+  "industry": "白酒/食品饮料",
+  "sector": "consumer_staples",
+  "price": 1308.55,
+  "market_cap_yi": 16357.94,
+  "total_shares_yi": 12.5008,
+  "pe_ttm": 19.78,
+  "pb": 7.02,
+  "currency": "CNY",
+  "fetch_time": "2026-08-06 22:35:45",
+  "source": "腾讯行情 + 东方财富"
+}

@@ -1,0 +1,19 @@
+{
+  "ticker": "OXY",
+  "name": "Occidental Petroleum Corporation",
+  "name_cn": "西方石油",
+  "exchange": "NYSE",
+  "sector": "Energy",
+  "industry": "Oil & Gas Exploration & Production (E&P)",
+  "market": "american",
+  "market_cap_usd_b": 56.52,
+  "shares_outstanding_m": 999.64,
+  "currency": "USD",
+  "founded": 1920,
+  "employees": 10412,
+  "website": "https://www.oxy.com",
+  "fiscal_year_end": "12-31",
+  "data_cutoff": "2026-08-06",
+  "data_source": "stockanalysis.com + SEC EDGAR 10-K",
+  "note": "2026-01-02 完成 OxyChem 化工业务出售给伯克希尔·哈撒韦($9.5B)；OxyChem 重分类为终止经营"
+}

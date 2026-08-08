@@ -1,0 +1,1219 @@
+{
+  "ticker": "WDC",
+  "source": "yfinance月度价格(前复权) + SEC 10-K年度EPS/BVPS",
+  "fetch_time": "2026-08-06",
+  "method": "年度FY EPS/BVPS分配至各月; FY2019-FY2022合并, FY2023-FY2025持续经营(HDD); FY2026+ BVPS估算(基于FY2025期末+留存收益增长); 亏损年PE=null",
+  "note": "2025年2月SanDisk分拆造成PB不连续: 分拆前BVPS含Flash($31-39), 分拆后HDD-only降至$15.31。当前PB=22.66, PE-TTM=19.5(yfinance, 含一次性Sandisk收益$2,734M)。分拆前后PB/PE不可直接比较。",
+  "current_pb": 22.66,
+  "current_pe_ttm": 19.5,
+  "pb_p30_pre_spinoff": 0.96,
+  "pb_median_pre_spinoff": 1.08,
+  "pb_p70_pre_spinoff": 1.25,
+  "pe_p30_profitable": 9.91,
+  "pe_median_profitable": 10.91,
+  "pe_p70_profitable": 11.87,
+  "count": 120,
+  "data_gaps": "2016-09至2019-06: 无10-K数据; FY2026+ EPS为null; 当前PE含一次性项目",
+  "points": [
+    {
+      "date": "2016-09",
+      "price": 39.1359,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": null,
+      "bvps_used": null,
+      "fy": null,
+      "type": "data_gap"
+    },
+    {
+      "date": "2016-10",
+      "price": 39.1158,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": null,
+      "bvps_used": null,
+      "fy": null,
+      "type": "data_gap"
+    },
+    {
+      "date": "2016-11",
+      "price": 42.6097,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": null,
+      "bvps_used": null,
+      "fy": null,
+      "type": "data_gap"
+    },
+    {
+      "date": "2016-12",
+      "price": 45.8075,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": null,
+      "bvps_used": null,
+      "fy": null,
+      "type": "data_gap"
+    },
+    {
+      "date": "2017-01",
+      "price": 53.7488,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": null,
+      "bvps_used": null,
+      "fy": null,
+      "type": "data_gap"
+    },
+    {
+      "date": "2017-02",
+      "price": 51.8276,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": null,
+      "bvps_used": null,
+      "fy": null,
+      "type": "data_gap"
+    },
+    {
+      "date": "2017-03",
+      "price": 55.9839,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": null,
+      "bvps_used": null,
+      "fy": null,
+      "type": "data_gap"
+    },
+    {
+      "date": "2017-04",
+      "price": 60.4203,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": null,
+      "bvps_used": null,
+      "fy": null,
+      "type": "data_gap"
+    },
+    {
+      "date": "2017-05",
+      "price": 61.0918,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": null,
+      "bvps_used": null,
+      "fy": null,
+      "type": "data_gap"
+    },
+    {
+      "date": "2017-06",
+      "price": 60.4304,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": null,
+      "bvps_used": null,
+      "fy": null,
+      "type": "data_gap"
+    },
+    {
+      "date": "2017-07",
+      "price": 58.0568,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": null,
+      "bvps_used": null,
+      "fy": null,
+      "type": "data_gap"
+    },
+    {
+      "date": "2017-08",
+      "price": 60.2053,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": null,
+      "bvps_used": null,
+      "fy": null,
+      "type": "data_gap"
+    },
+    {
+      "date": "2017-09",
+      "price": 59.2639,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": null,
+      "bvps_used": null,
+      "fy": null,
+      "type": "data_gap"
+    },
+    {
+      "date": "2017-10",
+      "price": 61.2325,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": null,
+      "bvps_used": null,
+      "fy": null,
+      "type": "data_gap"
+    },
+    {
+      "date": "2017-11",
+      "price": 54.092,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": null,
+      "bvps_used": null,
+      "fy": null,
+      "type": "data_gap"
+    },
+    {
+      "date": "2017-12",
+      "price": 54.8906,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": null,
+      "bvps_used": null,
+      "fy": null,
+      "type": "data_gap"
+    },
+    {
+      "date": "2018-01",
+      "price": 61.4128,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": null,
+      "bvps_used": null,
+      "fy": null,
+      "type": "data_gap"
+    },
+    {
+      "date": "2018-02",
+      "price": 60.0739,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": null,
+      "bvps_used": null,
+      "fy": null,
+      "type": "data_gap"
+    },
+    {
+      "date": "2018-03",
+      "price": 64.0309,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": null,
+      "bvps_used": null,
+      "fy": null,
+      "type": "data_gap"
+    },
+    {
+      "date": "2018-04",
+      "price": 54.6764,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": null,
+      "bvps_used": null,
+      "fy": null,
+      "type": "data_gap"
+    },
+    {
+      "date": "2018-05",
+      "price": 57.9519,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": null,
+      "bvps_used": null,
+      "fy": null,
+      "type": "data_gap"
+    },
+    {
+      "date": "2018-06",
+      "price": 54.0685,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": null,
+      "bvps_used": null,
+      "fy": null,
+      "type": "data_gap"
+    },
+    {
+      "date": "2018-07",
+      "price": 48.9976,
+      "pe_ttm": null,
+      "pb": 1.46,
+      "eps_used": -2.58,
+      "bvps_used": 33.56,
+      "fy": "FY2019",
+      "type": "combined"
+    },
+    {
+      "date": "2018-08",
+      "price": 44.1712,
+      "pe_ttm": null,
+      "pb": 1.32,
+      "eps_used": -2.58,
+      "bvps_used": 33.56,
+      "fy": "FY2019",
+      "type": "combined"
+    },
+    {
+      "date": "2018-09",
+      "price": 41.2382,
+      "pe_ttm": null,
+      "pb": 1.23,
+      "eps_used": -2.58,
+      "bvps_used": 33.56,
+      "fy": "FY2019",
+      "type": "combined"
+    },
+    {
+      "date": "2018-10",
+      "price": 30.3404,
+      "pe_ttm": null,
+      "pb": 0.9,
+      "eps_used": -2.58,
+      "bvps_used": 33.56,
+      "fy": "FY2019",
+      "type": "combined"
+    },
+    {
+      "date": "2018-11",
+      "price": 31.9748,
+      "pe_ttm": null,
+      "pb": 0.95,
+      "eps_used": -2.58,
+      "bvps_used": 33.56,
+      "fy": "FY2019",
+      "type": "combined"
+    },
+    {
+      "date": "2018-12",
+      "price": 26.4008,
+      "pe_ttm": null,
+      "pb": 0.79,
+      "eps_used": -2.58,
+      "bvps_used": 33.56,
+      "fy": "FY2019",
+      "type": "combined"
+    },
+    {
+      "date": "2019-01",
+      "price": 32.128,
+      "pe_ttm": null,
+      "pb": 0.96,
+      "eps_used": -2.58,
+      "bvps_used": 33.56,
+      "fy": "FY2019",
+      "type": "combined"
+    },
+    {
+      "date": "2019-02",
+      "price": 35.9199,
+      "pe_ttm": null,
+      "pb": 1.07,
+      "eps_used": -2.58,
+      "bvps_used": 33.56,
+      "fy": "FY2019",
+      "type": "combined"
+    },
+    {
+      "date": "2019-03",
+      "price": 34.7026,
+      "pe_ttm": null,
+      "pb": 1.03,
+      "eps_used": -2.58,
+      "bvps_used": 33.56,
+      "fy": "FY2019",
+      "type": "combined"
+    },
+    {
+      "date": "2019-04",
+      "price": 36.9122,
+      "pe_ttm": null,
+      "pb": 1.1,
+      "eps_used": -2.58,
+      "bvps_used": 33.56,
+      "fy": "FY2019",
+      "type": "combined"
+    },
+    {
+      "date": "2019-05",
+      "price": 26.8754,
+      "pe_ttm": null,
+      "pb": 0.8,
+      "eps_used": -2.58,
+      "bvps_used": 33.56,
+      "fy": "FY2019",
+      "type": "combined"
+    },
+    {
+      "date": "2019-06",
+      "price": 34.7281,
+      "pe_ttm": null,
+      "pb": 1.03,
+      "eps_used": -2.58,
+      "bvps_used": 33.56,
+      "fy": "FY2019",
+      "type": "combined"
+    },
+    {
+      "date": "2019-07",
+      "price": 39.3586,
+      "pe_ttm": null,
+      "pb": 1.23,
+      "eps_used": -0.84,
+      "bvps_used": 32.05,
+      "fy": "FY2020",
+      "type": "combined"
+    },
+    {
+      "date": "2019-08",
+      "price": 41.8271,
+      "pe_ttm": null,
+      "pb": 1.31,
+      "eps_used": -0.84,
+      "bvps_used": 32.05,
+      "fy": "FY2020",
+      "type": "combined"
+    },
+    {
+      "date": "2019-09",
+      "price": 43.5581,
+      "pe_ttm": null,
+      "pb": 1.36,
+      "eps_used": -0.84,
+      "bvps_used": 32.05,
+      "fy": "FY2020",
+      "type": "combined"
+    },
+    {
+      "date": "2019-10",
+      "price": 38.0575,
+      "pe_ttm": null,
+      "pb": 1.19,
+      "eps_used": -0.84,
+      "bvps_used": 32.05,
+      "fy": "FY2020",
+      "type": "combined"
+    },
+    {
+      "date": "2019-11",
+      "price": 37.0848,
+      "pe_ttm": null,
+      "pb": 1.16,
+      "eps_used": -0.84,
+      "bvps_used": 32.05,
+      "fy": "FY2020",
+      "type": "combined"
+    },
+    {
+      "date": "2019-12",
+      "price": 46.7668,
+      "pe_ttm": null,
+      "pb": 1.46,
+      "eps_used": -0.84,
+      "bvps_used": 32.05,
+      "fy": "FY2020",
+      "type": "combined"
+    },
+    {
+      "date": "2020-01",
+      "price": 48.6458,
+      "pe_ttm": null,
+      "pb": 1.52,
+      "eps_used": -0.84,
+      "bvps_used": 32.05,
+      "fy": "FY2020",
+      "type": "combined"
+    },
+    {
+      "date": "2020-02",
+      "price": 41.2636,
+      "pe_ttm": null,
+      "pb": 1.29,
+      "eps_used": -0.84,
+      "bvps_used": 32.05,
+      "fy": "FY2020",
+      "type": "combined"
+    },
+    {
+      "date": "2020-03",
+      "price": 30.9105,
+      "pe_ttm": null,
+      "pb": 0.96,
+      "eps_used": -0.84,
+      "bvps_used": 32.05,
+      "fy": "FY2020",
+      "type": "combined"
+    },
+    {
+      "date": "2020-04",
+      "price": 34.6712,
+      "pe_ttm": null,
+      "pb": 1.08,
+      "eps_used": -0.84,
+      "bvps_used": 32.05,
+      "fy": "FY2020",
+      "type": "combined"
+    },
+    {
+      "date": "2020-05",
+      "price": 33.3846,
+      "pe_ttm": null,
+      "pb": 1.04,
+      "eps_used": -0.84,
+      "bvps_used": 32.05,
+      "fy": "FY2020",
+      "type": "combined"
+    },
+    {
+      "date": "2020-06",
+      "price": 33.219,
+      "pe_ttm": null,
+      "pb": 1.04,
+      "eps_used": -0.84,
+      "bvps_used": 32.05,
+      "fy": "FY2020",
+      "type": "combined"
+    },
+    {
+      "date": "2020-07",
+      "price": 32.429,
+      "pe_ttm": 12.19,
+      "pb": 0.93,
+      "eps_used": 2.66,
+      "bvps_used": 34.81,
+      "fy": "FY2021",
+      "type": "combined"
+    },
+    {
+      "date": "2020-08",
+      "price": 28.9077,
+      "pe_ttm": 10.87,
+      "pb": 0.83,
+      "eps_used": 2.66,
+      "bvps_used": 34.81,
+      "fy": "FY2021",
+      "type": "combined"
+    },
+    {
+      "date": "2020-09",
+      "price": 27.5007,
+      "pe_ttm": 10.34,
+      "pb": 0.79,
+      "eps_used": 2.66,
+      "bvps_used": 34.81,
+      "fy": "FY2021",
+      "type": "combined"
+    },
+    {
+      "date": "2020-10",
+      "price": 28.3885,
+      "pe_ttm": 10.67,
+      "pb": 0.82,
+      "eps_used": 2.66,
+      "bvps_used": 34.81,
+      "fy": "FY2021",
+      "type": "combined"
+    },
+    {
+      "date": "2020-11",
+      "price": 33.7683,
+      "pe_ttm": 12.69,
+      "pb": 0.97,
+      "eps_used": 2.66,
+      "bvps_used": 34.81,
+      "fy": "FY2021",
+      "type": "combined"
+    },
+    {
+      "date": "2020-12",
+      "price": 41.6762,
+      "pe_ttm": 15.67,
+      "pb": 1.2,
+      "eps_used": 2.66,
+      "bvps_used": 34.81,
+      "fy": "FY2021",
+      "type": "combined"
+    },
+    {
+      "date": "2021-01",
+      "price": 42.4587,
+      "pe_ttm": 15.96,
+      "pb": 1.22,
+      "eps_used": 2.66,
+      "bvps_used": 34.81,
+      "fy": "FY2021",
+      "type": "combined"
+    },
+    {
+      "date": "2021-02",
+      "price": 51.5629,
+      "pe_ttm": 19.38,
+      "pb": 1.48,
+      "eps_used": 2.66,
+      "bvps_used": 34.81,
+      "fy": "FY2021",
+      "type": "combined"
+    },
+    {
+      "date": "2021-03",
+      "price": 50.2236,
+      "pe_ttm": 18.88,
+      "pb": 1.44,
+      "eps_used": 2.66,
+      "bvps_used": 34.81,
+      "fy": "FY2021",
+      "type": "combined"
+    },
+    {
+      "date": "2021-04",
+      "price": 53.1429,
+      "pe_ttm": 19.98,
+      "pb": 1.53,
+      "eps_used": 2.66,
+      "bvps_used": 34.81,
+      "fy": "FY2021",
+      "type": "combined"
+    },
+    {
+      "date": "2021-05",
+      "price": 56.604,
+      "pe_ttm": 21.28,
+      "pb": 1.63,
+      "eps_used": 2.66,
+      "bvps_used": 34.81,
+      "fy": "FY2021",
+      "type": "combined"
+    },
+    {
+      "date": "2021-06",
+      "price": 53.5492,
+      "pe_ttm": 20.13,
+      "pb": 1.54,
+      "eps_used": 2.66,
+      "bvps_used": 34.81,
+      "fy": "FY2021",
+      "type": "combined"
+    },
+    {
+      "date": "2021-07",
+      "price": 48.8542,
+      "pe_ttm": 10.29,
+      "pb": 1.26,
+      "eps_used": 4.75,
+      "bvps_used": 38.8,
+      "fy": "FY2022",
+      "type": "combined"
+    },
+    {
+      "date": "2021-08",
+      "price": 47.5525,
+      "pe_ttm": 10.01,
+      "pb": 1.23,
+      "eps_used": 4.75,
+      "bvps_used": 38.8,
+      "fy": "FY2022",
+      "type": "combined"
+    },
+    {
+      "date": "2021-09",
+      "price": 42.4662,
+      "pe_ttm": 8.94,
+      "pb": 1.09,
+      "eps_used": 4.75,
+      "bvps_used": 38.8,
+      "fy": "FY2022",
+      "type": "combined"
+    },
+    {
+      "date": "2021-10",
+      "price": 39.3437,
+      "pe_ttm": 8.28,
+      "pb": 1.01,
+      "eps_used": 4.75,
+      "bvps_used": 38.8,
+      "fy": "FY2022",
+      "type": "combined"
+    },
+    {
+      "date": "2021-11",
+      "price": 43.5196,
+      "pe_ttm": 9.16,
+      "pb": 1.12,
+      "eps_used": 4.75,
+      "bvps_used": 38.8,
+      "fy": "FY2022",
+      "type": "combined"
+    },
+    {
+      "date": "2021-12",
+      "price": 49.0649,
+      "pe_ttm": 10.33,
+      "pb": 1.26,
+      "eps_used": 4.75,
+      "bvps_used": 38.8,
+      "fy": "FY2022",
+      "type": "combined"
+    },
+    {
+      "date": "2022-01",
+      "price": 38.9299,
+      "pe_ttm": 8.2,
+      "pb": 1.0,
+      "eps_used": 4.75,
+      "bvps_used": 38.8,
+      "fy": "FY2022",
+      "type": "combined"
+    },
+    {
+      "date": "2022-02",
+      "price": 38.3279,
+      "pe_ttm": 8.07,
+      "pb": 0.99,
+      "eps_used": 4.75,
+      "bvps_used": 38.8,
+      "fy": "FY2022",
+      "type": "combined"
+    },
+    {
+      "date": "2022-03",
+      "price": 37.3573,
+      "pe_ttm": 7.86,
+      "pb": 0.96,
+      "eps_used": 4.75,
+      "bvps_used": 38.8,
+      "fy": "FY2022",
+      "type": "combined"
+    },
+    {
+      "date": "2022-04",
+      "price": 39.9306,
+      "pe_ttm": 8.41,
+      "pb": 1.03,
+      "eps_used": 4.75,
+      "bvps_used": 38.8,
+      "fy": "FY2022",
+      "type": "combined"
+    },
+    {
+      "date": "2022-05",
+      "price": 45.664,
+      "pe_ttm": 9.61,
+      "pb": 1.18,
+      "eps_used": 4.75,
+      "bvps_used": 38.8,
+      "fy": "FY2022",
+      "type": "combined"
+    },
+    {
+      "date": "2022-06",
+      "price": 33.7307,
+      "pe_ttm": 7.1,
+      "pb": 0.87,
+      "eps_used": 4.75,
+      "bvps_used": 38.8,
+      "fy": "FY2022",
+      "type": "combined"
+    },
+    {
+      "date": "2022-07",
+      "price": 36.9435,
+      "pe_ttm": null,
+      "pb": 1.0,
+      "eps_used": -2.91,
+      "bvps_used": 36.77,
+      "fy": "FY2023",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2022-08",
+      "price": 31.797,
+      "pe_ttm": null,
+      "pb": 0.86,
+      "eps_used": -2.91,
+      "bvps_used": 36.77,
+      "fy": "FY2023",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2022-09",
+      "price": 24.491,
+      "pe_ttm": null,
+      "pb": 0.67,
+      "eps_used": -2.91,
+      "bvps_used": 36.77,
+      "fy": "FY2023",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2022-10",
+      "price": 25.8604,
+      "pe_ttm": null,
+      "pb": 0.7,
+      "eps_used": -2.91,
+      "bvps_used": 36.77,
+      "fy": "FY2023",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2022-11",
+      "price": 27.6512,
+      "pe_ttm": null,
+      "pb": 0.75,
+      "eps_used": -2.91,
+      "bvps_used": 36.77,
+      "fy": "FY2023",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2022-12",
+      "price": 23.7386,
+      "pe_ttm": null,
+      "pb": 0.65,
+      "eps_used": -2.91,
+      "bvps_used": 36.77,
+      "fy": "FY2023",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2023-01",
+      "price": 33.0686,
+      "pe_ttm": null,
+      "pb": 0.9,
+      "eps_used": -2.91,
+      "bvps_used": 36.77,
+      "fy": "FY2023",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2023-02",
+      "price": 28.9529,
+      "pe_ttm": null,
+      "pb": 0.79,
+      "eps_used": -2.91,
+      "bvps_used": 36.77,
+      "fy": "FY2023",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2023-03",
+      "price": 28.3434,
+      "pe_ttm": null,
+      "pb": 0.77,
+      "eps_used": -2.91,
+      "bvps_used": 36.77,
+      "fy": "FY2023",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2023-04",
+      "price": 25.9131,
+      "pe_ttm": null,
+      "pb": 0.7,
+      "eps_used": -2.91,
+      "bvps_used": 36.77,
+      "fy": "FY2023",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2023-05",
+      "price": 29.141,
+      "pe_ttm": null,
+      "pb": 0.79,
+      "eps_used": -2.91,
+      "bvps_used": 36.77,
+      "fy": "FY2023",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2023-06",
+      "price": 28.539,
+      "pe_ttm": null,
+      "pb": 0.78,
+      "eps_used": -2.91,
+      "bvps_used": 36.77,
+      "fy": "FY2023",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2023-07",
+      "price": 32.0227,
+      "pe_ttm": null,
+      "pb": 1.02,
+      "eps_used": -2.51,
+      "bvps_used": 31.54,
+      "fy": "FY2024",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2023-08",
+      "price": 33.8586,
+      "pe_ttm": null,
+      "pb": 1.07,
+      "eps_used": -2.51,
+      "bvps_used": 31.54,
+      "fy": "FY2024",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2023-09",
+      "price": 34.3326,
+      "pe_ttm": null,
+      "pb": 1.09,
+      "eps_used": -2.51,
+      "bvps_used": 31.54,
+      "fy": "FY2024",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2023-10",
+      "price": 30.2094,
+      "pe_ttm": null,
+      "pb": 0.96,
+      "eps_used": -2.51,
+      "bvps_used": 31.54,
+      "fy": "FY2024",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2023-11",
+      "price": 36.3491,
+      "pe_ttm": null,
+      "pb": 1.15,
+      "eps_used": -2.51,
+      "bvps_used": 31.54,
+      "fy": "FY2024",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2023-12",
+      "price": 39.4039,
+      "pe_ttm": null,
+      "pb": 1.25,
+      "eps_used": -2.51,
+      "bvps_used": 31.54,
+      "fy": "FY2024",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2024-01",
+      "price": 43.0757,
+      "pe_ttm": null,
+      "pb": 1.37,
+      "eps_used": -2.51,
+      "bvps_used": 31.54,
+      "fy": "FY2024",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2024-02",
+      "price": 44.746,
+      "pe_ttm": null,
+      "pb": 1.42,
+      "eps_used": -2.51,
+      "bvps_used": 31.54,
+      "fy": "FY2024",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2024-03",
+      "price": 51.3447,
+      "pe_ttm": null,
+      "pb": 1.63,
+      "eps_used": -2.51,
+      "bvps_used": 31.54,
+      "fy": "FY2024",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2024-04",
+      "price": 53.2934,
+      "pe_ttm": null,
+      "pb": 1.69,
+      "eps_used": -2.51,
+      "bvps_used": 31.54,
+      "fy": "FY2024",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2024-05",
+      "price": 56.6492,
+      "pe_ttm": null,
+      "pb": 1.8,
+      "eps_used": -2.51,
+      "bvps_used": 31.54,
+      "fy": "FY2024",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2024-06",
+      "price": 57.0103,
+      "pe_ttm": null,
+      "pb": 1.81,
+      "eps_used": -2.51,
+      "bvps_used": 31.54,
+      "fy": "FY2024",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2024-07",
+      "price": 50.4493,
+      "pe_ttm": 11.34,
+      "pb": 3.3,
+      "eps_used": 4.45,
+      "bvps_used": 15.31,
+      "fy": "FY2025",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2024-08",
+      "price": 49.3508,
+      "pe_ttm": 11.09,
+      "pb": 3.22,
+      "eps_used": 4.45,
+      "bvps_used": 15.31,
+      "fy": "FY2025",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2024-09",
+      "price": 51.3823,
+      "pe_ttm": 11.55,
+      "pb": 3.36,
+      "eps_used": 4.45,
+      "bvps_used": 15.31,
+      "fy": "FY2025",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2024-10",
+      "price": 49.1401,
+      "pe_ttm": 11.04,
+      "pb": 3.21,
+      "eps_used": 4.45,
+      "bvps_used": 15.31,
+      "fy": "FY2025",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2024-11",
+      "price": 54.9186,
+      "pe_ttm": 12.34,
+      "pb": 3.59,
+      "eps_used": 4.45,
+      "bvps_used": 15.31,
+      "fy": "FY2025",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2024-12",
+      "price": 44.8664,
+      "pe_ttm": 10.08,
+      "pb": 2.93,
+      "eps_used": 4.45,
+      "bvps_used": 15.31,
+      "fy": "FY2025",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2025-01",
+      "price": 49.0047,
+      "pe_ttm": 11.01,
+      "pb": 3.2,
+      "eps_used": 4.45,
+      "bvps_used": 15.31,
+      "fy": "FY2025",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2025-02",
+      "price": 48.707,
+      "pe_ttm": 10.95,
+      "pb": 3.18,
+      "eps_used": 4.45,
+      "bvps_used": 15.31,
+      "fy": "FY2025",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2025-03",
+      "price": 40.2457,
+      "pe_ttm": 9.04,
+      "pb": 2.63,
+      "eps_used": 4.45,
+      "bvps_used": 15.31,
+      "fy": "FY2025",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2025-04",
+      "price": 43.6601,
+      "pe_ttm": 9.81,
+      "pb": 2.85,
+      "eps_used": 4.45,
+      "bvps_used": 15.31,
+      "fy": "FY2025",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2025-05",
+      "price": 51.3151,
+      "pe_ttm": 11.53,
+      "pb": 3.35,
+      "eps_used": 4.45,
+      "bvps_used": 15.31,
+      "fy": "FY2025",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2025-06",
+      "price": 63.8171,
+      "pe_ttm": 14.34,
+      "pb": 4.17,
+      "eps_used": 4.45,
+      "bvps_used": 15.31,
+      "fy": "FY2025",
+      "type": "cont_ops_HDD"
+    },
+    {
+      "date": "2025-07",
+      "price": 78.4773,
+      "pe_ttm": null,
+      "pb": 5.13,
+      "eps_used": null,
+      "bvps_used": 15.31,
+      "fy": "FY2026",
+      "type": "cont_ops_HDD_est"
+    },
+    {
+      "date": "2025-08",
+      "price": 80.1229,
+      "pe_ttm": null,
+      "pb": 4.94,
+      "eps_used": null,
+      "bvps_used": 16.21,
+      "fy": "FY2026",
+      "type": "cont_ops_HDD_est"
+    },
+    {
+      "date": "2025-09",
+      "price": 119.8749,
+      "pe_ttm": null,
+      "pb": 7.01,
+      "eps_used": null,
+      "bvps_used": 17.11,
+      "fy": "FY2026",
+      "type": "cont_ops_HDD_est"
+    },
+    {
+      "date": "2025-10",
+      "price": 149.9784,
+      "pe_ttm": null,
+      "pb": 8.33,
+      "eps_used": null,
+      "bvps_used": 18.01,
+      "fy": "FY2026",
+      "type": "cont_ops_HDD_est"
+    },
+    {
+      "date": "2025-11",
+      "price": 163.0782,
+      "pe_ttm": null,
+      "pb": 8.62,
+      "eps_used": null,
+      "bvps_used": 18.91,
+      "fy": "FY2026",
+      "type": "cont_ops_HDD_est"
+    },
+    {
+      "date": "2025-12",
+      "price": 172.1427,
+      "pe_ttm": null,
+      "pb": 8.69,
+      "eps_used": null,
+      "bvps_used": 19.81,
+      "fy": "FY2026",
+      "type": "cont_ops_HDD_est"
+    },
+    {
+      "date": "2026-01",
+      "price": 250.0451,
+      "pe_ttm": null,
+      "pb": 12.07,
+      "eps_used": null,
+      "bvps_used": 20.71,
+      "fy": "FY2026",
+      "type": "cont_ops_HDD_est"
+    },
+    {
+      "date": "2026-02",
+      "price": 279.4933,
+      "pe_ttm": null,
+      "pb": 12.93,
+      "eps_used": null,
+      "bvps_used": 21.61,
+      "fy": "FY2026",
+      "type": "cont_ops_HDD_est"
+    },
+    {
+      "date": "2026-03",
+      "price": 270.4195,
+      "pe_ttm": null,
+      "pb": 12.01,
+      "eps_used": null,
+      "bvps_used": 22.51,
+      "fy": "FY2026",
+      "type": "cont_ops_HDD_est"
+    },
+    {
+      "date": "2026-04",
+      "price": 434.4067,
+      "pe_ttm": null,
+      "pb": 18.56,
+      "eps_used": null,
+      "bvps_used": 23.41,
+      "fy": "FY2026",
+      "type": "cont_ops_HDD_est"
+    },
+    {
+      "date": "2026-05",
+      "price": 531.0715,
+      "pe_ttm": null,
+      "pb": 21.85,
+      "eps_used": null,
+      "bvps_used": 24.31,
+      "fy": "FY2026",
+      "type": "cont_ops_HDD_est"
+    },
+    {
+      "date": "2026-06",
+      "price": 638.72,
+      "pe_ttm": null,
+      "pb": 25.34,
+      "eps_used": null,
+      "bvps_used": 25.21,
+      "fy": "FY2026",
+      "type": "cont_ops_HDD_est"
+    },
+    {
+      "date": "2026-07",
+      "price": 544.84,
+      "pe_ttm": null,
+      "pb": 20.87,
+      "eps_used": null,
+      "bvps_used": 26.11,
+      "fy": "FY2027",
+      "type": "cont_ops_HDD_est"
+    },
+    {
+      "date": "2026-08",
+      "price": 472.7,
+      "pe_ttm": 19.5,
+      "pb": 17.5,
+      "eps_used": null,
+      "bvps_used": 27.01,
+      "fy": "FY2027",
+      "type": "cont_ops_HDD_est"
+    }
+  ]
+}

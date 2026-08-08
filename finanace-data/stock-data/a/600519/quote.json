@@ -1,0 +1,20 @@
+{
+  "ticker": "600519.SS",
+  "name": "贵州茅台",
+  "price": 1308.55,
+  "prev_close": 1306.45,
+  "open": 1310.0,
+  "high": 1314.4,
+  "low": 1300.01,
+  "volume_lots": 25463.0,
+  "turnover_yuan": 332623.0,
+  "market_cap_yi": 16357.94,
+  "circulating_market_cap_yi": 16357.94,
+  "pe_ttm": 19.78,
+  "pb": 7.02,
+  "turnover_rate": 0.2,
+  "high_52w": 1314.4,
+  "low_52w": 1300.01,
+  "timestamp": "2026-08-06 22:33:22",
+  "source": "腾讯行情 qt.gtimg.cn"
+}

@@ -1,0 +1,66 @@
+{
+  "ticker": "002050.SZ",
+  "name": "三花智控",
+  "reports": [
+    {
+      "report_type": "annual",
+      "fiscal_year": "2020",
+      "source": "巨潮资讯网 cninfo.com.cn",
+      "source_url": "http://static.cninfo.com.cn/finalpage/2021-03-27/1209462148.PDF",
+      "download_time": "2026-08-06 23:20:00",
+      "file_hash": "8c4b4b32b1da2cccbd7f86b02726f29e",
+      "file_size": 1436586,
+      "local_path": "finanace-data/financial-report/a/002050/raw/annual/002050-annual-2020.pdf"
+    },
+    {
+      "report_type": "annual",
+      "fiscal_year": "2021",
+      "source": "巨潮资讯网 cninfo.com.cn",
+      "source_url": "http://static.cninfo.com.cn/finalpage/2022-03-25/1212667588.PDF",
+      "download_time": "2026-08-06 23:20:00",
+      "file_hash": "4f999a9a246b517d56ade7d2cf98ac4d",
+      "file_size": 1340165,
+      "local_path": "finanace-data/financial-report/a/002050/raw/annual/002050-annual-2021.pdf"
+    },
+    {
+      "report_type": "annual",
+      "fiscal_year": "2022",
+      "source": "巨潮资讯网 cninfo.com.cn",
+      "source_url": "http://static.cninfo.com.cn/finalpage/2023-04-29/1216687189.PDF",
+      "download_time": "2026-08-06 23:20:00",
+      "file_hash": "a939fd69890929ece850cbbb8545ce7c",
+      "file_size": 1363639,
+      "local_path": "finanace-data/financial-report/a/002050/raw/annual/002050-annual-2022.pdf"
+    },
+    {
+      "report_type": "annual",
+      "fiscal_year": "2023",
+      "source": "巨潮资讯网 cninfo.com.cn",
+      "source_url": "http://static.cninfo.com.cn/finalpage/2024-04-30/1219912907.PDF",
+      "download_time": "2026-08-06 23:20:00",
+      "file_hash": "ba7a9b9c73a52489127d6b05280eba58",
+      "file_size": 1137842,
+      "local_path": "finanace-data/financial-report/a/002050/raw/annual/002050-annual-2023.pdf"
+    },
+    {
+      "report_type": "annual",
+      "fiscal_year": "2024",
+      "source": "巨潮资讯网 cninfo.com.cn",
+      "source_url": "http://static.cninfo.com.cn/finalpage/2025-03-27/1222913178.PDF",
+      "download_time": "2026-08-06 23:20:00",
+      "file_hash": "be4303e002cb08fdc2118ab7bc82ab7e",
+      "file_size": 1262277,
+      "local_path": "finanace-data/financial-report/a/002050/raw/annual/002050-annual-2024.pdf"
+    },
+    {
+      "report_type": "annual",
+      "fiscal_year": "2025",
+      "source": "巨潮资讯网 cninfo.com.cn",
+      "source_url": "http://static.cninfo.com.cn/finalpage/2026-03-24/1225026522.PDF",
+      "download_time": "2026-08-06 23:20:00",
+      "file_hash": "171d9e3bc3ce0a3a22a12c666e295bd2",
+      "file_size": 1270470,
+      "local_path": "finanace-data/financial-report/a/002050/raw/annual/002050-annual-2025.pdf"
+    }
+  ]
+}

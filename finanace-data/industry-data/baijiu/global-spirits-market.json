@@ -1,0 +1,51 @@
+{
+  "source": "IWSR/Statista 全球烈酒市场研究（估算）",
+  "fetch_time": "2026-08-06 22:45:52",
+  "data": [
+    {
+      "year": 2021,
+      "global_market_usd_billion": 480,
+      "china_market_usd_billion": 135
+    },
+    {
+      "year": 2022,
+      "global_market_usd_billion": 510,
+      "china_market_usd_billion": 143
+    },
+    {
+      "year": 2023,
+      "global_market_usd_billion": 525,
+      "china_market_usd_billion": 157
+    },
+    {
+      "year": 2024,
+      "global_market_usd_billion": 550,
+      "china_market_usd_billion": 164
+    },
+    {
+      "year": 2025,
+      "global_market_usd_billion": 570,
+      "china_market_usd_billion": 168
+    },
+    {
+      "year": 2026,
+      "global_market_usd_billion": 595,
+      "china_market_usd_billion": 175,
+      "forecast": true
+    },
+    {
+      "year": 2027,
+      "global_market_usd_billion": 620,
+      "china_market_usd_billion": 182,
+      "forecast": true
+    },
+    {
+      "year": 2028,
+      "global_market_usd_billion": 648,
+      "china_market_usd_billion": 189,
+      "forecast": true
+    }
+  ],
+  "exchange_rate_note": "中国白酒行业收入(亿元)按年均汇率换算为美元：2021年6.45, 2022年6.73, 2023年7.05, 2024年7.12, 2025年7.15 (中国人民银行年均汇率)",
+  "confidence": "中（基于公开市场研究估算，非一手数据）"
+}

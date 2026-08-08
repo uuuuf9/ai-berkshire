@@ -1,0 +1,26 @@
+{
+  "source": "贵州茅台年报-主营业务分产品情况",
+  "fetch_time": "2026-08-06 22:45:52",
+  "data": [
+    {
+      "year": 2024,
+      "moutai_liquor_yi": 1459.28,
+      "moutai_yoy": 15.28,
+      "series_liquor_yi": 246.84,
+      "series_yoy": 19.65,
+      "total_yi": 1706.12
+    },
+    {
+      "year": 2025,
+      "moutai_liquor_yi": 1464.99,
+      "moutai_yoy": 0.39,
+      "series_liquor_yi": 222.75,
+      "series_yoy": -9.76,
+      "total_yi": 1687.75
+    }
+  ],
+  "source_files": [
+    "finanace-data/financial-report/a/600519/raw/annual/600519-annual-2024.pdf:9",
+    "finanace-data/financial-report/a/600519/raw/annual/600519-annual-2025.pdf:10"
+  ]
+}

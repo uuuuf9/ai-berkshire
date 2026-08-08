@@ -1,0 +1,74 @@
+{
+  "ticker": "WDC",
+  "company": "Western Digital Corporation",
+  "currency": "USD (millions)",
+  "fetch_time": "2026-08-06",
+  "note": "持续经营(HDD-only)口径; Q3 FY2026含一次性项目: Sandisk留存权益收益2,734M + 债务转股权交换成本545M",
+  "quarters": [
+    {
+      "quarter": "Q4 FY2025",
+      "period_end": "2025-06-27",
+      "revenue": 2605,
+      "revenue_note": "计算值: FY2025总收入9,520M - 9M FY2025收入6,915M",
+      "gross_profit": null,
+      "gross_margin_pct": null,
+      "operating_income": null,
+      "net_income": null,
+      "data_source": "计算自FY2025 10-K (raw/annual/WDC-annual-2025.htm)"
+    },
+    {
+      "quarter": "Q1 FY2026",
+      "period_end": "2025-10-03",
+      "revenue": 2818,
+      "revenue_yoy_pct": 27.4,
+      "gross_profit": null,
+      "gross_margin_pct": null,
+      "operating_income": null,
+      "net_income": null,
+      "data_source": "10-Q (raw/quarterly/WDC-quarterly-2025Q4.htm)"
+    },
+    {
+      "quarter": "Q2 FY2026",
+      "period_end": "2026-01-02",
+      "revenue": 3017,
+      "revenue_yoy_pct": 25.2,
+      "gross_profit": null,
+      "gross_margin_pct": null,
+      "operating_income": null,
+      "net_income": null,
+      "data_source": "10-Q (raw/quarterly/WDC-quarterly-2026Q1.htm)"
+    },
+    {
+      "quarter": "Q3 FY2026",
+      "period_end": "2026-04-03",
+      "revenue": 3337,
+      "revenue_yoy_pct": 45.5,
+      "cost_of_revenue": 1661,
+      "gross_profit": 1676,
+      "gross_margin_pct": 50.2,
+      "rd_expense": 294,
+      "sga_expense": 147,
+      "operating_income": 1190,
+      "operating_margin_pct": 35.7,
+      "interest_income": 12,
+      "interest_expense": -38,
+      "gain_on_sandisk_retained_interest": 2734,
+      "debt_for_equity_exchange_cost": -545,
+      "income_before_taxes": 3359,
+      "income_tax": 154,
+      "net_income": 3205,
+      "net_income_adjusted": 1016,
+      "net_income_adjusted_note": "剔除Sandisk留存权益收益2,734M和债务转股权交换成本545M后的调整净利润",
+      "diluted_eps": null,
+      "data_source": "10-Q (raw/quarterly/WDC-quarterly-2026Q2.htm)"
+    }
+  ],
+  "nine_month_fy2026": {
+    "revenue": 9172,
+    "revenue_yoy_pct": 32.7,
+    "prior_year_revenue": 6915,
+    "note": "9M FY2026收入9,172M vs 9M FY2025收入6,915M, 同比+32.7%"
+  },
+  "ttm_revenue": 11777,
+  "ttm_revenue_note": "TTM收入 = Q4 FY2025 + Q1-Q3 FY2026 = 2,605 + 2,818 + 3,017 + 3,337 = 11,777M"
+}

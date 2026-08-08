@@ -1,0 +1,974 @@
+{
+  "ticker": "MU",
+  "source": "yfinance价格 + SEC 10-K EPS/BVPS + 季度TTM调整",
+  "fetch_time": "2026-08-03",
+  "method": "历史用年度FY EPS/BVPS(9月切换); 2025年9月起用季度滚动TTM EPS和最新BVPS",
+  "note": "FY2016-2017 BVPS为数据缺口(标注null); 亏损年份PE为null; 近期BVPS因季度盈利爆发快速增长",
+  "current_pb": 9.1,
+  "current_pb_source": "yfinance (price/latest quarterly BVPS $89.22)",
+  "current_pe_ttm": 18.34,
+  "current_pe_forward": 5.22,
+  "count": 120,
+  "points": [
+    {
+      "date": "2016-09",
+      "price": 17.3379,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": -0.16,
+      "bvps_used": null
+    },
+    {
+      "date": "2016-10",
+      "price": 16.7334,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": -0.16,
+      "bvps_used": null
+    },
+    {
+      "date": "2016-11",
+      "price": 19.0444,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": -0.16,
+      "bvps_used": null
+    },
+    {
+      "date": "2016-12",
+      "price": 21.375,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": -0.16,
+      "bvps_used": null
+    },
+    {
+      "date": "2017-01",
+      "price": 23.5106,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": -0.16,
+      "bvps_used": null
+    },
+    {
+      "date": "2017-02",
+      "price": 22.8572,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": -0.16,
+      "bvps_used": null
+    },
+    {
+      "date": "2017-03",
+      "price": 28.1815,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": -0.16,
+      "bvps_used": null
+    },
+    {
+      "date": "2017-04",
+      "price": 26.982,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": -0.16,
+      "bvps_used": null
+    },
+    {
+      "date": "2017-05",
+      "price": 30.005,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": -0.16,
+      "bvps_used": null
+    },
+    {
+      "date": "2017-06",
+      "price": 29.1176,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": -0.16,
+      "bvps_used": null
+    },
+    {
+      "date": "2017-07",
+      "price": 27.4209,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": -0.16,
+      "bvps_used": null
+    },
+    {
+      "date": "2017-08",
+      "price": 31.1751,
+      "pe_ttm": null,
+      "pb": null,
+      "eps_used": -0.16,
+      "bvps_used": null
+    },
+    {
+      "date": "2017-09",
+      "price": 38.3521,
+      "pe_ttm": 8.48,
+      "pb": null,
+      "eps_used": 4.52,
+      "bvps_used": null
+    },
+    {
+      "date": "2017-10",
+      "price": 43.2083,
+      "pe_ttm": 9.56,
+      "pb": null,
+      "eps_used": 4.52,
+      "bvps_used": null
+    },
+    {
+      "date": "2017-11",
+      "price": 41.3361,
+      "pe_ttm": 9.15,
+      "pb": null,
+      "eps_used": 4.52,
+      "bvps_used": null
+    },
+    {
+      "date": "2017-12",
+      "price": 40.0976,
+      "pe_ttm": 8.87,
+      "pb": null,
+      "eps_used": 4.52,
+      "bvps_used": null
+    },
+    {
+      "date": "2018-01",
+      "price": 42.633,
+      "pe_ttm": 9.43,
+      "pb": null,
+      "eps_used": 4.52,
+      "bvps_used": null
+    },
+    {
+      "date": "2018-02",
+      "price": 47.5964,
+      "pe_ttm": 10.53,
+      "pb": null,
+      "eps_used": 4.52,
+      "bvps_used": null
+    },
+    {
+      "date": "2018-03",
+      "price": 50.8437,
+      "pe_ttm": 11.25,
+      "pb": null,
+      "eps_used": 4.52,
+      "bvps_used": null
+    },
+    {
+      "date": "2018-04",
+      "price": 44.8368,
+      "pe_ttm": 9.92,
+      "pb": null,
+      "eps_used": 4.52,
+      "bvps_used": null
+    },
+    {
+      "date": "2018-05",
+      "price": 56.1582,
+      "pe_ttm": 12.42,
+      "pb": null,
+      "eps_used": 4.52,
+      "bvps_used": null
+    },
+    {
+      "date": "2018-06",
+      "price": 51.1362,
+      "pe_ttm": 11.31,
+      "pb": null,
+      "eps_used": 4.52,
+      "bvps_used": null
+    },
+    {
+      "date": "2018-07",
+      "price": 51.4775,
+      "pe_ttm": 11.39,
+      "pb": null,
+      "eps_used": 4.52,
+      "bvps_used": null
+    },
+    {
+      "date": "2018-08",
+      "price": 51.2142,
+      "pe_ttm": 11.33,
+      "pb": null,
+      "eps_used": 4.52,
+      "bvps_used": null
+    },
+    {
+      "date": "2018-09",
+      "price": 44.1055,
+      "pe_ttm": 3.82,
+      "pb": 1.17,
+      "eps_used": 11.55,
+      "bvps_used": 37.8
+    },
+    {
+      "date": "2018-10",
+      "price": 36.7822,
+      "pe_ttm": 3.18,
+      "pb": 0.97,
+      "eps_used": 11.55,
+      "bvps_used": 37.8
+    },
+    {
+      "date": "2018-11",
+      "price": 37.6013,
+      "pe_ttm": 3.26,
+      "pb": 0.99,
+      "eps_used": 11.55,
+      "bvps_used": 37.8
+    },
+    {
+      "date": "2018-12",
+      "price": 30.9411,
+      "pe_ttm": 2.68,
+      "pb": 0.82,
+      "eps_used": 11.55,
+      "bvps_used": 37.8
+    },
+    {
+      "date": "2019-01",
+      "price": 37.2697,
+      "pe_ttm": 3.23,
+      "pb": 0.99,
+      "eps_used": 11.55,
+      "bvps_used": 37.8
+    },
+    {
+      "date": "2019-02",
+      "price": 39.8636,
+      "pe_ttm": 3.45,
+      "pb": 1.05,
+      "eps_used": 11.55,
+      "bvps_used": 37.8
+    },
+    {
+      "date": "2019-03",
+      "price": 40.3024,
+      "pe_ttm": 3.49,
+      "pb": 1.07,
+      "eps_used": 11.55,
+      "bvps_used": 37.8
+    },
+    {
+      "date": "2019-04",
+      "price": 41.0143,
+      "pe_ttm": 3.55,
+      "pb": 1.09,
+      "eps_used": 11.55,
+      "bvps_used": 37.8
+    },
+    {
+      "date": "2019-05",
+      "price": 31.7992,
+      "pe_ttm": 2.75,
+      "pb": 0.84,
+      "eps_used": 11.55,
+      "bvps_used": 37.8
+    },
+    {
+      "date": "2019-06",
+      "price": 37.6305,
+      "pe_ttm": 3.26,
+      "pb": 1.0,
+      "eps_used": 11.55,
+      "bvps_used": 37.8
+    },
+    {
+      "date": "2019-07",
+      "price": 43.7739,
+      "pe_ttm": 3.79,
+      "pb": 1.16,
+      "eps_used": 11.55,
+      "bvps_used": 37.8
+    },
+    {
+      "date": "2019-08",
+      "price": 44.1445,
+      "pe_ttm": 3.82,
+      "pb": 1.17,
+      "eps_used": 11.55,
+      "bvps_used": 37.8
+    },
+    {
+      "date": "2019-09",
+      "price": 41.7846,
+      "pe_ttm": 7.5,
+      "pb": 1.04,
+      "eps_used": 5.57,
+      "bvps_used": 40.3
+    },
+    {
+      "date": "2019-10",
+      "price": 46.3678,
+      "pe_ttm": 8.32,
+      "pb": 1.15,
+      "eps_used": 5.57,
+      "bvps_used": 40.3
+    },
+    {
+      "date": "2019-11",
+      "price": 46.3288,
+      "pe_ttm": 8.32,
+      "pb": 1.15,
+      "eps_used": 5.57,
+      "bvps_used": 40.3
+    },
+    {
+      "date": "2019-12",
+      "price": 52.4429,
+      "pe_ttm": 9.42,
+      "pb": 1.3,
+      "eps_used": 5.57,
+      "bvps_used": 40.3
+    },
+    {
+      "date": "2020-01",
+      "price": 51.77,
+      "pe_ttm": 9.29,
+      "pb": 1.28,
+      "eps_used": 5.57,
+      "bvps_used": 40.3
+    },
+    {
+      "date": "2020-02",
+      "price": 51.2532,
+      "pe_ttm": 9.2,
+      "pb": 1.27,
+      "eps_used": 5.57,
+      "bvps_used": 40.3
+    },
+    {
+      "date": "2020-03",
+      "price": 41.0143,
+      "pe_ttm": 7.36,
+      "pb": 1.02,
+      "eps_used": 5.57,
+      "bvps_used": 40.3
+    },
+    {
+      "date": "2020-04",
+      "price": 46.6993,
+      "pe_ttm": 8.38,
+      "pb": 1.16,
+      "eps_used": 5.57,
+      "bvps_used": 40.3
+    },
+    {
+      "date": "2020-05",
+      "price": 46.7188,
+      "pe_ttm": 8.39,
+      "pb": 1.16,
+      "eps_used": 5.57,
+      "bvps_used": 40.3
+    },
+    {
+      "date": "2020-06",
+      "price": 50.2391,
+      "pe_ttm": 9.02,
+      "pb": 1.25,
+      "eps_used": 5.57,
+      "bvps_used": 40.3
+    },
+    {
+      "date": "2020-07",
+      "price": 48.8154,
+      "pe_ttm": 8.76,
+      "pb": 1.21,
+      "eps_used": 5.57,
+      "bvps_used": 40.3
+    },
+    {
+      "date": "2020-08",
+      "price": 44.3785,
+      "pe_ttm": 7.97,
+      "pb": 1.1,
+      "eps_used": 5.57,
+      "bvps_used": 40.3
+    },
+    {
+      "date": "2020-09",
+      "price": 45.7924,
+      "pe_ttm": 19.24,
+      "pb": 1.17,
+      "eps_used": 2.38,
+      "bvps_used": 39.2
+    },
+    {
+      "date": "2020-10",
+      "price": 49.0884,
+      "pe_ttm": 20.63,
+      "pb": 1.25,
+      "eps_used": 2.38,
+      "bvps_used": 39.2
+    },
+    {
+      "date": "2020-11",
+      "price": 62.4965,
+      "pe_ttm": 26.26,
+      "pb": 1.59,
+      "eps_used": 2.38,
+      "bvps_used": 39.2
+    },
+    {
+      "date": "2020-12",
+      "price": 73.3108,
+      "pe_ttm": 30.8,
+      "pb": 1.87,
+      "eps_used": 2.38,
+      "bvps_used": 39.2
+    },
+    {
+      "date": "2021-01",
+      "price": 76.324,
+      "pe_ttm": 32.07,
+      "pb": 1.95,
+      "eps_used": 2.38,
+      "bvps_used": 39.2
+    },
+    {
+      "date": "2021-02",
+      "price": 89.2543,
+      "pe_ttm": 37.5,
+      "pb": 2.28,
+      "eps_used": 2.38,
+      "bvps_used": 39.2
+    },
+    {
+      "date": "2021-03",
+      "price": 86.0169,
+      "pe_ttm": 36.14,
+      "pb": 2.19,
+      "eps_used": 2.38,
+      "bvps_used": 39.2
+    },
+    {
+      "date": "2021-04",
+      "price": 83.9301,
+      "pe_ttm": 35.26,
+      "pb": 2.14,
+      "eps_used": 2.38,
+      "bvps_used": 39.2
+    },
+    {
+      "date": "2021-05",
+      "price": 82.0481,
+      "pe_ttm": 34.47,
+      "pb": 2.09,
+      "eps_used": 2.38,
+      "bvps_used": 39.2
+    },
+    {
+      "date": "2021-06",
+      "price": 82.8672,
+      "pe_ttm": 34.82,
+      "pb": 2.11,
+      "eps_used": 2.38,
+      "bvps_used": 39.2
+    },
+    {
+      "date": "2021-07",
+      "price": 75.6511,
+      "pe_ttm": 31.79,
+      "pb": 1.93,
+      "eps_used": 2.38,
+      "bvps_used": 39.2
+    },
+    {
+      "date": "2021-08",
+      "price": 71.8676,
+      "pe_ttm": 30.2,
+      "pb": 1.83,
+      "eps_used": 2.38,
+      "bvps_used": 39.2
+    },
+    {
+      "date": "2021-09",
+      "price": 69.312,
+      "pe_ttm": 13.43,
+      "pb": 1.76,
+      "eps_used": 5.16,
+      "bvps_used": 39.3
+    },
+    {
+      "date": "2021-10",
+      "price": 67.4762,
+      "pe_ttm": 13.08,
+      "pb": 1.72,
+      "eps_used": 5.16,
+      "bvps_used": 39.3
+    },
+    {
+      "date": "2021-11",
+      "price": 82.026,
+      "pe_ttm": 15.9,
+      "pb": 2.09,
+      "eps_used": 5.16,
+      "bvps_used": 39.3
+    },
+    {
+      "date": "2021-12",
+      "price": 91.058,
+      "pe_ttm": 17.65,
+      "pb": 2.32,
+      "eps_used": 5.16,
+      "bvps_used": 39.3
+    },
+    {
+      "date": "2022-01",
+      "price": 80.4223,
+      "pe_ttm": 15.59,
+      "pb": 2.05,
+      "eps_used": 5.16,
+      "bvps_used": 39.3
+    },
+    {
+      "date": "2022-02",
+      "price": 86.8643,
+      "pe_ttm": 16.83,
+      "pb": 2.21,
+      "eps_used": 5.16,
+      "bvps_used": 39.3
+    },
+    {
+      "date": "2022-03",
+      "price": 76.1407,
+      "pe_ttm": 14.76,
+      "pb": 1.94,
+      "eps_used": 5.16,
+      "bvps_used": 39.3
+    },
+    {
+      "date": "2022-04",
+      "price": 66.7497,
+      "pe_ttm": 12.94,
+      "pb": 1.7,
+      "eps_used": 5.16,
+      "bvps_used": 39.3
+    },
+    {
+      "date": "2022-05",
+      "price": 72.2803,
+      "pe_ttm": 14.01,
+      "pb": 1.84,
+      "eps_used": 5.16,
+      "bvps_used": 39.3
+    },
+    {
+      "date": "2022-06",
+      "price": 54.1123,
+      "pe_ttm": 10.49,
+      "pb": 1.38,
+      "eps_used": 5.16,
+      "bvps_used": 39.3
+    },
+    {
+      "date": "2022-07",
+      "price": 60.6719,
+      "pe_ttm": 11.76,
+      "pb": 1.54,
+      "eps_used": 5.16,
+      "bvps_used": 39.3
+    },
+    {
+      "date": "2022-08",
+      "price": 55.4443,
+      "pe_ttm": 10.75,
+      "pb": 1.41,
+      "eps_used": 5.16,
+      "bvps_used": 39.3
+    },
+    {
+      "date": "2022-09",
+      "price": 49.1378,
+      "pe_ttm": 6.34,
+      "pb": 1.1,
+      "eps_used": 7.75,
+      "bvps_used": 44.6
+    },
+    {
+      "date": "2022-10",
+      "price": 53.1729,
+      "pe_ttm": 6.86,
+      "pb": 1.19,
+      "eps_used": 7.75,
+      "bvps_used": 44.6
+    },
+    {
+      "date": "2022-11",
+      "price": 56.6621,
+      "pe_ttm": 7.31,
+      "pb": 1.27,
+      "eps_used": 7.75,
+      "bvps_used": 44.6
+    },
+    {
+      "date": "2022-12",
+      "price": 49.2353,
+      "pe_ttm": 6.35,
+      "pb": 1.1,
+      "eps_used": 7.75,
+      "bvps_used": 44.6
+    },
+    {
+      "date": "2023-01",
+      "price": 59.4015,
+      "pe_ttm": 7.66,
+      "pb": 1.33,
+      "eps_used": 7.75,
+      "bvps_used": 44.6
+    },
+    {
+      "date": "2023-02",
+      "price": 56.9585,
+      "pe_ttm": 7.35,
+      "pb": 1.28,
+      "eps_used": 7.75,
+      "bvps_used": 44.6
+    },
+    {
+      "date": "2023-03",
+      "price": 59.4409,
+      "pe_ttm": 7.67,
+      "pb": 1.33,
+      "eps_used": 7.75,
+      "bvps_used": 44.6
+    },
+    {
+      "date": "2023-04",
+      "price": 63.5292,
+      "pe_ttm": 8.2,
+      "pb": 1.42,
+      "eps_used": 7.75,
+      "bvps_used": 44.6
+    },
+    {
+      "date": "2023-05",
+      "price": 67.3196,
+      "pe_ttm": 8.69,
+      "pb": 1.51,
+      "eps_used": 7.75,
+      "bvps_used": 44.6
+    },
+    {
+      "date": "2023-06",
+      "price": 62.2953,
+      "pe_ttm": 8.04,
+      "pb": 1.4,
+      "eps_used": 7.75,
+      "bvps_used": 44.6
+    },
+    {
+      "date": "2023-07",
+      "price": 70.601,
+      "pe_ttm": 9.11,
+      "pb": 1.58,
+      "eps_used": 7.75,
+      "bvps_used": 44.6
+    },
+    {
+      "date": "2023-08",
+      "price": 69.167,
+      "pe_ttm": 8.92,
+      "pb": 1.55,
+      "eps_used": 7.75,
+      "bvps_used": 44.6
+    },
+    {
+      "date": "2023-09",
+      "price": 67.2781,
+      "pe_ttm": null,
+      "pb": 1.68,
+      "eps_used": -5.34,
+      "bvps_used": 40.0
+    },
+    {
+      "date": "2023-10",
+      "price": 66.2413,
+      "pe_ttm": null,
+      "pb": 1.66,
+      "eps_used": -5.34,
+      "bvps_used": 40.0
+    },
+    {
+      "date": "2023-11",
+      "price": 75.4043,
+      "pe_ttm": null,
+      "pb": 1.89,
+      "eps_used": -5.34,
+      "bvps_used": 40.0
+    },
+    {
+      "date": "2023-12",
+      "price": 84.6508,
+      "pe_ttm": null,
+      "pb": 2.12,
+      "eps_used": -5.34,
+      "bvps_used": 40.0
+    },
+    {
+      "date": "2024-01",
+      "price": 85.0575,
+      "pe_ttm": null,
+      "pb": 2.13,
+      "eps_used": -5.34,
+      "bvps_used": 40.0
+    },
+    {
+      "date": "2024-02",
+      "price": 89.8783,
+      "pe_ttm": null,
+      "pb": 2.25,
+      "eps_used": -5.34,
+      "bvps_used": 40.0
+    },
+    {
+      "date": "2024-03",
+      "price": 117.0508,
+      "pe_ttm": null,
+      "pb": 2.93,
+      "eps_used": -5.34,
+      "bvps_used": 40.0
+    },
+    {
+      "date": "2024-04",
+      "price": 112.1559,
+      "pe_ttm": null,
+      "pb": 2.8,
+      "eps_used": -5.34,
+      "bvps_used": 40.0
+    },
+    {
+      "date": "2024-05",
+      "price": 124.1102,
+      "pe_ttm": null,
+      "pb": 3.1,
+      "eps_used": -5.34,
+      "bvps_used": 40.0
+    },
+    {
+      "date": "2024-06",
+      "price": 130.5937,
+      "pe_ttm": null,
+      "pb": 3.26,
+      "eps_used": -5.34,
+      "bvps_used": 40.0
+    },
+    {
+      "date": "2024-07",
+      "price": 109.1336,
+      "pe_ttm": null,
+      "pb": 2.73,
+      "eps_used": -5.34,
+      "bvps_used": 40.0
+    },
+    {
+      "date": "2024-08",
+      "price": 95.6385,
+      "pe_ttm": null,
+      "pb": 2.39,
+      "eps_used": -5.34,
+      "bvps_used": 40.0
+    },
+    {
+      "date": "2024-09",
+      "price": 103.0618,
+      "pe_ttm": 147.23,
+      "pb": 2.54,
+      "eps_used": 0.7,
+      "bvps_used": 40.6
+    },
+    {
+      "date": "2024-10",
+      "price": 99.1387,
+      "pe_ttm": 141.63,
+      "pb": 2.44,
+      "eps_used": 0.7,
+      "bvps_used": 40.6
+    },
+    {
+      "date": "2024-11",
+      "price": 97.4474,
+      "pe_ttm": 139.21,
+      "pb": 2.4,
+      "eps_used": 0.7,
+      "bvps_used": 40.6
+    },
+    {
+      "date": "2024-12",
+      "price": 83.837,
+      "pe_ttm": 119.77,
+      "pb": 2.06,
+      "eps_used": 0.7,
+      "bvps_used": 40.6
+    },
+    {
+      "date": "2025-01",
+      "price": 90.8898,
+      "pe_ttm": 129.84,
+      "pb": 2.24,
+      "eps_used": 0.7,
+      "bvps_used": 40.6
+    },
+    {
+      "date": "2025-02",
+      "price": 93.2706,
+      "pe_ttm": 133.24,
+      "pb": 2.3,
+      "eps_used": 0.7,
+      "bvps_used": 40.6
+    },
+    {
+      "date": "2025-03",
+      "price": 86.6692,
+      "pe_ttm": 123.81,
+      "pb": 2.13,
+      "eps_used": 0.7,
+      "bvps_used": 40.6
+    },
+    {
+      "date": "2025-04",
+      "price": 76.7544,
+      "pe_ttm": 109.65,
+      "pb": 1.89,
+      "eps_used": 0.7,
+      "bvps_used": 40.6
+    },
+    {
+      "date": "2025-05",
+      "price": 94.2199,
+      "pe_ttm": 134.6,
+      "pb": 2.32,
+      "eps_used": 0.7,
+      "bvps_used": 40.6
+    },
+    {
+      "date": "2025-06",
+      "price": 122.9368,
+      "pe_ttm": 175.62,
+      "pb": 3.03,
+      "eps_used": 0.7,
+      "bvps_used": 40.6
+    },
+    {
+      "date": "2025-07",
+      "price": 108.9651,
+      "pe_ttm": 155.66,
+      "pb": 2.68,
+      "eps_used": 0.7,
+      "bvps_used": 40.6
+    },
+    {
+      "date": "2025-08",
+      "price": 118.8193,
+      "pe_ttm": 169.74,
+      "pb": 2.93,
+      "eps_used": 0.7,
+      "bvps_used": 40.6
+    },
+    {
+      "date": "2025-09",
+      "price": 167.0519,
+      "pe_ttm": 22.01,
+      "pb": 3.48,
+      "eps_used": 7.59,
+      "bvps_used": 48.0
+    },
+    {
+      "date": "2025-10",
+      "price": 223.5513,
+      "pe_ttm": 29.45,
+      "pb": 4.29,
+      "eps_used": 7.59,
+      "bvps_used": 52.1
+    },
+    {
+      "date": "2025-11",
+      "price": 236.2489,
+      "pe_ttm": 31.13,
+      "pb": 4.02,
+      "eps_used": 7.59,
+      "bvps_used": 58.8
+    },
+    {
+      "date": "2025-12",
+      "price": 285.2463,
+      "pe_ttm": 30.48,
+      "pb": 4.85,
+      "eps_used": 9.36,
+      "bvps_used": 58.8
+    },
+    {
+      "date": "2026-01",
+      "price": 414.642,
+      "pe_ttm": 44.3,
+      "pb": 5.72,
+      "eps_used": 9.36,
+      "bvps_used": 72.5
+    },
+    {
+      "date": "2026-02",
+      "price": 412.1335,
+      "pe_ttm": 44.03,
+      "pb": 5.68,
+      "eps_used": 9.36,
+      "bvps_used": 72.5
+    },
+    {
+      "date": "2026-03",
+      "price": 337.7881,
+      "pe_ttm": 17.1,
+      "pb": 4.66,
+      "eps_used": 19.75,
+      "bvps_used": 72.5
+    },
+    {
+      "date": "2026-04",
+      "price": 517.0804,
+      "pe_ttm": 26.18,
+      "pb": 5.8,
+      "eps_used": 19.75,
+      "bvps_used": 89.2
+    },
+    {
+      "date": "2026-05",
+      "price": 970.8507,
+      "pe_ttm": 49.16,
+      "pb": 10.88,
+      "eps_used": 19.75,
+      "bvps_used": 89.2
+    },
+    {
+      "date": "2026-06",
+      "price": 1154.1125,
+      "pe_ttm": 26.13,
+      "pb": 12.94,
+      "eps_used": 44.17,
+      "bvps_used": 89.2
+    },
+    {
+      "date": "2026-07",
+      "price": 823.03,
+      "pe_ttm": 18.63,
+      "pb": 9.23,
+      "eps_used": 44.17,
+      "bvps_used": 89.2
+    },
+    {
+      "date": "2026-08",
+      "price": 807.99,
+      "pe_ttm": 18.29,
+      "pb": 9.06,
+      "eps_used": 44.17,
+      "bvps_used": 89.2
+    }
+  ]
+}

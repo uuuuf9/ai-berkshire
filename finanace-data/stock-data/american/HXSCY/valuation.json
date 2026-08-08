@@ -1,0 +1,15 @@
+{
+  "as_of": "2026-07-30",
+  "EPS_FY25_krw": 58946,
+  "PE_TTM": 22.43,
+  "BPS_FY25_krw": 171751.0,
+  "PB": 7.7,
+  "ROE_FY25_pct": 44.2,
+  "PE_forward_2026E": 5.5,
+  "DPS_FY25_krw": 3000,
+  "dividend_yield_pct": 0.23,
+  "EV_krw": 872792705000000.0,
+  "EV_revenue": 0.9,
+  "net_cash_krw": 69400000000000.0,
+  "notes": "EPS=NI(FY25 42.95T)/total shares(728.6M), cross-checked vs Naver 58,955. BPS from Naver 기업실적(FY25). Forward PE on 2026E NI~170T (H1'26 OP 98.15T annualized × NI/OP ratio 0.91, ex 2Q26 one-off gains). PB/equity medium confidence; precise net assets pending full annual report."
+}

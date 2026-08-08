@@ -1,0 +1,62 @@
+{
+  "ticker": "000603",
+  "market": "a",
+  "files": [
+    {
+      "report_type": "年报",
+      "fiscal_year": "2025",
+      "source": "巨潮资讯网 cninfo.com.cn",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-29/1225242915.PDF",
+      "notice_date": "2026-04-29",
+      "download_time": "2026-08-06T23:27:22",
+      "md5": "13680e6e22568e6c3c69aa199333efe5",
+      "size_bytes": 3087667,
+      "local_path": "000603-annual-2025.pdf"
+    },
+    {
+      "report_type": "年报",
+      "fiscal_year": "2024",
+      "source": "巨潮资讯网 cninfo.com.cn",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-29/1223382697.PDF",
+      "notice_date": "2025-04-29",
+      "download_time": "2026-08-06T23:27:22",
+      "md5": "541e6a89883675f3a76eef0a5db57c32",
+      "size_bytes": 5468496,
+      "local_path": "000603-annual-2024.pdf"
+    },
+    {
+      "report_type": "年报",
+      "fiscal_year": "2023",
+      "source": "巨潮资讯网 cninfo.com.cn",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-27/1219860184.PDF",
+      "notice_date": "2024-04-27",
+      "download_time": "2026-08-06T23:27:22",
+      "md5": "465439e2649d327f6b7114b5a92e5aa1",
+      "size_bytes": 1375230,
+      "local_path": "000603-annual-2023.pdf"
+    },
+    {
+      "report_type": "年报",
+      "fiscal_year": "2022",
+      "source": "巨潮资讯网 cninfo.com.cn",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2023-04-29/1216698921.PDF",
+      "notice_date": "2023-04-29",
+      "download_time": "2026-08-06T23:27:22",
+      "md5": "8ab778ebd5716711eec2664f76da5ce4",
+      "size_bytes": 4730938,
+      "local_path": "000603-annual-2022.pdf"
+    },
+    {
+      "report_type": "年报",
+      "fiscal_year": "2021",
+      "source": "巨潮资讯网 cninfo.com.cn",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2022-04-26/1213104264.PDF",
+      "notice_date": "2022-04-26",
+      "download_time": "2026-08-06T23:27:23",
+      "md5": "90769370e8da02745474a4b5afae2b4f",
+      "size_bytes": 5636331,
+      "local_path": "000603-annual-2021.pdf"
+    }
+  ],
+  "source": "巨潮资讯网"
+}

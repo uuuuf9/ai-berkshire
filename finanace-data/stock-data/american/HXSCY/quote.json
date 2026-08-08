@@ -1,0 +1,17 @@
+{
+  "as_of": "2026-07-30",
+  "currency": "KRW",
+  "price": 1322000,
+  "prev_close": 1401000,
+  "change_pct": -5.64,
+  "day_low": 1287000,
+  "day_high": 1459000,
+  "market_cap_krw": 942192705000000,
+  "market_cap_usd": 687731901460,
+  "shares_listed": 712700000,
+  "shares_total_issued": 728600000,
+  "treasury_shares": 15900000,
+  "primary_code": "000660.KS",
+  "us_adr": "HXSCY",
+  "note": "Price/mktcap from Naver + Google Finance (cross-verified, 2026-07-30 close). Stock fell ~10% over 7/29-7/30 after 2Q26 record results (sell-the-news / peak-cycle fears)."
+}

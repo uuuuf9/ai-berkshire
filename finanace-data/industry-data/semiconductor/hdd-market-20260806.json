@@ -1,0 +1,117 @@
+{
+  "sector": "HDD Storage (硬盘存储)",
+  "source": "WDC 10-K + Seagate (STX) yfinance + 行业结构分析",
+  "fetch_time": "2026-08-06",
+  "currency": "USD (millions unless noted)",
+  "market_data": [
+    {
+      "fiscal_year": "FY2021",
+      "wdc_revenue_musd": 8216,
+      "stx_revenue_musd": null,
+      "total_market_musd": null,
+      "wdc_market_share_pct": null,
+      "note": "Seagate数据不可得"
+    },
+    {
+      "fiscal_year": "FY2022",
+      "wdc_revenue_musd": 9040,
+      "stx_revenue_musd": null,
+      "total_market_musd": null,
+      "wdc_market_share_pct": null,
+      "note": "Seagate数据不可得"
+    },
+    {
+      "fiscal_year": "FY2023",
+      "wdc_revenue_musd": 6255,
+      "stx_revenue_musd": 7384,
+      "total_market_musd": 13639,
+      "wdc_market_share_pct": 45.9,
+      "stx_market_share_pct": 54.1,
+      "wdc_exabytes": 412,
+      "total_exabytes_est": 898
+    },
+    {
+      "fiscal_year": "FY2024",
+      "wdc_revenue_musd": 6317,
+      "stx_revenue_musd": 6552,
+      "total_market_musd": 12869,
+      "wdc_market_share_pct": 49.1,
+      "stx_market_share_pct": 50.9,
+      "wdc_exabytes": 443,
+      "total_exabytes_est": 902
+    },
+    {
+      "fiscal_year": "FY2025",
+      "wdc_revenue_musd": 9520,
+      "stx_revenue_musd": 9104,
+      "total_market_musd": 18624,
+      "wdc_market_share_pct": 51.1,
+      "stx_market_share_pct": 48.9,
+      "wdc_exabytes": 696,
+      "total_exabytes_est": 1362
+    }
+  ],
+  "forecast": [
+    {
+      "year": 2026,
+      "total_market_musd_est": 24400,
+      "growth_pct_est": 31.0,
+      "confidence": "中",
+      "note": "基于WDC FY2026 9M年化$12.2B + STX FY2026 $12.2B; AI数据中心HDD需求强劲"
+    },
+    {
+      "year": 2027,
+      "total_market_musd_est": 28000,
+      "growth_pct_est": 15.0,
+      "confidence": "中",
+      "note": "HAMR技术量产+更高容量驱动器; 预期增速放缓但保持双位数"
+    },
+    {
+      "year": 2028,
+      "total_market_musd_est": 31000,
+      "growth_pct_est": 11.0,
+      "confidence": "低",
+      "note": "高基数下增速趋缓; 长期看AI数据存储需求持续"
+    }
+  ],
+  "industry_context": {
+    "market_structure": "全球HDD市场为双寡头格局: Western Digital (WDC) + Seagate (STX) 合计占~99%市场份额",
+    "key_drivers": [
+      "AI驱动的数据中心存储需求爆发: AI训练/推理产生海量数据, HDD因其TCO优势成为大容量存储首选",
+      "近线(nearline)企业级HDD需求: 云超大规模数据中心持续扩建, 高容量(20TB+)HDD需求旺盛",
+      "技术路线图: ePMR + OptiNAND + UltraSMR + HAMR 推动面密度提升和单盘容量增长",
+      "产品结构升级: 客户向更高容量驱动器迁移(24TB/28TB/32TB+), ASP持续提升",
+      "Flash业务分拆: WDC 2025年2月分拆SanDisk后, 成为纯HDD公司, 资本配置更聚焦"
+    ],
+    "wdc_competitive_advantages": [
+      "垂直整合: 自研自产记录头和磁介质, 成本和技术领先",
+      "面密度领导力: ePMR/OptiNAND/UltraSMR技术组合, 行业领先的面密度",
+      "云客户关系: 与AWS/Azure/Google/Meta等超大规模云厂商深度合作",
+      "~4,500项活跃专利: 覆盖数据存储、磁记录等核心技术",
+      "产能优势: FY2025出货696EB, 同比+57%, 市占率升至~51%"
+    ],
+    "competitive_comparison": {
+      "WDC": {
+        "market_cap_bn": 163.3,
+        "pe_ttm": 19.5,
+        "pb": 22.66,
+        "gross_margin_pct": 50.2,
+        "revenue_ttm_bn": 11.8
+      },
+      "STX": {
+        "market_cap_bn": 196.2,
+        "pe_ttm": 62.2,
+        "pb": 177.4,
+        "gross_margin_pct": 45.6,
+        "revenue_ttm_bn": 12.2
+      },
+      "note": "WDC估值低于STX(PE/PB), 毛利率更高; STX的PE因前两年亏损被扭曲; STX的PB极高因大量回购导致账面价值极低/为负"
+    },
+    "data_sources": [
+      "WDC FY2025 10-K: raw/annual/WDC-annual-2025.htm (收入/EB出货/分部数据)",
+      "Seagate (STX) yfinance financials (收入/利润/估值)",
+      "行业结构分析: WDC+STX双寡头, 合计~99%市场份额"
+    ]
+  },
+  "note": "HDD市场为WDC+STX双寡头; 全球HDD市场按WDC+STX收入合计估算; 预测基于AI数据中心需求趋势, 置信度中/低"
+}

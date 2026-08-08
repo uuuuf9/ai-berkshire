@@ -1,0 +1,43 @@
+{
+  "ticker": "HXSCY",
+  "market": "american",
+  "source": "SK hynix Newsroom (official IR)",
+  "filings": [
+    {
+      "type": "annual",
+      "fy": "FY2025",
+      "file": "raw/annual/HXSCY-annual-FY25.html",
+      "url": "https://news.skhynix.com/en/sk-hynix-announces-fy25-financial-results/"
+    },
+    {
+      "type": "annual",
+      "fy": "FY2024",
+      "file": "raw/annual/HXSCY-annual-FY24.html",
+      "url": "https://news.skhynix.com/en/sk-hynix-announces-4q24-financial-results/"
+    },
+    {
+      "type": "annual",
+      "fy": "FY2023",
+      "file": "raw/annual/HXSCY-annual-FY23.html",
+      "url": "https://news.skhynix.com/en/sk-hynix-reports-fourth-quarter-2023-financial-results/"
+    },
+    {
+      "type": "annual",
+      "fy": "FY2022",
+      "file": "raw/annual/HXSCY-annual-FY22.html",
+      "url": "https://news.skhynix.com/en/sk-hynix-reports-2022-and-fourth-quarter-financial-results/"
+    },
+    {
+      "type": "annual",
+      "fy": "FY2021",
+      "file": "raw/annual/HXSCY-annual-FY21.html",
+      "url": "https://news.skhynix.com/en/sk-hynix-inc-reports-fiscal-year-2021-and-fourth-quarter-results/"
+    },
+    {
+      "type": "quarterly",
+      "q": "2Q26",
+      "file": "raw/quarterly/HXSCY-quarterly-2Q26.html",
+      "url": "https://news.skhynix.com/en/q2-2026-business-results/"
+    }
+  ]
+}

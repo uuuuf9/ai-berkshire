@@ -1,0 +1,77 @@
+{
+  "sector": "EdTech / Online Language Learning",
+  "fetch_time": "2026-08-06",
+  "sources": [
+    "HolonIQ Global Education Outlook",
+    "Grand View Research",
+    "MarketsandMarkets",
+    "company 10-K industry discussion"
+  ],
+  "data_quality": "第三方权威数据为市场研究机构公开引用的估算值（HolonIQ/Grand View Research等），非订阅原始报告；置信度中",
+  "global_language_learning_market_usd_bn": {
+    "2021": 58.0,
+    "2022": 62.0,
+    "2023": 67.0,
+    "2024": 72.5,
+    "2025": 78.0,
+    "2026F": 85.0,
+    "2027F": 92.5,
+    "2028F": 100.5
+  },
+  "global_digital_language_learning_market_usd_bn": {
+    "2021": 14.5,
+    "2022": 17.5,
+    "2023": 21.0,
+    "2024": 25.5,
+    "2025": 30.5,
+    "2026F": 36.5,
+    "2027F": 43.5,
+    "2028F": 51.5
+  },
+  "us_language_learning_market_usd_bn": {
+    "2021": 12.5,
+    "2022": 13.2,
+    "2023": 14.0,
+    "2024": 14.8,
+    "2025": 15.6,
+    "2026F": 16.5,
+    "2027F": 17.4,
+    "2028F": 18.3
+  },
+  "us_digital_language_learning_market_usd_bn": {
+    "2021": 4.2,
+    "2022": 4.9,
+    "2023": 5.7,
+    "2024": 6.6,
+    "2025": 7.6,
+    "2026F": 8.7,
+    "2027F": 9.9,
+    "2028F": 11.2
+  },
+  "market_growth_drivers": [
+    "全球数字化转型与移动设备普及",
+    "AI驱动个性化学习提升效果与参与度",
+    "新兴市场英语学习需求（职业发展/移民）",
+    "订阅模式在消费领域接受度提升",
+    "在线教育从疫情催化走向长期结构性增长"
+  ],
+  "duolingo_market_share_digital": {
+    "2022": 1.57,
+    "2023": 2.53,
+    "2024": 2.93,
+    "2025": 3.4
+  },
+  "competitors": [
+    "Babbel",
+    "Rosetta Stone",
+    "Busuu",
+    "Pimsleur",
+    "Memrise",
+    "Drops",
+    "Lingoda",
+    "HelloTalk",
+    "Tandem",
+    "多邻国竞品含Google Translate等免费工具"
+  ],
+  "notes": "全球语言学习市场含线下培训(新东方/英孚等)；数字语言学习为在线/app细分。Duolingo在数字语言学习app中DAU/下载量第一，但按收入计份额仍小(~3%)，因其freemium模式下大量免费用户。TAM天花板高，公司处于早期渗透阶段。数据缺口：无法获取HolonIQ/GrandView原始订阅报告，以上为公开引用估算值。"
+}

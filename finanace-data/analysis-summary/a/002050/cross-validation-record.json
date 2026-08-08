@@ -1,0 +1,81 @@
+{
+  "ticker": "002050.SZ",
+  "name": "三花智控",
+  "fetch_time": "2026-08-06 23:26:38",
+  "market_cap_verification": {
+    "price": 38.71,
+    "shares": 4208000000,
+    "calculated": 162889680000,
+    "reported": 162892000000,
+    "deviation_pct": 0.0,
+    "result": "pass"
+  },
+  "valuation_verification": {
+    "pe_ttm": 37.58,
+    "pb": 5.13,
+    "roe": 13.65,
+    "p_fcf": 32.56,
+    "fcf_yield": 3.07,
+    "dividend_yield": 0.77
+  },
+  "cross_validation": [
+    {
+      "field": "revenue_2025",
+      "sources": {
+        "东方财富": 310.12,
+        "年报披露": 310.12
+      },
+      "unit": "亿",
+      "deviation": 0.0,
+      "result": "pass"
+    },
+    {
+      "field": "net_profit_2025",
+      "sources": {
+        "东方财富": 40.63,
+        "年报披露": 40.63
+      },
+      "unit": "亿",
+      "deviation": 0.0,
+      "result": "pass"
+    },
+    {
+      "field": "inventory_2025",
+      "sources": {
+        "东方财富": 56.4,
+        "年报披露": 56.4
+      },
+      "unit": "亿",
+      "deviation": 0.0,
+      "result": "pass"
+    }
+  ],
+  "three_scenario_valuation": {
+    "current_price": 38.71,
+    "current_eps": 1.03,
+    "years": 3,
+    "scenarios": {
+      "bull": {
+        "growth": 0.25,
+        "target_pe": 45,
+        "target_eps": 2.01,
+        "target_price": 90.5,
+        "upside": 133.9
+      },
+      "base": {
+        "growth": 0.18,
+        "target_pe": 35,
+        "target_eps": 1.69,
+        "target_price": 59.2,
+        "upside": 53.0
+      },
+      "bear": {
+        "growth": 0.1,
+        "target_pe": 25,
+        "target_eps": 1.37,
+        "target_price": 34.3,
+        "upside": -11.5
+      }
+    }
+  }
+}

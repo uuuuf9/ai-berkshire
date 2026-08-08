@@ -1,0 +1,19 @@
+{
+  "ticker": "002050.SZ",
+  "name": "三花智控",
+  "exchange": "深圳证券交易所",
+  "market": "a",
+  "industry": "制冷空调设备/汽车热管理",
+  "sector": "auto-thermal-management",
+  "price": 38.71,
+  "market_cap": 162892000000.0,
+  "circulating_market_cap": 142880000000.0,
+  "pe_dynamic": 39.86,
+  "pb": 5.18,
+  "total_shares": 4208008267.0,
+  "fetch_time": "2026-08-06 23:18:54",
+  "sources": [
+    "腾讯行情",
+    "东方财富"
+  ]
+}

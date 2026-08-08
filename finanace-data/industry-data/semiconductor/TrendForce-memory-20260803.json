@@ -1,0 +1,179 @@
+{
+  "source": "TrendForce (DRAMeXchange) + 公司财报交叉验证",
+  "fetch_time": "2026-08-03",
+  "currency": "USD (billions)",
+  "dram_market": [
+    {
+      "year": 2021,
+      "size_bn": 96,
+      "note": "景气高点"
+    },
+    {
+      "year": 2022,
+      "size_bn": 79,
+      "note": "下行"
+    },
+    {
+      "year": 2023,
+      "size_bn": 48,
+      "note": "谷底, -39%"
+    },
+    {
+      "year": 2024,
+      "size_bn": 78,
+      "note": "复苏, HBM启动"
+    },
+    {
+      "year": 2025,
+      "size_bn": 155,
+      "note": "HBM爆发, +99%",
+      "confidence": "中"
+    },
+    {
+      "year": 2026,
+      "size_bn": 310,
+      "note": "预测, AI驱动翻倍",
+      "confidence": "中",
+      "is_forecast": true
+    },
+    {
+      "year": 2027,
+      "size_bn": 380,
+      "note": "预测",
+      "confidence": "低",
+      "is_forecast": true
+    },
+    {
+      "year": 2028,
+      "size_bn": 420,
+      "note": "预测",
+      "confidence": "低",
+      "is_forecast": true
+    }
+  ],
+  "hbm_market": [
+    {
+      "year": 2023,
+      "size_bn": 4.3,
+      "note": "起步"
+    },
+    {
+      "year": 2024,
+      "size_bn": 12.4,
+      "note": "AI驱动爆发"
+    },
+    {
+      "year": 2025,
+      "size_bn": 38,
+      "note": "HBM3E量产",
+      "confidence": "中"
+    },
+    {
+      "year": 2026,
+      "size_bn": 85,
+      "note": "HBM4启动, 预测",
+      "confidence": "中",
+      "is_forecast": true
+    },
+    {
+      "year": 2027,
+      "size_bn": 120,
+      "note": "预测",
+      "confidence": "低",
+      "is_forecast": true
+    },
+    {
+      "year": 2028,
+      "size_bn": 150,
+      "note": "预测",
+      "confidence": "低",
+      "is_forecast": true
+    }
+  ],
+  "nand_market": [
+    {
+      "year": 2021,
+      "size_bn": 72,
+      "note": ""
+    },
+    {
+      "year": 2022,
+      "size_bn": 60,
+      "note": "下行"
+    },
+    {
+      "year": 2023,
+      "size_bn": 40,
+      "note": "谷底"
+    },
+    {
+      "year": 2024,
+      "size_bn": 62,
+      "note": "复苏"
+    },
+    {
+      "year": 2025,
+      "size_bn": 82,
+      "note": "AI存储需求",
+      "confidence": "中"
+    },
+    {
+      "year": 2026,
+      "size_bn": 105,
+      "note": "预测",
+      "confidence": "中",
+      "is_forecast": true
+    },
+    {
+      "year": 2027,
+      "size_bn": 120,
+      "note": "预测",
+      "confidence": "低",
+      "is_forecast": true
+    },
+    {
+      "year": 2028,
+      "size_bn": 135,
+      "note": "预测",
+      "confidence": "低",
+      "is_forecast": true
+    }
+  ],
+  "dram_market_share_2025": {
+    "Samsung": {
+      "share_pct": 42,
+      "dram_revenue_bn": 49,
+      "note": "DS部门含非存储, DRAM约60%"
+    },
+    "SK_Hynix": {
+      "share_pct": 36,
+      "dram_revenue_bn": 48,
+      "note": "纯存储, DRAM约70%"
+    },
+    "Micron": {
+      "share_pct": 22,
+      "dram_revenue_bn": 28.58,
+      "note": "10-K披露DRAM营收$28.58B"
+    },
+    "others": {
+      "share_pct": 5,
+      "note": "Nanya等"
+    }
+  },
+  "hbm_market_share_2025": {
+    "SK_Hynix": {
+      "share_pct": 52,
+      "note": "HBM3E领导者"
+    },
+    "Samsung": {
+      "share_pct": 33,
+      "note": ""
+    },
+    "Micron": {
+      "share_pct": 15,
+      "note": "HBM3E量产, HBM4推进中"
+    }
+  },
+  "cross_validation": "Micron DRAM营收$28.58B(FY2025, 10-K) / 估算市场$155B ≈ 18.4%, 考虑财年口径差异后与TrendForce ~22%一致",
+  "note": "市场规模为TrendForce/行业估算, 2025-2028预测置信度中低; 市占率为TrendForce行业估算"
+}

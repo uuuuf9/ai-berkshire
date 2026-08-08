@@ -1,0 +1,35 @@
+[
+  {
+    "q": "3Q25",
+    "revenue": 24448.9,
+    "operating_profit": 11383.4,
+    "op_margin": 47.0,
+    "net_income": 12597.5,
+    "source": "FY25 article (3Q25 comp)"
+  },
+  {
+    "q": "4Q25",
+    "revenue": 32826.7,
+    "operating_profit": 19169.6,
+    "op_margin": 58.0,
+    "net_income": 15246.0,
+    "source": "sk-hynix-announces-fy25"
+  },
+  {
+    "q": "1Q26",
+    "revenue": 52576.3,
+    "operating_profit": 37610.3,
+    "op_margin": 71.5,
+    "net_income": null,
+    "source": "2Q26 article (1Q26 comp)"
+  },
+  {
+    "q": "2Q26",
+    "revenue": 79318.7,
+    "operating_profit": 60542.6,
+    "op_margin": 76.0,
+    "net_income": 93922.6,
+    "note": "Net income includes large non-operating one-off gains (net margin 118%); cash 88T, total debt 18.6T, net cash 69.4T at end-Q2'26",
+    "source": "q2-2026-business-results"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "source": "贵州茅台2025年报-主营业务分销售模式情况",
+  "source_file": "finanace-data/financial-report/a/600519/raw/annual/600519-annual-2025.pdf:10",
+  "fetch_time": "2026-08-06 22:45:52",
+  "data": [
+    {
+      "year": 2025,
+      "wholesale_yi": 842.32,
+      "wholesale_yoy": -12.05,
+      "wholesale_margin": 87.86,
+      "direct_yi": 845.43,
+      "direct_yoy": 12.96,
+      "direct_margin": 94.58
+    }
+  ]
+}
