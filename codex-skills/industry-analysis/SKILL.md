@@ -3,6 +3,16 @@ name: "industry-analysis"
 description: "基于《如何快速了解一个行业》方法论的系统行业分析工具，覆盖上下游产业链、定价权、未来3年增长预测等核心维度。当用户需要分析任何行业、做行业研究、撰写行业报告、评估投资机会或了解行业格局时调用此skill。"
 ---
 
+## Codex adapter note
+
+This skill is generated from `skills/industry-analysis.md` so Claude Code and Codex users share one canonical workflow.
+
+- Treat `$ARGUMENTS` as the user's request in the current Codex thread.
+- When the source mentions Claude-only surfaces such as Task, Agent, WebSearch, Bash, Read, or Write, use the closest Codex capability available in this session: subagents when available, web search when needed, shell commands for local tools, and normal file edits for workspace files.
+- Use shared project tools from `tools/` in this repository. Prefer running commands from the repository root with paths like `python3 tools/financial_rigor.py ...`; if the current thread starts outside the repo, locate the actual checkout path first instead of assuming a fixed home-directory path.
+- Before starting research, run the `date` command to confirm today's date; treat it as the baseline for "latest" data and state the data cutoff date in the report header. Never assume the current date from training data.
+- Preserve the research quality rules from `AGENTS.md`: cross-check financial data, use exact arithmetic tools for valuation/math, and clearly label uncertainty and source gaps.
+
 # 行业分析 Skill
 
 基于麦肯锡前分析师肖璟《如何快速了解一个行业》的系统方法论，帮助你在1-2周内快速建立对陌生行业的深度认知。

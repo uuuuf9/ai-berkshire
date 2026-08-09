@@ -3,6 +3,16 @@ name: "financial-statement-analysis"
 description: "基于肖星《一本书读懂财报》的上市公司财报分析Skill。拉取近5年三大报表数据，分析盈利能力、营运能力、偿债能力，判断公司质量与投资价值。当用户要求分析上市公司财报、评估企业财务状况、判断投资价值时调用。"
 ---
 
+## Codex adapter note
+
+This skill is generated from `skills/financial-statement-analysis.md` so Claude Code and Codex users share one canonical workflow.
+
+- Treat `$ARGUMENTS` as the user's request in the current Codex thread.
+- When the source mentions Claude-only surfaces such as Task, Agent, WebSearch, Bash, Read, or Write, use the closest Codex capability available in this session: subagents when available, web search when needed, shell commands for local tools, and normal file edits for workspace files.
+- Use shared project tools from `tools/` in this repository. Prefer running commands from the repository root with paths like `python3 tools/financial_rigor.py ...`; if the current thread starts outside the repo, locate the actual checkout path first instead of assuming a fixed home-directory path.
+- Before starting research, run the `date` command to confirm today's date; treat it as the baseline for "latest" data and state the data cutoff date in the report header. Never assume the current date from training data.
+- Preserve the research quality rules from `AGENTS.md`: cross-check financial data, use exact arithmetic tools for valuation/math, and clearly label uncertainty and source gaps.
+
 # 财报分析Skill - 基于《一本书读懂财报》
 
 本Skill严格按照肖星教授《一本书读懂财报》的方法论，对上市公司进行系统性财务报表分析。
