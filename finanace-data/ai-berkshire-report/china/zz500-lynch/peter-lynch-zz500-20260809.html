@@ -1,0 +1,2742 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>彼得·林奇选股分析 - 中证500</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+        }
+        .header h1 { font-size: 28px; margin-bottom: 8px; }
+        .header .subtitle { opacity: 0.85; font-size: 15px; margin-bottom: 16px; }
+        .header .meta { display: flex; gap: 24px; font-size: 13px; opacity: 0.75; flex-wrap: wrap; }
+        .header .meta span { display: flex; align-items: center; gap: 6px; }
+        
+        .section { background: white; border-radius: 10px; padding: 24px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .section h2 { font-size: 20px; color: #1e293b; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #e2e8f0; }
+        
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+        th { background: #f1f5f9; font-weight: 600; color: #475569; font-size: 13px; }
+        tr:hover { background: #f8fafc; }
+        .text-right { text-align: right; }
+        .text-center { text-align: center; }
+        .muted { color: #64748b; font-size: 13px; }
+        
+        .type-badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            background: #e0e7ff;
+            color: #4338ca;
+            font-weight: 500;
+        }
+        .type-badge.large { padding: 4px 14px; font-size: 13px; }
+        
+        .rating {
+            display: inline-block;
+            padding: 3px 12px;
+            border-radius: 14px;
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .stars { color: #f59e0b; letter-spacing: 2px; font-size: 14px; }
+        .stars-big { color: #f59e0b; letter-spacing: 4px; font-size: 18px; }
+        
+        .stock-card {
+            background: white;
+            border-radius: 10px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .stock-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .stock-header h3 { font-size: 22px; color: #1e293b; margin-bottom: 4px; }
+        .stock-header .code { color: #64748b; font-size: 16px; font-weight: normal; }
+        .type-desc { color: #64748b; font-size: 14px; }
+        .stock-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+        
+        .thesis-box {
+            background: #f0f9ff;
+            border-left: 4px solid #0ea5e9;
+            padding: 12px 16px;
+            border-radius: 0 6px 6px 0;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+        
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 16px; }
+        @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
+        
+        .stock-card h4 { font-size: 15px; margin: 16px 0 10px; color: #334155; }
+        
+        .valuation-box {
+            background: #fffbeb;
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin: 16px 0;
+        }
+        .valuation-box h4 { margin-top: 0; }
+        .valuation-box p { font-size: 14px; color: #78350f; }
+        
+        .track-box {
+            background: #f1f5f9;
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 13px;
+            color: #475569;
+        }
+        
+        .note { display: block; font-size: 12px; color: #d97706; margin-top: 6px; }
+        
+        .check { font-size: 14px; }
+        .cross { font-size: 14px; }
+        .maybe { font-size: 14px; }
+        
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+        .summary-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .summary-card .num { font-size: 32px; font-weight: 700; color: #1e3a5f; }
+        .summary-card .label { font-size: 13px; color: #64748b; margin-top: 4px; }
+        
+        .risk-section { background: #fef2f2; border: 1px solid #fecaca; }
+        .risk-section h2 { color: #b91c1c; border-color: #fecaca; }
+        .risk-section ul { padding-left: 20px; color: #7f1d1d; font-size: 14px; }
+        .risk-section li { margin-bottom: 8px; }
+        
+        .opportunity-rating {
+            display: inline-block;
+            padding: 8px 24px;
+            border-radius: 20px;
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            margin: 16px 0;
+        }
+        
+        .data-table { margin-bottom: 8px; }
+        .features-table td { vertical-align: top; }
+        
+        nav.toc {
+            background: white;
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        nav.toc h3 { font-size: 15px; margin-bottom: 10px; color: #475569; }
+        nav.toc a {
+            display: inline-block;
+            padding: 4px 12px;
+            margin: 4px 6px 4px 0;
+            background: #f1f5f9;
+            border-radius: 14px;
+            text-decoration: none;
+            color: #475569;
+            font-size: 13px;
+        }
+        nav.toc a:hover { background: #e2e8f0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>彼得·林奇选股分析报告</h1>
+            <p class="subtitle">中证500指数成分股 · 十倍股筛选与分析框架</p>
+            <div class="meta">
+                <span>📅 分析日期：2026-08-09</span>
+                <span>📊 分析标的：中证500指数（12只精选成分股）</span>
+                <span>📈 数据截止：2026年一季报/2025年报</span>
+                <span>⏱️ 今日为周日，价格取最近交易日</span>
+            </div>
+        </div>
+        
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="num">12</div>
+                <div class="label">深度分析标的</div>
+            </div>
+            <div class="summary-card">
+                <div class="num">4</div>
+                <div class="label">十倍股候选池</div>
+            </div>
+            <div class="summary-card">
+                <div class="num">5</div>
+                <div class="label">公司类型覆盖</div>
+            </div>
+            <div class="summary-card">
+                <div class="num">B</div>
+                <div class="label">行业机会评级</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>一、标的概览</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>公司</th>
+                        <th>代码</th>
+                        <th>市值</th>
+                        <th>类型判定</th>
+                        <th>星级</th>
+                        <th>PE(动)</th>
+                        <th>PEG</th>
+                        <th>综合评级</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+        <tr>
+            <td><strong>协创数据</strong></td>
+            <td>300857</td>
+            <td>1241亿</td>
+            <td><span class="type-badge">快速增长型</span></td>
+            <td class="stars">★★★★☆</td>
+            <td>71.1</td>
+            <td>0.65</td>
+            <td><span class="rating" style="background:#10b981">买入</span></td>
+        </tr>
+    
+        <tr>
+            <td><strong>长川科技</strong></td>
+            <td>300604</td>
+            <td>1828亿</td>
+            <td><span class="type-badge">快速增长型</span></td>
+            <td class="stars">★★★★☆</td>
+            <td>116.2</td>
+            <td>0.34</td>
+            <td><span class="rating" style="background:#10b981">买入</span></td>
+        </tr>
+    
+        <tr>
+            <td><strong>赤峰黄金</strong></td>
+            <td>600988</td>
+            <td>800亿</td>
+            <td><span class="type-badge">周期型</span></td>
+            <td class="stars">★★★☆☆</td>
+            <td>22.3</td>
+            <td>0.25</td>
+            <td><span class="rating" style="background:#f59e0b">持有</span></td>
+        </tr>
+    
+        <tr>
+            <td><strong>兴业银锡</strong></td>
+            <td>000426</td>
+            <td>701亿</td>
+            <td><span class="type-badge">周期型</span></td>
+            <td class="stars">★★★☆☆</td>
+            <td>26.3</td>
+            <td>0.15</td>
+            <td><span class="rating" style="background:#f59e0b">持有</span></td>
+        </tr>
+    
+        <tr>
+            <td><strong>科达利</strong></td>
+            <td>002850</td>
+            <td>527亿</td>
+            <td><span class="type-badge">快速增长型</span></td>
+            <td class="stars">★★★★☆</td>
+            <td>28.6</td>
+            <td>1.13</td>
+            <td><span class="rating" style="background:#f59e0b">持有</span></td>
+        </tr>
+    
+        <tr>
+            <td><strong>宏发股份</strong></td>
+            <td>600885</td>
+            <td>548亿</td>
+            <td><span class="type-badge">稳定增长型</span></td>
+            <td class="stars">★★★★☆</td>
+            <td>28.1</td>
+            <td>2.33</td>
+            <td><span class="rating" style="background:#f59e0b">持有</span></td>
+        </tr>
+    
+        <tr>
+            <td><strong>德明利</strong></td>
+            <td>001309</td>
+            <td>917亿</td>
+            <td><span class="type-badge">周期型</span></td>
+            <td class="stars">★★★☆☆</td>
+            <td>22.3</td>
+            <td>0.05</td>
+            <td><span class="rating" style="background:#6b7280">观望</span></td>
+        </tr>
+    
+        <tr>
+            <td><strong>先导智能</strong></td>
+            <td>300450</td>
+            <td>584亿</td>
+            <td><span class="type-badge">周期型/反转</span></td>
+            <td class="stars">★★★☆☆</td>
+            <td>36.4</td>
+            <td>0.32</td>
+            <td><span class="rating" style="background:#10b981">买入</span></td>
+        </tr>
+    
+        <tr>
+            <td><strong>巨人网络</strong></td>
+            <td>002558</td>
+            <td>558亿</td>
+            <td><span class="type-badge">快速增长型/反转</span></td>
+            <td class="stars">★★★☆☆</td>
+            <td>22.4</td>
+            <td>0.82</td>
+            <td><span class="rating" style="background:#6b7280">观望</span></td>
+        </tr>
+    
+        <tr>
+            <td><strong>杰瑞股份</strong></td>
+            <td>002353</td>
+            <td>1486亿</td>
+            <td><span class="type-badge">周期型</span></td>
+            <td class="stars">★★★☆☆</td>
+            <td>53.0</td>
+            <td>8.64</td>
+            <td><span class="rating" style="background:#f59e0b">持有</span></td>
+        </tr>
+    
+        <tr>
+            <td><strong>湖南黄金</strong></td>
+            <td>002155</td>
+            <td>403亿</td>
+            <td><span class="type-badge">周期型</span></td>
+            <td class="stars">★★★☆☆</td>
+            <td>23.0</td>
+            <td>0.43</td>
+            <td><span class="rating" style="background:#f59e0b">持有</span></td>
+        </tr>
+    
+        <tr>
+            <td><strong>网宿科技</strong></td>
+            <td>300017</td>
+            <td>386亿</td>
+            <td><span class="type-badge">缓慢增长型/平庸</span></td>
+            <td class="stars">★★☆☆☆</td>
+            <td>53.0</td>
+            <td>0.64</td>
+            <td><span class="rating" style="background:#6b7280">观望</span></td>
+        </tr>
+    
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>三、十倍股候选池</h2>
+            <p class="muted" style="margin-bottom:12px">满足林奇买入标准（4星以上 + 估值合理 + 无重大红旗）的精选标的</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:50px">排名</th>
+                        <th>公司</th>
+                        <th>类型</th>
+                        <th>星级</th>
+                        <th style="width:80px">PEG</th>
+                        <th style="width:80px">评级</th>
+                        <th>推荐理由</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+        <tr>
+            <td class="text-center">1</td>
+            <td><strong>协创数据</strong></td>
+            <td><span class="type-badge">快速增长型</span></td>
+            <td class="stars">★★★★☆</td>
+            <td class="text-center">0.65</td>
+            <td style="color:#10b981;font-weight:bold">买入</td>
+            <td class="muted">AI算力基础设施核心受益标的，存储需求爆发式增长，高ROE+高增速组合罕见...</td>
+        </tr>
+    
+        <tr>
+            <td class="text-center">2</td>
+            <td><strong>长川科技</strong></td>
+            <td><span class="type-badge">快速增长型</span></td>
+            <td class="stars">★★★★☆</td>
+            <td class="text-center">0.34</td>
+            <td style="color:#10b981;font-weight:bold">买入</td>
+            <td class="muted">国产半导体测试设备龙头，受益于国产化率提升和行业周期复苏，增速快但估值偏高...</td>
+        </tr>
+    
+        <tr>
+            <td class="text-center">3</td>
+            <td><strong>科达利</strong></td>
+            <td><span class="type-badge">快速增长型</span></td>
+            <td class="stars">★★★★☆</td>
+            <td class="text-center">1.13</td>
+            <td style="color:#f59e0b;font-weight:bold">持有</td>
+            <td class="muted">全球锂电结构件绝对龙头，受益于新能源车+储能持续增长，护城河深厚但估值不便宜...</td>
+        </tr>
+    
+        <tr>
+            <td class="text-center">4</td>
+            <td><strong>宏发股份</strong></td>
+            <td><span class="type-badge">稳定增长型</span></td>
+            <td class="stars">★★★★☆</td>
+            <td class="text-center">2.33</td>
+            <td style="color:#f59e0b;font-weight:bold">持有</td>
+            <td class="muted">中国制造业隐形冠军典范，全球继电器龙头，穿越周期能力强，适合长期持有...</td>
+        </tr>
+    
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>四、类型分布统计</h2>
+            <div style="margin:16px 0">
+                <strong>行业机会评级：</strong>
+                <span class="opportunity-rating" style="background:#f59e0b">B 级</span>
+                <p class="muted" style="margin-top:8px">
+                    B级：有优质公司但估值不便宜，或估值便宜但质量一般。中证500中存在结构性机会，但整体估值已不低，
+                    需精选个股。周期股占比较高（5/12），需注意周期位置判断；快速增长型标的估值普遍偏高。
+                </p>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>类型</th>
+                        <th style="width:80px">数量</th>
+                        <th style="width:80px">占比</th>
+                        <th>代表公司</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+        <tr>
+            <td><strong>快速增长型</strong></td>
+            <td class="text-center">3</td>
+            <td class="text-center">25%</td>
+            <td class="muted">协创数据、长川科技、科达利</td>
+        </tr>
+    
+        <tr>
+            <td><strong>周期型</strong></td>
+            <td class="text-center">6</td>
+            <td class="text-center">50%</td>
+            <td class="muted">赤峰黄金、兴业银锡、湖南黄金、德明利、杰瑞股份、先导智能</td>
+        </tr>
+    
+        <tr>
+            <td><strong>稳定增长型</strong></td>
+            <td class="text-center">1</td>
+            <td class="text-center">8%</td>
+            <td class="muted">宏发股份</td>
+        </tr>
+    
+        <tr>
+            <td><strong>游戏/反转</strong></td>
+            <td class="text-center">1</td>
+            <td class="text-center">8%</td>
+            <td class="muted">巨人网络</td>
+        </tr>
+    
+        <tr>
+            <td><strong>缓慢增长/平庸</strong></td>
+            <td class="text-center">1</td>
+            <td class="text-center">8%</td>
+            <td class="muted">网宿科技</td>
+        </tr>
+    
+                </tbody>
+            </table>
+        </div>
+        
+        <nav class="toc">
+            <h3>📍 个股分析导航</h3>
+            <a href="#300857">协创数据</a><a href="#300604">长川科技</a><a href="#600988">赤峰黄金</a><a href="#000426">兴业银锡</a><a href="#002850">科达利</a><a href="#600885">宏发股份</a><a href="#001309">德明利</a><a href="#300450">先导智能</a><a href="#002558">巨人网络</a><a href="#002353">杰瑞股份</a><a href="#002155">湖南黄金</a><a href="#300017">网宿科技</a>
+        </nav>
+        
+        <h2 style="margin:24px 0 16px; font-size:20px; color:#1e293b">二、逐公司详细分析</h2>
+        
+        
+    <div class="stock-card" id="300857">
+        <div class="stock-header">
+            <div>
+                <h3>协创数据 <span class="code">(300857)</span></h3>
+                <p class="type-desc">数据存储/AI服务器解决方案，受益于AI算力需求爆发</p>
+            </div>
+            <div class="stock-meta">
+                <div class="stars-big">★★★★☆</div>
+                <span class="type-badge large">快速增长型</span>
+            </div>
+        </div>
+        
+        <div class="thesis-box">
+            <strong>一句话投资逻辑：</strong>AI算力基础设施核心受益标的，存储需求爆发式增长，高ROE+高增速组合罕见
+        </div>
+        
+        <div class="grid-2">
+            <div>
+                <h4>📊 关键数据</h4>
+                <table class="data-table">
+                    <tr><td>总市值</td><td class="text-right">1241亿</td></tr>
+                    <tr><td>PE(动)</td><td class="text-right">71.1</td></tr>
+                    <tr><td>PEG</td><td class="text-right" style="color:#059669;font-weight:bold">0.65</td></tr>
+                    <tr><td>利润增速(3年均)</td><td class="text-right">109.5%</td></tr>
+                    <tr><td>ROE(3年均)</td><td class="text-right">24.2%</td></tr>
+                    <tr><td>估值判断</td><td class="text-right"><strong style="color:#059669">低估</strong></td></tr>
+                </table>
+                
+            </div>
+            <div>
+                <h4>🚩 红旗排查</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr><th>红旗项目</th><th>状态</th><th>说明</th></tr>
+                    </thead>
+                    
+            <tr>
+                <td><strong>多元恶化</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">专注存储和智能终端</td>
+            </tr>
+        
+            <tr>
+                <td><strong>高负债</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">资产负债率正常</td>
+            </tr>
+        
+            <tr>
+                <td><strong>单一客户依赖</strong></td>
+                <td class="text-center"><span class="cross">🔴</span></td>
+                <td class="muted">前五大客户占比较高，需关注客户集中度风险</td>
+            </tr>
+        
+            <tr>
+                <td><strong>管理层变动</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">管理层稳定</td>
+            </tr>
+        
+            <tr>
+                <td><strong>盲目扩张</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">快速扩张中，需关注产能消化</td>
+            </tr>
+        
+            <tr>
+                <td><strong>PEG过高</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">PEG约0.65，相对合理</td>
+            </tr>
+        
+                </table>
+            </div>
+        </div>
+        
+        <h4>📋 十三项特征匹配</h4>
+        <table class="data-table features-table">
+            <thead>
+                <tr><th style="width:40px">#</th><th>特征</th><th style="width:60px">符合</th><th>说明</th></tr>
+            </thead>
+            
+            <tr>
+                <td>1</td>
+                <td>名字枯燥</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">名字带"数据"，不算枯燥但也不性感</td>
+            </tr>
+        
+            <tr>
+                <td>2</td>
+                <td>业务枯燥</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">数据存储/服务器，属于硬核科技但不"性感"</td>
+            </tr>
+        
+            <tr>
+                <td>3</td>
+                <td>业务令人厌恶</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">不涉及</td>
+            </tr>
+        
+            <tr>
+                <td>4</td>
+                <td>母公司分拆</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">独立上市公司</td>
+            </tr>
+        
+            <tr>
+                <td>5</td>
+                <td>机构不持股</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">中证500成分股，机构持仓中等</td>
+            </tr>
+        
+            <tr>
+                <td>6</td>
+                <td>负面谣言缠身</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">暂无重大负面</td>
+            </tr>
+        
+            <tr>
+                <td>7</td>
+                <td>行业增长缓慢</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">AI存储是高增长行业</td>
+            </tr>
+        
+            <tr>
+                <td>8</td>
+                <td>有利基/护城河</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">在存储模组和边缘计算有一定技术积累</td>
+            </tr>
+        
+            <tr>
+                <td>9</td>
+                <td>重复消费</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">服务器和存储设备有持续升级换代需求</td>
+            </tr>
+        
+            <tr>
+                <td>10</td>
+                <td>内部人买入</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+            <tr>
+                <td>11</td>
+                <td>公司回购</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+            <tr>
+                <td>12</td>
+                <td>小公司niche龙头</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">1200亿市值已不算小，细分领域龙头</td>
+            </tr>
+        
+            <tr>
+                <td>13</td>
+                <td>低成本生产商</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+        </table>
+        
+        <div class="valuation-box">
+            <h4>💰 估值分析</h4>
+            <p>快速增长型，2025年净利润11.64亿，2026Q1增速343%，若全年维持50%增速，PE约47倍，PEG约0.94。考虑AI存储赛道的高景气度，估值合理偏低。</p>
+        </div>
+        
+        <div class="track-box">
+            <strong>📈 需持续跟踪的关键指标：</strong>
+            营收增速 / 毛利率变化 / AI存储收入占比 / 存货周转 / 客户集中度
+        </div>
+    </div>
+    
+    <div class="stock-card" id="300604">
+        <div class="stock-header">
+            <div>
+                <h3>长川科技 <span class="code">(300604)</span></h3>
+                <p class="type-desc">半导体测试设备龙头，受益于国产替代+行业周期复苏</p>
+            </div>
+            <div class="stock-meta">
+                <div class="stars-big">★★★★☆</div>
+                <span class="type-badge large">快速增长型</span>
+            </div>
+        </div>
+        
+        <div class="thesis-box">
+            <strong>一句话投资逻辑：</strong>国产半导体测试设备龙头，受益于国产化率提升和行业周期复苏，增速快但估值偏高
+        </div>
+        
+        <div class="grid-2">
+            <div>
+                <h4>📊 关键数据</h4>
+                <table class="data-table">
+                    <tr><td>总市值</td><td class="text-right">1828亿</td></tr>
+                    <tr><td>PE(动)</td><td class="text-right">116.2</td></tr>
+                    <tr><td>PEG</td><td class="text-right" style="color:#10b981;font-weight:bold">0.34</td></tr>
+                    <tr><td>利润增速(3年均)</td><td class="text-right">338.5%</td></tr>
+                    <tr><td>ROE(3年均)</td><td class="text-right">16.5%</td></tr>
+                    <tr><td>估值判断</td><td class="text-right"><strong style="color:#10b981">极度低估</strong></td></tr>
+                </table>
+                
+            </div>
+            <div>
+                <h4>🚩 红旗排查</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr><th>红旗项目</th><th>状态</th><th>说明</th></tr>
+                    </thead>
+                    
+            <tr>
+                <td><strong>多元恶化</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">专注测试设备</td>
+            </tr>
+        
+            <tr>
+                <td><strong>高负债</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">负债率合理</td>
+            </tr>
+        
+            <tr>
+                <td><strong>单一客户依赖</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">客户相对分散</td>
+            </tr>
+        
+            <tr>
+                <td><strong>管理层变动</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">稳定</td>
+            </tr>
+        
+            <tr>
+                <td><strong>盲目扩张</strong></td>
+                <td class="text-center"><span class="cross">🔴</span></td>
+                <td class="muted">半导体周期波动大，当前扩产激进需警惕周期下行</td>
+            </tr>
+        
+            <tr>
+                <td><strong>PEG过高</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">PEG约0.34，看似便宜但需注意增速可持续性</td>
+            </tr>
+        
+                </table>
+            </div>
+        </div>
+        
+        <h4>📋 十三项特征匹配</h4>
+        <table class="data-table features-table">
+            <thead>
+                <tr><th style="width:40px">#</th><th>特征</th><th style="width:60px">符合</th><th>说明</th></tr>
+            </thead>
+            
+            <tr>
+                <td>1</td>
+                <td>名字枯燥</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">"长川科技"听起来像传统制造业公司</td>
+            </tr>
+        
+            <tr>
+                <td>2</td>
+                <td>业务枯燥</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">半导体测试设备，技术性强，大众不了解</td>
+            </tr>
+        
+            <tr>
+                <td>3</td>
+                <td>业务令人厌恶</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">不涉及</td>
+            </tr>
+        
+            <tr>
+                <td>4</td>
+                <td>母公司分拆</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">独立上市</td>
+            </tr>
+        
+            <tr>
+                <td>5</td>
+                <td>机构不持股</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">机构重仓股，分析师覆盖多</td>
+            </tr>
+        
+            <tr>
+                <td>6</td>
+                <td>负面谣言缠身</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">行业景气度高，正面消息多</td>
+            </tr>
+        
+            <tr>
+                <td>7</td>
+                <td>行业增长缓慢</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">半导体设备国产替代是高增长赛道</td>
+            </tr>
+        
+            <tr>
+                <td>8</td>
+                <td>有利基/护城河</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">测试机技术壁垒高，长川是国内龙头之一</td>
+            </tr>
+        
+            <tr>
+                <td>9</td>
+                <td>重复消费</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">晶圆厂持续扩产，设备需求稳定</td>
+            </tr>
+        
+            <tr>
+                <td>10</td>
+                <td>内部人买入</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+            <tr>
+                <td>11</td>
+                <td>公司回购</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+            <tr>
+                <td>12</td>
+                <td>小公司niche龙头</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">1800亿市值，已进入中大盘行列</td>
+            </tr>
+        
+            <tr>
+                <td>13</td>
+                <td>低成本生产商</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">技术驱动而非成本驱动</td>
+            </tr>
+        
+        </table>
+        
+        <div class="valuation-box">
+            <h4>💰 估值分析</h4>
+            <p>2025年净利润13.31亿，增速190%。2026Q1增速217%。PE 116倍看起来高，但如果2026年净利润增长50%到20亿，PE约90倍，仍偏高。考虑半导体设备国产替代的长期空间，当前估值处于合理偏贵区间。</p>
+        </div>
+        
+        <div class="track-box">
+            <strong>📈 需持续跟踪的关键指标：</strong>
+            新签订单 / 国产化率 / 毛利率 / 研发投入占比 / 存货/预收款项
+        </div>
+    </div>
+    
+    <div class="stock-card" id="600988">
+        <div class="stock-header">
+            <div>
+                <h3>赤峰黄金 <span class="code">(600988)</span></h3>
+                <p class="type-desc">黄金矿业公司，受益于金价上行周期</p>
+            </div>
+            <div class="stock-meta">
+                <div class="stars-big">★★★☆☆</div>
+                <span class="type-badge large">周期型</span>
+            </div>
+        </div>
+        
+        <div class="thesis-box">
+            <strong>一句话投资逻辑：</strong>黄金股典型周期标的，金价处于上行通道中，但需警惕周期顶部风险
+        </div>
+        
+        <div class="grid-2">
+            <div>
+                <h4>📊 关键数据</h4>
+                <table class="data-table">
+                    <tr><td>总市值</td><td class="text-right">800亿</td></tr>
+                    <tr><td>PE(动)</td><td class="text-right">22.3</td></tr>
+                    <tr><td>PEG</td><td class="text-right" style="color:#10b981;font-weight:bold">0.25</td></tr>
+                    <tr><td>利润增速(3年均)</td><td class="text-right">90.8%</td></tr>
+                    <tr><td>ROE(3年均)</td><td class="text-right">22.3%</td></tr>
+                    <tr><td>估值判断</td><td class="text-right"><strong style="color:#10b981">极度低估</strong></td></tr>
+                </table>
+                <span class="note">⚠️ 周期股PEG参考价值有限，需结合周期位置判断</span>
+            </div>
+            <div>
+                <h4>🚩 红旗排查</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr><th>红旗项目</th><th>状态</th><th>说明</th></tr>
+                    </thead>
+                    
+            <tr>
+                <td><strong>多元恶化</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">专注黄金开采</td>
+            </tr>
+        
+            <tr>
+                <td><strong>高负债</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">负债率中等</td>
+            </tr>
+        
+            <tr>
+                <td><strong>单一客户依赖</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">黄金标准化产品，无单一客户风险</td>
+            </tr>
+        
+            <tr>
+                <td><strong>管理层变动</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">需关注</td>
+            </tr>
+        
+            <tr>
+                <td><strong>盲目扩张</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">扩张相对稳健</td>
+            </tr>
+        
+            <tr>
+                <td><strong>PEG过高</strong></td>
+                <td class="text-center"><span class="cross">🔴</span></td>
+                <td class="muted">周期股PEG不适用，周期顶部PE最低但最贵</td>
+            </tr>
+        
+                </table>
+            </div>
+        </div>
+        
+        <h4>📋 十三项特征匹配</h4>
+        <table class="data-table features-table">
+            <thead>
+                <tr><th style="width:40px">#</th><th>特征</th><th style="width:60px">符合</th><th>说明</th></tr>
+            </thead>
+            
+            <tr>
+                <td>1</td>
+                <td>名字枯燥</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">"赤峰黄金"名字朴实无华</td>
+            </tr>
+        
+            <tr>
+                <td>2</td>
+                <td>业务枯燥</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">采矿业，传统 boring business</td>
+            </tr>
+        
+            <tr>
+                <td>3</td>
+                <td>业务令人厌恶</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">不涉及</td>
+            </tr>
+        
+            <tr>
+                <td>4</td>
+                <td>母公司分拆</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">独立上市公司</td>
+            </tr>
+        
+            <tr>
+                <td>5</td>
+                <td>机构不持股</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">机构持仓较多</td>
+            </tr>
+        
+            <tr>
+                <td>6</td>
+                <td>负面谣言缠身</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">环保/安全生产是矿业公司永恒风险</td>
+            </tr>
+        
+            <tr>
+                <td>7</td>
+                <td>行业增长缓慢</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">黄金储量增长缓慢，行业整体低速</td>
+            </tr>
+        
+            <tr>
+                <td>8</td>
+                <td>有利基/护城河</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">黄金资源是天然护城河，赤峰有优质矿山</td>
+            </tr>
+        
+            <tr>
+                <td>9</td>
+                <td>重复消费</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">黄金是耐用商品，不是消耗品</td>
+            </tr>
+        
+            <tr>
+                <td>10</td>
+                <td>内部人买入</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+            <tr>
+                <td>11</td>
+                <td>公司回购</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+            <tr>
+                <td>12</td>
+                <td>小公司niche龙头</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">800亿市值，中等规模</td>
+            </tr>
+        
+            <tr>
+                <td>13</td>
+                <td>低成本生产商</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">赤峰黄金成本控制能力在行业中较强</td>
+            </tr>
+        
+        </table>
+        
+        <div class="valuation-box">
+            <h4>💰 估值分析</h4>
+            <p>周期股不适用PEG估值。2025年净利润30.82亿，PE 26倍。金价3000美元/盎司背景下，黄金股估值需看金价走势。若金价维持高位，利润有望继续增长，但需警惕金价回调风险。PB约5.85倍，处于历史中高位。</p>
+        </div>
+        
+        <div class="track-box">
+            <strong>📈 需持续跟踪的关键指标：</strong>
+            金价走势 / 矿产金产量 / 克金成本 / 资源储量 / 美元指数
+        </div>
+    </div>
+    
+    <div class="stock-card" id="000426">
+        <div class="stock-header">
+            <div>
+                <h3>兴业银锡 <span class="code">(000426)</span></h3>
+                <p class="type-desc">银锡多金属矿业，受益于新能源+贵金属双重逻辑</p>
+            </div>
+            <div class="stock-meta">
+                <div class="stars-big">★★★☆☆</div>
+                <span class="type-badge large">周期型</span>
+            </div>
+        </div>
+        
+        <div class="thesis-box">
+            <strong>一句话投资逻辑：</strong>银锡双金属标的，锡受益于半导体需求，银受益于光伏+贵金属，周期弹性大
+        </div>
+        
+        <div class="grid-2">
+            <div>
+                <h4>📊 关键数据</h4>
+                <table class="data-table">
+                    <tr><td>总市值</td><td class="text-right">701亿</td></tr>
+                    <tr><td>PE(动)</td><td class="text-right">26.3</td></tr>
+                    <tr><td>PEG</td><td class="text-right" style="color:#10b981;font-weight:bold">0.15</td></tr>
+                    <tr><td>利润增速(3年均)</td><td class="text-right">175.5%</td></tr>
+                    <tr><td>ROE(3年均)</td><td class="text-right">19.0%</td></tr>
+                    <tr><td>估值判断</td><td class="text-right"><strong style="color:#10b981">极度低估</strong></td></tr>
+                </table>
+                <span class="note">⚠️ 周期股PEG参考价值有限，需结合周期位置判断</span>
+            </div>
+            <div>
+                <h4>🚩 红旗排查</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr><th>红旗项目</th><th>状态</th><th>说明</th></tr>
+                    </thead>
+                    
+            <tr>
+                <td><strong>多元恶化</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">专注银锡开采</td>
+            </tr>
+        
+            <tr>
+                <td><strong>高负债</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">负债率有所下降</td>
+            </tr>
+        
+            <tr>
+                <td><strong>单一客户依赖</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">金属标准化产品</td>
+            </tr>
+        
+            <tr>
+                <td><strong>管理层变动</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">需关注兴业集团影响</td>
+            </tr>
+        
+            <tr>
+                <td><strong>盲目扩张</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">相对稳健</td>
+            </tr>
+        
+            <tr>
+                <td><strong>PEG过高</strong></td>
+                <td class="text-center"><span class="cross">🔴</span></td>
+                <td class="muted">周期股PEG不适用，需判断周期位置</td>
+            </tr>
+        
+                </table>
+            </div>
+        </div>
+        
+        <h4>📋 十三项特征匹配</h4>
+        <table class="data-table features-table">
+            <thead>
+                <tr><th style="width:40px">#</th><th>特征</th><th style="width:60px">符合</th><th>说明</th></tr>
+            </thead>
+            
+            <tr>
+                <td>1</td>
+                <td>名字枯燥</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">"兴业银锡"非常朴实</td>
+            </tr>
+        
+            <tr>
+                <td>2</td>
+                <td>业务枯燥</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">矿业开采， boring</td>
+            </tr>
+        
+            <tr>
+                <td>3</td>
+                <td>业务令人厌恶</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">不涉及</td>
+            </tr>
+        
+            <tr>
+                <td>4</td>
+                <td>母公司分拆</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">兴业集团旗下</td>
+            </tr>
+        
+            <tr>
+                <td>5</td>
+                <td>机构不持股</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">相对冷门，机构覆盖较少</td>
+            </tr>
+        
+            <tr>
+                <td>6</td>
+                <td>负面谣言缠身</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">兴业集团历史问题，已逐步化解</td>
+            </tr>
+        
+            <tr>
+                <td>7</td>
+                <td>行业增长缓慢</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">矿业是传统周期行业</td>
+            </tr>
+        
+            <tr>
+                <td>8</td>
+                <td>有利基/护城河</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">银锡资源稀缺，矿山资源是护城河</td>
+            </tr>
+        
+            <tr>
+                <td>9</td>
+                <td>重复消费</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">金属是耐用商品</td>
+            </tr>
+        
+            <tr>
+                <td>10</td>
+                <td>内部人买入</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+            <tr>
+                <td>11</td>
+                <td>公司回购</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+            <tr>
+                <td>12</td>
+                <td>小公司niche龙头</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">700亿市值，中等规模</td>
+            </tr>
+        
+            <tr>
+                <td>13</td>
+                <td>低成本生产商</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">成本控制能力较强</td>
+            </tr>
+        
+        </table>
+        
+        <div class="valuation-box">
+            <h4>💰 估值分析</h4>
+            <p>周期股，需看金属价格周期位置。2025年净利润17.04亿，PE 41倍。锡价和银价都处于相对高位，利润弹性大。但需警惕金属价格回调风险。PB约6.5倍，偏高。</p>
+        </div>
+        
+        <div class="track-box">
+            <strong>📈 需持续跟踪的关键指标：</strong>
+            锡价 / 银价 / 精矿产量 / 选矿品位 / 库存
+        </div>
+    </div>
+    
+    <div class="stock-card" id="002850">
+        <div class="stock-header">
+            <div>
+                <h3>科达利 <span class="code">(002850)</span></h3>
+                <p class="type-desc">锂电池结构件龙头，全球市占率领先</p>
+            </div>
+            <div class="stock-meta">
+                <div class="stars-big">★★★★☆</div>
+                <span class="type-badge large">快速增长型</span>
+            </div>
+        </div>
+        
+        <div class="thesis-box">
+            <strong>一句话投资逻辑：</strong>全球锂电结构件绝对龙头，受益于新能源车+储能持续增长，护城河深厚但估值不便宜
+        </div>
+        
+        <div class="grid-2">
+            <div>
+                <h4>📊 关键数据</h4>
+                <table class="data-table">
+                    <tr><td>总市值</td><td class="text-right">527亿</td></tr>
+                    <tr><td>PE(动)</td><td class="text-right">28.6</td></tr>
+                    <tr><td>PEG</td><td class="text-right" style="color:#f59e0b;font-weight:bold">1.13</td></tr>
+                    <tr><td>利润增速(3年均)</td><td class="text-right">25.3%</td></tr>
+                    <tr><td>ROE(3年均)</td><td class="text-right">14.3%</td></tr>
+                    <tr><td>估值判断</td><td class="text-right"><strong style="color:#f59e0b">合理</strong></td></tr>
+                </table>
+                
+            </div>
+            <div>
+                <h4>🚩 红旗排查</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr><th>红旗项目</th><th>状态</th><th>说明</th></tr>
+                    </thead>
+                    
+            <tr>
+                <td><strong>多元恶化</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">非常专注主业</td>
+            </tr>
+        
+            <tr>
+                <td><strong>高负债</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">负债率合理</td>
+            </tr>
+        
+            <tr>
+                <td><strong>单一客户依赖</strong></td>
+                <td class="text-center"><span class="cross">🔴</span></td>
+                <td class="muted">前五大客户占比较高，宁德时代是第一大客户</td>
+            </tr>
+        
+            <tr>
+                <td><strong>管理层变动</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">管理层稳定</td>
+            </tr>
+        
+            <tr>
+                <td><strong>盲目扩张</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">扩产与下游需求匹配度较高</td>
+            </tr>
+        
+            <tr>
+                <td><strong>PEG过高</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">PEG约1.13，略高于合理值但可接受</td>
+            </tr>
+        
+                </table>
+            </div>
+        </div>
+        
+        <h4>📋 十三项特征匹配</h4>
+        <table class="data-table features-table">
+            <thead>
+                <tr><th style="width:40px">#</th><th>特征</th><th style="width:60px">符合</th><th>说明</th></tr>
+            </thead>
+            
+            <tr>
+                <td>1</td>
+                <td>名字枯燥</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">"科达利"听起来像传统制造业</td>
+            </tr>
+        
+            <tr>
+                <td>2</td>
+                <td>业务枯燥</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">电池结构件，非常boring的精密制造</td>
+            </tr>
+        
+            <tr>
+                <td>3</td>
+                <td>业务令人厌恶</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">不涉及</td>
+            </tr>
+        
+            <tr>
+                <td>4</td>
+                <td>母公司分拆</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">独立上市公司</td>
+            </tr>
+        
+            <tr>
+                <td>5</td>
+                <td>机构不持股</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">机构重仓，外资持股比例高</td>
+            </tr>
+        
+            <tr>
+                <td>6</td>
+                <td>负面谣言缠身</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">基本面稳健</td>
+            </tr>
+        
+            <tr>
+                <td>7</td>
+                <td>行业增长缓慢</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">新能源车+储能高速增长</td>
+            </tr>
+        
+            <tr>
+                <td>8</td>
+                <td>有利基/护城河</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">全球市占率超40%，技术+客户认证壁垒高</td>
+            </tr>
+        
+            <tr>
+                <td>9</td>
+                <td>重复消费</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">动力电池持续出货，需求稳定</td>
+            </tr>
+        
+            <tr>
+                <td>10</td>
+                <td>内部人买入</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+            <tr>
+                <td>11</td>
+                <td>公司回购</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+            <tr>
+                <td>12</td>
+                <td>小公司niche龙头</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">527亿市值，细分领域绝对龙头</td>
+            </tr>
+        
+            <tr>
+                <td>13</td>
+                <td>低成本生产商</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">规模效应+技术优势，成本行业领先</td>
+            </tr>
+        
+        </table>
+        
+        <div class="valuation-box">
+            <h4>💰 估值分析</h4>
+            <p>2025年净利润17.64亿，增速19.9%。PE 28.6倍，PEG 1.13。作为全球龙头，享有一定估值溢价。2026Q1增速19.1%，增长稳定。估值处于合理区间，不算便宜也不贵。</p>
+        </div>
+        
+        <div class="track-box">
+            <strong>📈 需持续跟踪的关键指标：</strong>
+            新能源车销量 / 储能装机 / 毛利率 / 客户集中度 / 海外产能利用率
+        </div>
+    </div>
+    
+    <div class="stock-card" id="600885">
+        <div class="stock-header">
+            <div>
+                <h3>宏发股份 <span class="code">(600885)</span></h3>
+                <p class="type-desc">全球继电器龙头，中国制造业隐形冠军</p>
+            </div>
+            <div class="stock-meta">
+                <div class="stars-big">★★★★☆</div>
+                <span class="type-badge large">稳定增长型</span>
+            </div>
+        </div>
+        
+        <div class="thesis-box">
+            <strong>一句话投资逻辑：</strong>中国制造业隐形冠军典范，全球继电器龙头，穿越周期能力强，适合长期持有
+        </div>
+        
+        <div class="grid-2">
+            <div>
+                <h4>📊 关键数据</h4>
+                <table class="data-table">
+                    <tr><td>总市值</td><td class="text-right">548亿</td></tr>
+                    <tr><td>PE(动)</td><td class="text-right">28.1</td></tr>
+                    <tr><td>PEG</td><td class="text-right" style="color:#ef4444;font-weight:bold">2.33</td></tr>
+                    <tr><td>利润增速(3年均)</td><td class="text-right">12.1%</td></tr>
+                    <tr><td>ROE(3年均)</td><td class="text-right">17.7%</td></tr>
+                    <tr><td>估值判断</td><td class="text-right"><strong style="color:#ef4444">高估</strong></td></tr>
+                </table>
+                
+            </div>
+            <div>
+                <h4>🚩 红旗排查</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr><th>红旗项目</th><th>状态</th><th>说明</th></tr>
+                    </thead>
+                    
+            <tr>
+                <td><strong>多元恶化</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">非常专注继电器主业</td>
+            </tr>
+        
+            <tr>
+                <td><strong>高负债</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">负债率很低</td>
+            </tr>
+        
+            <tr>
+                <td><strong>单一客户依赖</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">客户极度分散</td>
+            </tr>
+        
+            <tr>
+                <td><strong>管理层变动</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">管理层极其稳定</td>
+            </tr>
+        
+            <tr>
+                <td><strong>盲目扩张</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">扩张非常稳健</td>
+            </tr>
+        
+            <tr>
+                <td><strong>PEG过高</strong></td>
+                <td class="text-center"><span class="cross">🔴</span></td>
+                <td class="muted">PEG 2.3偏高，但作为稳定增长型龙头享有溢价</td>
+            </tr>
+        
+                </table>
+            </div>
+        </div>
+        
+        <h4>📋 十三项特征匹配</h4>
+        <table class="data-table features-table">
+            <thead>
+                <tr><th style="width:40px">#</th><th>特征</th><th style="width:60px">符合</th><th>说明</th></tr>
+            </thead>
+            
+            <tr>
+                <td>1</td>
+                <td>名字枯燥</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">"宏发股份"极其普通</td>
+            </tr>
+        
+            <tr>
+                <td>2</td>
+                <td>业务枯燥</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">继电器，绝大多数人不知道是什么</td>
+            </tr>
+        
+            <tr>
+                <td>3</td>
+                <td>业务令人厌恶</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">不涉及</td>
+            </tr>
+        
+            <tr>
+                <td>4</td>
+                <td>母公司分拆</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">独立发展</td>
+            </tr>
+        
+            <tr>
+                <td>5</td>
+                <td>机构不持股</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">QFII和基金重仓，外资最爱标的之一</td>
+            </tr>
+        
+            <tr>
+                <td>6</td>
+                <td>负面谣言缠身</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">基本面非常稳健</td>
+            </tr>
+        
+            <tr>
+                <td>7</td>
+                <td>行业增长缓慢</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">继电器是传统行业，整体增速不高</td>
+            </tr>
+        
+            <tr>
+                <td>8</td>
+                <td>有利基/护城河</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">全球市占率第一，规模+技术+品牌三重护城河</td>
+            </tr>
+        
+            <tr>
+                <td>9</td>
+                <td>重复消费</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">继电器是易耗品，应用场景广泛</td>
+            </tr>
+        
+            <tr>
+                <td>10</td>
+                <td>内部人买入</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+            <tr>
+                <td>11</td>
+                <td>公司回购</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+            <tr>
+                <td>12</td>
+                <td>小公司niche龙头</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">548亿市值，细分领域全球龙头</td>
+            </tr>
+        
+            <tr>
+                <td>13</td>
+                <td>低成本生产商</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">中国制造业成本优势+规模效应</td>
+            </tr>
+        
+        </table>
+        
+        <div class="valuation-box">
+            <h4>💰 估值分析</h4>
+            <p>稳定增长型，用PEGY估值。2025年净利润17.58亿，增速7.8%，股息率约1.5%。PE 28.1倍，PEGY = 28.1 / (7.8+1.5) ≈ 3.0。作为全球龙头，估值偏高但合理。ROE长期稳定在17%+，非常优秀。适合长期持有，等待低估机会。</p>
+        </div>
+        
+        <div class="track-box">
+            <strong>📈 需持续跟踪的关键指标：</strong>
+            营收增速 / 毛利率 / 海外收入占比 / ROE / 新产品进展
+        </div>
+    </div>
+    
+    <div class="stock-card" id="001309">
+        <div class="stock-header">
+            <div>
+                <h3>德明利 <span class="code">(001309)</span></h3>
+                <p class="type-desc">存储芯片设计公司，处于存储周期上行阶段</p>
+            </div>
+            <div class="stock-meta">
+                <div class="stars-big">★★★☆☆</div>
+                <span class="type-badge large">周期型</span>
+            </div>
+        </div>
+        
+        <div class="thesis-box">
+            <strong>一句话投资逻辑：</strong>存储芯片周期反转标的，2026Q1利润爆发，但存储周期波动极大，需判断周期位置
+        </div>
+        
+        <div class="grid-2">
+            <div>
+                <h4>📊 关键数据</h4>
+                <table class="data-table">
+                    <tr><td>总市值</td><td class="text-right">917亿</td></tr>
+                    <tr><td>PE(动)</td><td class="text-right">22.3</td></tr>
+                    <tr><td>PEG</td><td class="text-right" style="color:#10b981;font-weight:bold">0.05</td></tr>
+                    <tr><td>利润增速(3年均)</td><td class="text-right">445.2%</td></tr>
+                    <tr><td>ROE(3年均)</td><td class="text-right">17.8%</td></tr>
+                    <tr><td>估值判断</td><td class="text-right"><strong style="color:#10b981">极度低估</strong></td></tr>
+                </table>
+                <span class="note">⚠️ 周期股PEG参考价值有限，需结合周期位置判断</span>
+            </div>
+            <div>
+                <h4>🚩 红旗排查</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr><th>红旗项目</th><th>状态</th><th>说明</th></tr>
+                    </thead>
+                    
+            <tr>
+                <td><strong>多元恶化</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">专注存储</td>
+            </tr>
+        
+            <tr>
+                <td><strong>高负债</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">负债率不高</td>
+            </tr>
+        
+            <tr>
+                <td><strong>单一客户依赖</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">需确认</td>
+            </tr>
+        
+            <tr>
+                <td><strong>管理层变动</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">稳定</td>
+            </tr>
+        
+            <tr>
+                <td><strong>盲目扩张</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">相对谨慎</td>
+            </tr>
+        
+            <tr>
+                <td><strong>PEG过高</strong></td>
+                <td class="text-center"><span class="cross">🔴</span></td>
+                <td class="muted">周期股PEG完全不适用！当前PE低是因为周期顶部利润高</td>
+            </tr>
+        
+                </table>
+            </div>
+        </div>
+        
+        <h4>📋 十三项特征匹配</h4>
+        <table class="data-table features-table">
+            <thead>
+                <tr><th style="width:40px">#</th><th>特征</th><th style="width:60px">符合</th><th>说明</th></tr>
+            </thead>
+            
+            <tr>
+                <td>1</td>
+                <td>名字枯燥</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">"德明利"听起来像传统公司</td>
+            </tr>
+        
+            <tr>
+                <td>2</td>
+                <td>业务枯燥</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">芯片设计，热门赛道</td>
+            </tr>
+        
+            <tr>
+                <td>3</td>
+                <td>业务令人厌恶</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">不涉及</td>
+            </tr>
+        
+            <tr>
+                <td>4</td>
+                <td>母公司分拆</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">独立上市</td>
+            </tr>
+        
+            <tr>
+                <td>5</td>
+                <td>机构不持股</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">机构关注度快速提升</td>
+            </tr>
+        
+            <tr>
+                <td>6</td>
+                <td>负面谣言缠身</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">暂无</td>
+            </tr>
+        
+            <tr>
+                <td>7</td>
+                <td>行业增长缓慢</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">存储芯片是周期成长行业</td>
+            </tr>
+        
+            <tr>
+                <td>8</td>
+                <td>有利基/护城河</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">在存储卡等细分有一定竞争力，但技术壁垒不如大厂</td>
+            </tr>
+        
+            <tr>
+                <td>9</td>
+                <td>重复消费</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">存储芯片是消耗品，持续需求</td>
+            </tr>
+        
+            <tr>
+                <td>10</td>
+                <td>内部人买入</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+            <tr>
+                <td>11</td>
+                <td>公司回购</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+            <tr>
+                <td>12</td>
+                <td>小公司niche龙头</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">900亿市值，细分领域有一定地位</td>
+            </tr>
+        
+            <tr>
+                <td>13</td>
+                <td>低成本生产商</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+        </table>
+        
+        <div class="valuation-box">
+            <h4>💰 估值分析</h4>
+            <p>典型周期股，PEG不适用。2026Q1净利润33.46亿（单季度！），增速4943%，这是存储周期顶峰的特征。如果全年利润100亿，PE仅9倍——但这是周期顶部利润，不可持续。存储周期波动极大，需警惕周期下行风险。</p>
+        </div>
+        
+        <div class="track-box">
+            <strong>📈 需持续跟踪的关键指标：</strong>
+            存储芯片价格走势 / DRAM/NAND现货价 / 库存水平 / 行业资本开支 / 下游需求
+        </div>
+    </div>
+    
+    <div class="stock-card" id="300450">
+        <div class="stock-header">
+            <div>
+                <h3>先导智能 <span class="code">(300450)</span></h3>
+                <p class="type-desc">锂电设备龙头，处于行业周期底部反转阶段</p>
+            </div>
+            <div class="stock-meta">
+                <div class="stars-big">★★★☆☆</div>
+                <span class="type-badge large">周期型/反转</span>
+            </div>
+        </div>
+        
+        <div class="thesis-box">
+            <strong>一句话投资逻辑：</strong>全球锂电设备龙头，经历了2023-2024年的行业低谷后，2025年开始复苏，2026年有望加速
+        </div>
+        
+        <div class="grid-2">
+            <div>
+                <h4>📊 关键数据</h4>
+                <table class="data-table">
+                    <tr><td>总市值</td><td class="text-right">584亿</td></tr>
+                    <tr><td>PE(动)</td><td class="text-right">36.4</td></tr>
+                    <tr><td>PEG</td><td class="text-right" style="color:#10b981;font-weight:bold">0.32</td></tr>
+                    <tr><td>利润增速(3年均)</td><td class="text-right">113.1%</td></tr>
+                    <tr><td>ROE(3年均)</td><td class="text-right">5.1%</td></tr>
+                    <tr><td>估值判断</td><td class="text-right"><strong style="color:#10b981">极度低估</strong></td></tr>
+                </table>
+                <span class="note">⚠️ 周期股PEG参考价值有限，需结合周期位置判断</span>
+            </div>
+            <div>
+                <h4>🚩 红旗排查</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr><th>红旗项目</th><th>状态</th><th>说明</th></tr>
+                    </thead>
+                    
+            <tr>
+                <td><strong>多元恶化</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">专注锂电设备，相关多元化到光伏/氢能设备</td>
+            </tr>
+        
+            <tr>
+                <td><strong>高负债</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">负债率中等</td>
+            </tr>
+        
+            <tr>
+                <td><strong>单一客户依赖</strong></td>
+                <td class="text-center"><span class="cross">🔴</span></td>
+                <td class="muted">宁德时代占比较高</td>
+            </tr>
+        
+            <tr>
+                <td><strong>管理层变动</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">稳定</td>
+            </tr>
+        
+            <tr>
+                <td><strong>盲目扩张</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">低谷期收缩，复苏期扩张</td>
+            </tr>
+        
+            <tr>
+                <td><strong>PEG过高</strong></td>
+                <td class="text-center"><span class="cross">🔴</span></td>
+                <td class="muted">周期股PEG需谨慎，当前是周期底部反转初期</td>
+            </tr>
+        
+                </table>
+            </div>
+        </div>
+        
+        <h4>📋 十三项特征匹配</h4>
+        <table class="data-table features-table">
+            <thead>
+                <tr><th style="width:40px">#</th><th>特征</th><th style="width:60px">符合</th><th>说明</th></tr>
+            </thead>
+            
+            <tr>
+                <td>1</td>
+                <td>名字枯燥</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">"先导智能"听起来普通</td>
+            </tr>
+        
+            <tr>
+                <td>2</td>
+                <td>业务枯燥</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">锂电池设备，技术性强</td>
+            </tr>
+        
+            <tr>
+                <td>3</td>
+                <td>业务令人厌恶</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">不涉及</td>
+            </tr>
+        
+            <tr>
+                <td>4</td>
+                <td>母公司分拆</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">独立上市</td>
+            </tr>
+        
+            <tr>
+                <td>5</td>
+                <td>机构不持股</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">机构重仓</td>
+            </tr>
+        
+            <tr>
+                <td>6</td>
+                <td>负面谣言缠身</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">2024年行业低谷，市场悲观预期浓厚</td>
+            </tr>
+        
+            <tr>
+                <td>7</td>
+                <td>行业增长缓慢</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">锂电是高增长但强周期行业</td>
+            </tr>
+        
+            <tr>
+                <td>8</td>
+                <td>有利基/护城河</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">全球锂电设备龙头，技术+客户壁垒高</td>
+            </tr>
+        
+            <tr>
+                <td>9</td>
+                <td>重复消费</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">电池厂持续扩产和设备更新</td>
+            </tr>
+        
+            <tr>
+                <td>10</td>
+                <td>内部人买入</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+            <tr>
+                <td>11</td>
+                <td>公司回购</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+            <tr>
+                <td>12</td>
+                <td>小公司niche龙头</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">584亿市值，行业龙头</td>
+            </tr>
+        
+            <tr>
+                <td>13</td>
+                <td>低成本生产商</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">技术驱动</td>
+            </tr>
+        
+        </table>
+        
+        <div class="valuation-box">
+            <h4>💰 估值分析</h4>
+            <p>周期底部反转股，PE看似高但实际可能便宜。2024年低谷利润仅2.86亿，2025年恢复到15.64亿，2026年有望继续增长。如果2026年净利润20-25亿，PE约23-29倍。作为全球龙头，周期底部布局性价比高。</p>
+        </div>
+        
+        <div class="track-box">
+            <strong>📈 需持续跟踪的关键指标：</strong>
+            新签订单 / 锂电池厂扩产计划 / 毛利率 / 海外订单占比 / 储能设备收入
+        </div>
+    </div>
+    
+    <div class="stock-card" id="002558">
+        <div class="stock-header">
+            <div>
+                <h3>巨人网络 <span class="code">(002558)</span></h3>
+                <p class="type-desc">游戏公司，新品周期驱动业绩高增长</p>
+            </div>
+            <div class="stock-meta">
+                <div class="stars-big">★★★☆☆</div>
+                <span class="type-badge large">快速增长型/反转</span>
+            </div>
+        </div>
+        
+        <div class="thesis-box">
+            <strong>一句话投资逻辑：</strong>游戏公司新品周期带来业绩爆发，但游戏行业波动性大，持续性待观察
+        </div>
+        
+        <div class="grid-2">
+            <div>
+                <h4>📊 关键数据</h4>
+                <table class="data-table">
+                    <tr><td>总市值</td><td class="text-right">558亿</td></tr>
+                    <tr><td>PE(动)</td><td class="text-right">22.4</td></tr>
+                    <tr><td>PEG</td><td class="text-right" style="color:#059669;font-weight:bold">0.82</td></tr>
+                    <tr><td>利润增速(3年均)</td><td class="text-right">27.3%</td></tr>
+                    <tr><td>ROE(3年均)</td><td class="text-right">11.0%</td></tr>
+                    <tr><td>估值判断</td><td class="text-right"><strong style="color:#059669">低估</strong></td></tr>
+                </table>
+                
+            </div>
+            <div>
+                <h4>🚩 红旗排查</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr><th>红旗项目</th><th>状态</th><th>说明</th></tr>
+                    </thead>
+                    
+            <tr>
+                <td><strong>多元恶化</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">专注游戏</td>
+            </tr>
+        
+            <tr>
+                <td><strong>高负债</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">现金充裕，负债低</td>
+            </tr>
+        
+            <tr>
+                <td><strong>单一客户依赖</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">用户分散</td>
+            </tr>
+        
+            <tr>
+                <td><strong>管理层变动</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">史玉柱的公司，需关注管理层稳定性</td>
+            </tr>
+        
+            <tr>
+                <td><strong>盲目扩张</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">相对稳健</td>
+            </tr>
+        
+            <tr>
+                <td><strong>PEG过高</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">PEG 0.82看似合理，但游戏公司增速可持续性存疑</td>
+            </tr>
+        
+                </table>
+            </div>
+        </div>
+        
+        <h4>📋 十三项特征匹配</h4>
+        <table class="data-table features-table">
+            <thead>
+                <tr><th style="width:40px">#</th><th>特征</th><th style="width:60px">符合</th><th>说明</th></tr>
+            </thead>
+            
+            <tr>
+                <td>1</td>
+                <td>名字枯燥</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">"巨人"品牌知名度高</td>
+            </tr>
+        
+            <tr>
+                <td>2</td>
+                <td>业务枯燥</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">游戏，性感赛道</td>
+            </tr>
+        
+            <tr>
+                <td>3</td>
+                <td>业务令人厌恶</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">不涉及</td>
+            </tr>
+        
+            <tr>
+                <td>4</td>
+                <td>母公司分拆</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">史玉柱旗下</td>
+            </tr>
+        
+            <tr>
+                <td>5</td>
+                <td>机构不持股</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">游戏行业受政策影响，机构配置偏低</td>
+            </tr>
+        
+            <tr>
+                <td>6</td>
+                <td>负面谣言缠身</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">游戏行业政策风险、版号风险持续存在</td>
+            </tr>
+        
+            <tr>
+                <td>7</td>
+                <td>行业增长缓慢</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">游戏行业仍有增长</td>
+            </tr>
+        
+            <tr>
+                <td>8</td>
+                <td>有利基/护城河</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">游戏研发能力是护城河，但可持续性不如硬科技</td>
+            </tr>
+        
+            <tr>
+                <td>9</td>
+                <td>重复消费</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">游戏内购是持续收入</td>
+            </tr>
+        
+            <tr>
+                <td>10</td>
+                <td>内部人买入</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+            <tr>
+                <td>11</td>
+                <td>公司回购</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+            <tr>
+                <td>12</td>
+                <td>小公司niche龙头</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">558亿市值，二线游戏厂商</td>
+            </tr>
+        
+            <tr>
+                <td>13</td>
+                <td>低成本生产商</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">内容创意驱动</td>
+            </tr>
+        
+        </table>
+        
+        <div class="valuation-box">
+            <h4>💰 估值分析</h4>
+            <p>游戏公司估值需看新品周期可持续性。2025年净利润17.55亿，增速23%。2026Q1增速210%（新品爆发）。PE 22.4倍，PEG 0.82。但游戏公司的问题是增速波动大，一个爆款不能保证持续高增长。估值合理但需要持续跟踪新品表现。</p>
+        </div>
+        
+        <div class="track-box">
+            <strong>📈 需持续跟踪的关键指标：</strong>
+            新品流水 / 月活用户 / 版号获取 / 研发管线 / 政策风险
+        </div>
+    </div>
+    
+    <div class="stock-card" id="002353">
+        <div class="stock-header">
+            <div>
+                <h3>杰瑞股份 <span class="code">(002353)</span></h3>
+                <p class="type-desc">油气设备龙头，受益于全球油气资本开支复苏</p>
+            </div>
+            <div class="stock-meta">
+                <div class="stars-big">★★★☆☆</div>
+                <span class="type-badge large">周期型</span>
+            </div>
+        </div>
+        
+        <div class="thesis-box">
+            <strong>一句话投资逻辑：</strong>全球油气设备龙头之一，受益于中东和北美油气资本开支，但增速放缓需警惕周期见顶
+        </div>
+        
+        <div class="grid-2">
+            <div>
+                <h4>📊 关键数据</h4>
+                <table class="data-table">
+                    <tr><td>总市值</td><td class="text-right">1486亿</td></tr>
+                    <tr><td>PE(动)</td><td class="text-right">53.0</td></tr>
+                    <tr><td>PEG</td><td class="text-right" style="color:#ef4444;font-weight:bold">8.64</td></tr>
+                    <tr><td>利润增速(3年均)</td><td class="text-right">6.1%</td></tr>
+                    <tr><td>ROE(3年均)</td><td class="text-right">12.9%</td></tr>
+                    <tr><td>估值判断</td><td class="text-right"><strong style="color:#ef4444">高估</strong></td></tr>
+                </table>
+                <span class="note">⚠️ 周期股PEG参考价值有限，需结合周期位置判断</span>
+            </div>
+            <div>
+                <h4>🚩 红旗排查</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr><th>红旗项目</th><th>状态</th><th>说明</th></tr>
+                    </thead>
+                    
+            <tr>
+                <td><strong>多元恶化</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">专注油气装备，相关多元化到天然气等</td>
+            </tr>
+        
+            <tr>
+                <td><strong>高负债</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">负债率合理</td>
+            </tr>
+        
+            <tr>
+                <td><strong>单一客户依赖</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">客户相对分散，海外收入占比高</td>
+            </tr>
+        
+            <tr>
+                <td><strong>管理层变动</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">管理层稳定</td>
+            </tr>
+        
+            <tr>
+                <td><strong>盲目扩张</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">扩张稳健</td>
+            </tr>
+        
+            <tr>
+                <td><strong>PEG过高</strong></td>
+                <td class="text-center"><span class="cross">🔴</span></td>
+                <td class="muted">周期股PEG不适用，当前利润增速放缓可能预示周期顶部</td>
+            </tr>
+        
+                </table>
+            </div>
+        </div>
+        
+        <h4>📋 十三项特征匹配</h4>
+        <table class="data-table features-table">
+            <thead>
+                <tr><th style="width:40px">#</th><th>特征</th><th style="width:60px">符合</th><th>说明</th></tr>
+            </thead>
+            
+            <tr>
+                <td>1</td>
+                <td>名字枯燥</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">"杰瑞股份"极其普通</td>
+            </tr>
+        
+            <tr>
+                <td>2</td>
+                <td>业务枯燥</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">油气设备，非常boring</td>
+            </tr>
+        
+            <tr>
+                <td>3</td>
+                <td>业务令人厌恶</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">不涉及脏活</td>
+            </tr>
+        
+            <tr>
+                <td>4</td>
+                <td>母公司分拆</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">独立上市</td>
+            </tr>
+        
+            <tr>
+                <td>5</td>
+                <td>机构不持股</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">机构持仓较多</td>
+            </tr>
+        
+            <tr>
+                <td>6</td>
+                <td>负面谣言缠身</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">基本面稳健</td>
+            </tr>
+        
+            <tr>
+                <td>7</td>
+                <td>行业增长缓慢</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">油气设备是传统周期行业，长期增速低</td>
+            </tr>
+        
+            <tr>
+                <td>8</td>
+                <td>有利基/护城河</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">压裂设备等领域有技术优势，国内龙头</td>
+            </tr>
+        
+            <tr>
+                <td>9</td>
+                <td>重复消费</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">设备磨损+技术升级，持续需求</td>
+            </tr>
+        
+            <tr>
+                <td>10</td>
+                <td>内部人买入</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+            <tr>
+                <td>11</td>
+                <td>公司回购</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+            <tr>
+                <td>12</td>
+                <td>小公司niche龙头</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">1486亿市值，已进入中大盘</td>
+            </tr>
+        
+            <tr>
+                <td>13</td>
+                <td>低成本生产商</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">中国制造优势，成本低于国际同行</td>
+            </tr>
+        
+        </table>
+        
+        <div class="valuation-box">
+            <h4>💰 估值分析</h4>
+            <p>周期股，PE高可能是因为周期顶部利润增速放缓。2025年净利润26.8亿，增速仅2%。2026Q1增速26%，有所恢复。PE 53倍对于周期股来说偏高。如果油价维持高位，油气资本开支可持续，但需警惕周期下行风险。</p>
+        </div>
+        
+        <div class="track-box">
+            <strong>📈 需持续跟踪的关键指标：</strong>
+            油价走势 / 全球油气资本开支 / 新签订单 / 海外收入占比 / 毛利率
+        </div>
+    </div>
+    
+    <div class="stock-card" id="002155">
+        <div class="stock-header">
+            <div>
+                <h3>湖南黄金 <span class="code">(002155)</span></h3>
+                <p class="type-desc">黄金+锑双主业，受益于贵金属+军工半导体双重逻辑</p>
+            </div>
+            <div class="stock-meta">
+                <div class="stars-big">★★★☆☆</div>
+                <span class="type-badge large">周期型</span>
+            </div>
+        </div>
+        
+        <div class="thesis-box">
+            <strong>一句话投资逻辑：</strong>黄金+锑双金属标的，金价上行+锑价坚挺双重受益，但估值已反映较多乐观预期
+        </div>
+        
+        <div class="grid-2">
+            <div>
+                <h4>📊 关键数据</h4>
+                <table class="data-table">
+                    <tr><td>总市值</td><td class="text-right">403亿</td></tr>
+                    <tr><td>PE(动)</td><td class="text-right">23.0</td></tr>
+                    <tr><td>PEG</td><td class="text-right" style="color:#10b981;font-weight:bold">0.43</td></tr>
+                    <tr><td>利润增速(3年均)</td><td class="text-right">53.4%</td></tr>
+                    <tr><td>ROE(3年均)</td><td class="text-right">13.2%</td></tr>
+                    <tr><td>估值判断</td><td class="text-right"><strong style="color:#10b981">极度低估</strong></td></tr>
+                </table>
+                <span class="note">⚠️ 周期股PEG参考价值有限，需结合周期位置判断</span>
+            </div>
+            <div>
+                <h4>🚩 红旗排查</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr><th>红旗项目</th><th>状态</th><th>说明</th></tr>
+                    </thead>
+                    
+            <tr>
+                <td><strong>多元恶化</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">专注黄金和锑</td>
+            </tr>
+        
+            <tr>
+                <td><strong>高负债</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">负债率合理</td>
+            </tr>
+        
+            <tr>
+                <td><strong>单一客户依赖</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">金属标准化产品</td>
+            </tr>
+        
+            <tr>
+                <td><strong>管理层变动</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">国企，管理层稳定</td>
+            </tr>
+        
+            <tr>
+                <td><strong>盲目扩张</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">稳健</td>
+            </tr>
+        
+            <tr>
+                <td><strong>PEG过高</strong></td>
+                <td class="text-center"><span class="cross">🔴</span></td>
+                <td class="muted">周期股PEG不适用</td>
+            </tr>
+        
+                </table>
+            </div>
+        </div>
+        
+        <h4>📋 十三项特征匹配</h4>
+        <table class="data-table features-table">
+            <thead>
+                <tr><th style="width:40px">#</th><th>特征</th><th style="width:60px">符合</th><th>说明</th></tr>
+            </thead>
+            
+            <tr>
+                <td>1</td>
+                <td>名字枯燥</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">朴实无华</td>
+            </tr>
+        
+            <tr>
+                <td>2</td>
+                <td>业务枯燥</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">采矿业</td>
+            </tr>
+        
+            <tr>
+                <td>3</td>
+                <td>业务令人厌恶</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">不涉及</td>
+            </tr>
+        
+            <tr>
+                <td>4</td>
+                <td>母公司分拆</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">湖南国资旗下</td>
+            </tr>
+        
+            <tr>
+                <td>5</td>
+                <td>机构不持股</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">机构持仓中等</td>
+            </tr>
+        
+            <tr>
+                <td>6</td>
+                <td>负面谣言缠身</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">环保安全是矿业永恒风险</td>
+            </tr>
+        
+            <tr>
+                <td>7</td>
+                <td>行业增长缓慢</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">矿业是传统行业</td>
+            </tr>
+        
+            <tr>
+                <td>8</td>
+                <td>有利基/护城河</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">锑矿资源是稀缺资源，湖南黄金是国内锑龙头</td>
+            </tr>
+        
+            <tr>
+                <td>9</td>
+                <td>重复消费</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">金属是耐用商品</td>
+            </tr>
+        
+            <tr>
+                <td>10</td>
+                <td>内部人买入</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+            <tr>
+                <td>11</td>
+                <td>公司回购</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+            <tr>
+                <td>12</td>
+                <td>小公司niche龙头</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">403亿市值，锑行业龙头</td>
+            </tr>
+        
+            <tr>
+                <td>13</td>
+                <td>低成本生产商</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">金锑伴生，成本优势明显</td>
+            </tr>
+        
+        </table>
+        
+        <div class="valuation-box">
+            <h4>💰 估值分析</h4>
+            <p>周期股，2025年净利润14.88亿，增速76%。PE 23倍。黄金+锑双逻辑，锑受益于军工和半导体需求。估值在黄金股中相对合理。但需警惕金价和锑价回调风险。</p>
+        </div>
+        
+        <div class="track-box">
+            <strong>📈 需持续跟踪的关键指标：</strong>
+            金价 / 锑价 / 精矿产量 / 资源储量 / 成本
+        </div>
+    </div>
+    
+    <div class="stock-card" id="300017">
+        <div class="stock-header">
+            <div>
+                <h3>网宿科技 <span class="code">(300017)</span></h3>
+                <p class="type-desc">CDN老牌厂商，增长停滞，转型效果待观察</p>
+            </div>
+            <div class="stock-meta">
+                <div class="stars-big">★★☆☆☆</div>
+                <span class="type-badge large">缓慢增长型/平庸</span>
+            </div>
+        </div>
+        
+        <div class="thesis-box">
+            <strong>一句话投资逻辑：</strong>曾经的大牛股，现在增长停滞，转型边缘计算和AI算力。故事还在，但基本面尚未验证
+        </div>
+        
+        <div class="grid-2">
+            <div>
+                <h4>📊 关键数据</h4>
+                <table class="data-table">
+                    <tr><td>总市值</td><td class="text-right">386亿</td></tr>
+                    <tr><td>PE(动)</td><td class="text-right">53.0</td></tr>
+                    <tr><td>PEG</td><td class="text-right" style="color:#059669;font-weight:bold">0.64</td></tr>
+                    <tr><td>利润增速(3年均)</td><td class="text-right">83.4%</td></tr>
+                    <tr><td>ROE(3年均)</td><td class="text-right">7.1%</td></tr>
+                    <tr><td>估值判断</td><td class="text-right"><strong style="color:#059669">低估</strong></td></tr>
+                </table>
+                
+            </div>
+            <div>
+                <h4>🚩 红旗排查</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr><th>红旗项目</th><th>状态</th><th>说明</th></tr>
+                    </thead>
+                    
+            <tr>
+                <td><strong>多元恶化</strong></td>
+                <td class="text-center"><span class="cross">🔴</span></td>
+                <td class="muted">多次转型，从CDN到云计算到边缘计算到AI，战略漂移</td>
+            </tr>
+        
+            <tr>
+                <td><strong>高负债</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">负债率不高</td>
+            </tr>
+        
+            <tr>
+                <td><strong>单一客户依赖</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">客户分散</td>
+            </tr>
+        
+            <tr>
+                <td><strong>管理层变动</strong></td>
+                <td class="text-center"><span class="cross">🔴</span></td>
+                <td class="muted">管理层变动频繁</td>
+            </tr>
+        
+            <tr>
+                <td><strong>盲目扩张</strong></td>
+                <td class="text-center"><span class="cross">🔴</span></td>
+                <td class="muted">多次转型失败，资源浪费</td>
+            </tr>
+        
+            <tr>
+                <td><strong>PEG过高</strong></td>
+                <td class="text-center"><span class="check">🟢</span></td>
+                <td class="muted">PEG 0.64看似便宜，但增长质量差</td>
+            </tr>
+        
+                </table>
+            </div>
+        </div>
+        
+        <h4>📋 十三项特征匹配</h4>
+        <table class="data-table features-table">
+            <thead>
+                <tr><th style="width:40px">#</th><th>特征</th><th style="width:60px">符合</th><th>说明</th></tr>
+            </thead>
+            
+            <tr>
+                <td>1</td>
+                <td>名字枯燥</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">"网宿科技"听起来像科技公司</td>
+            </tr>
+        
+            <tr>
+                <td>2</td>
+                <td>业务枯燥</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">CDN/云计算，热门赛道</td>
+            </tr>
+        
+            <tr>
+                <td>3</td>
+                <td>业务令人厌恶</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">不涉及</td>
+            </tr>
+        
+            <tr>
+                <td>4</td>
+                <td>母公司分拆</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">独立上市</td>
+            </tr>
+        
+            <tr>
+                <td>5</td>
+                <td>机构不持股</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">机构已大幅减持</td>
+            </tr>
+        
+            <tr>
+                <td>6</td>
+                <td>负面谣言缠身</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">增长停滞、被阿里云等碾压的叙事持续存在</td>
+            </tr>
+        
+            <tr>
+                <td>7</td>
+                <td>行业增长缓慢</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">CDN行业仍有增长但竞争激烈</td>
+            </tr>
+        
+            <tr>
+                <td>8</td>
+                <td>有利基/护城河</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">曾经有先发优势，现在护城河变弱</td>
+            </tr>
+        
+            <tr>
+                <td>9</td>
+                <td>重复消费</td>
+                <td class="text-center"><span class="check">✅</span></td>
+                <td class="muted">带宽/流量是持续消费</td>
+            </tr>
+        
+            <tr>
+                <td>10</td>
+                <td>内部人买入</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+            <tr>
+                <td>11</td>
+                <td>公司回购</td>
+                <td class="text-center"><span class="maybe">⚠️</span></td>
+                <td class="muted">待确认</td>
+            </tr>
+        
+            <tr>
+                <td>12</td>
+                <td>小公司niche龙头</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">386亿市值，曾经的龙头现在地位下滑</td>
+            </tr>
+        
+            <tr>
+                <td>13</td>
+                <td>低成本生产商</td>
+                <td class="text-center"><span class="cross">❌</span></td>
+                <td class="muted">价格战激烈，成本优势不明显</td>
+            </tr>
+        
+        </table>
+        
+        <div class="valuation-box">
+            <h4>💰 估值分析</h4>
+            <p>缓慢增长型，估值看似便宜但增长质量差。2025年净利润8亿，增速18.5%。但2026Q1营收负增长9.7%，净利润负增长37.1%，反转存疑。PE 53倍，对于一个增长停滞的公司来说偏贵。ROE仅7-8%，资本回报一般。</p>
+        </div>
+        
+        <div class="track-box">
+            <strong>📈 需持续跟踪的关键指标：</strong>
+            营收增速 / 毛利率 / AI相关收入占比 / 市占率变化 / 现金流
+        </div>
+    </div>
+    
+        
+        <div class="section risk-section">
+            <h2>五、风险提示</h2>
+            <ul>
+                <li><strong>不构成投资建议：</strong>本报告基于彼得·林奇投资框架的学术性研究，仅为投资分析方法论的实践展示，不构成任何投资建议。</li>
+                <li><strong>市场环境差异：</strong>林奇的方法源于1970-1990年代的美股市场环境，应用于A股市场需结合本土市场特征（散户占比高、政策影响大、退市机制不完善等）进行调整。</li>
+                <li><strong>周期股难度：</strong>中证500中周期股占比较高，周期股的择时难度极大，"低PE时贵、高PE时便宜"的反直觉特性容易导致误判。</li>
+                <li><strong>数据局限性：</strong>部分定性指标（内部人买入、公司回购、机构覆盖度等）未能获取完整数据，标注为"待确认"，实际投资前需进一步核实。</li>
+                <li><strong>样本偏差：</strong>本分析仅覆盖中证500ETF前50大重仓股中的12只，不代表整个中证500指数的全貌。指数共有500只成分股，可能存在未被覆盖的优质标的。</li>
+                <li><strong>历史不代表未来：</strong>过去的十倍股特征不代表未来一定会重复，林奇的13项特征是画像而非教条。</li>
+                <li><strong>估值验证说明：</strong>关键市值数据已通过 financial_rigor.py 验证，偏差在0.1%以内。PE使用动态PE，与静态PE可能存在差异。</li>
+            </ul>
+        </div>
+        
+        <div style="text-align:center; color:#94a3b8; font-size:12px; padding:20px 0">
+            彼得·林奇选股法 · AI Berkshire Research · 2026-08-09
+        </div>
+    </div>
+</body>
+</html>
