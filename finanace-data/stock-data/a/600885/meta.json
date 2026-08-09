@@ -1,0 +1,20 @@
+{
+  "fetched_at": "2026-08-09T14:32:15.835495",
+  "sources": [
+    "东方财富"
+  ],
+  "data": {
+    "name": "宏发股份",
+    "ticker": "600885",
+    "market": "sh",
+    "industry": "电力设备-继电器",
+    "industry_sws": "电力设备",
+    "market_cap": 548.0,
+    "market_cap_unit": "亿元",
+    "total_shares": 15.48,
+    "total_shares_unit": "亿股",
+    "list_board": "沪市主板",
+    "full_name": "厦门宏发电声股份有限公司",
+    "is_cyclical": false
+  }
+}

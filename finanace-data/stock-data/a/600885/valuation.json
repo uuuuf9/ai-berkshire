@@ -1,0 +1,16 @@
+{
+  "fetched_at": "2026-08-09T14:32:15.835495",
+  "sources": [
+    "东方财富"
+  ],
+  "data": {
+    "pe_ttm": 28.11,
+    "pe_forward": null,
+    "pb": 4.15,
+    "ps_ttm": 3.18,
+    "ev_ebitda": null,
+    "dividend_yield": 1.8,
+    "market_cap": 548.0,
+    "market_cap_unit": "亿元"
+  }
+}

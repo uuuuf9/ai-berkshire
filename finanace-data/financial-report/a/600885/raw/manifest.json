@@ -1,0 +1,55 @@
+{
+  "annual": [
+    {
+      "type": "annual",
+      "fy": "FY2021",
+      "filename": "600885-annual-FY2021.pdf",
+      "source": "巨潮资讯 cninfo.com.cn",
+      "downloaded_at": "2026-08-09T14:33:21.167586",
+      "md5": "9e92edc22aedc09d6247817d10418e77",
+      "size_bytes": 4441338,
+      "local_path": "finanace-data/financial-report/a/600885/raw/annual/600885-annual-FY2021.pdf"
+    },
+    {
+      "type": "annual",
+      "fy": "FY2022",
+      "filename": "600885-annual-FY2022.pdf",
+      "source": "巨潮资讯 cninfo.com.cn",
+      "downloaded_at": "2026-08-09T14:33:21.174924",
+      "md5": "b932c9416161c48f4428b618c1df06bd",
+      "size_bytes": 4562080,
+      "local_path": "finanace-data/financial-report/a/600885/raw/annual/600885-annual-FY2022.pdf"
+    },
+    {
+      "type": "annual",
+      "fy": "FY2023",
+      "filename": "600885-annual-FY2023.pdf",
+      "source": "巨潮资讯 cninfo.com.cn",
+      "downloaded_at": "2026-08-09T14:33:21.183234",
+      "md5": "0b443f1366b30e6a175759a4475cb3f1",
+      "size_bytes": 4953955,
+      "local_path": "finanace-data/financial-report/a/600885/raw/annual/600885-annual-FY2023.pdf"
+    },
+    {
+      "type": "annual",
+      "fy": "FY2024",
+      "filename": "600885-annual-FY2024.pdf",
+      "source": "巨潮资讯 cninfo.com.cn",
+      "downloaded_at": "2026-08-09T14:33:21.191139",
+      "md5": "808157475b4b033d23fde516c08e38ac",
+      "size_bytes": 4767553,
+      "local_path": "finanace-data/financial-report/a/600885/raw/annual/600885-annual-FY2024.pdf"
+    },
+    {
+      "type": "annual",
+      "fy": "FY2025",
+      "filename": "600885-annual-FY2025.pdf",
+      "source": "巨潮资讯 cninfo.com.cn",
+      "downloaded_at": "2026-08-09T14:33:21.193778",
+      "md5": "19c038ccfdd363949e71aaea10002a4e",
+      "size_bytes": 1632634,
+      "local_path": "finanace-data/financial-report/a/600885/raw/annual/600885-annual-FY2025.pdf"
+    }
+  ],
+  "quarterly": []
+}

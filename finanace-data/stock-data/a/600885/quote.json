@@ -1,0 +1,29 @@
+{
+  "fetched_at": "2026-08-09T14:32:15.835495",
+  "sources": [
+    "东方财富"
+  ],
+  "data": {
+    "price": 35.41,
+    "change_pct": -0.39,
+    "change_amt": -0.14,
+    "open": 35.05,
+    "high": 35.51,
+    "low": 34.58,
+    "prev_close": 35.55,
+    "volume": 158314,
+    "volume_unit": "手",
+    "amount": 55619,
+    "amount_unit": "万元",
+    "market_cap": 548.0,
+    "market_cap_unit": "亿元",
+    "float_market_cap": 548.0,
+    "pe_ttm": 28.11,
+    "pb": 4.15,
+    "turnover_rate": 1.02,
+    "52w_high": 39.11,
+    "52w_low": 32.0,
+    "total_shares": 15.48,
+    "total_shares_unit": "亿股"
+  }
+}
